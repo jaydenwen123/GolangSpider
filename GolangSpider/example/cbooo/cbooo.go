@@ -166,6 +166,7 @@ func ParseRealTimeWithRegexp(content string) *BoxOffice {
 	}
 
 	//构建MovieInfos
+
 	// fmt.Println("--------------rankNo------------")
 	submatchs = MatchTarget(rankNo, content)
 	movieInfos := make([]*MovieInfo, len(submatchs))
