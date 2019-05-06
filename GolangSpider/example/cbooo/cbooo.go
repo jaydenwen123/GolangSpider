@@ -168,57 +168,50 @@ func ParseRealTimeWithRegexp(content string) *BoxOffice {
 	//构建MovieInfos
 
 	// fmt.Println("--------------rankNo------------")
-	submatchs = MatchTarget(rankNo, content)
+	submatchs = util.MatchTarget(rankNo, content)
 	movieInfos := make([]*MovieInfo, len(submatchs))
 	for index, item := range submatchs {
 		movieInfos[index] = &MovieInfo{}
 		movieInfos[index].RankNo, _ = strconv.Atoi(item[1])
 	}
 	//fmt.Println("--------------movieNameRe------------")
-	submatchs = MatchTarget(movieNameRe, content)
+	submatchs = util.MatchTarget(movieNameRe, content)
 	for index, item := range submatchs {
 		movieInfos[index].MovieName = item[1]
 	}
 	//fmt.Println("--------------RealSaleRe------------")
-	submatchs = MatchTarget(realSaleRe, content)
+	submatchs = util.MatchTarget(realSaleRe, content)
 	for index, item := range submatchs {
 		if index%2 == 0 {
 			movieInfos[index/2].RealSale, _ = strconv.ParseFloat(item[1], 64)
 		}
 	}
 	//fmt.Println("---------------SaleRatioRe-----------")
-	submatchs = MatchTarget(saleRatioRe, content)
+	submatchs = util.MatchTarget(saleRatioRe, content)
 	for index, item := range submatchs {
 		if index%2 == 0 {
 			movieInfos[index/2].SaleRatio = item[1]
 		}
 	}
 	//fmt.Println("---------------AccumulateRatioRe-----------")
-	submatchs = MatchTarget(accumulateRatioRe, content)
+	submatchs = util.MatchTarget(accumulateRatioRe, content)
 	for index, item := range submatchs {
 		if index%2 == 1 {
 			movieInfos[index/2].AccumulateSale, _ = strconv.ParseFloat(item[1], 64)
 		}
 	}
 	//fmt.Println("---------------MovieRatioRe-----------")
-	submatchs = MatchTarget(movieRatioRe, content)
+	submatchs = util.MatchTarget(movieRatioRe, content)
 	for index, item := range submatchs {
 		if index%2 == 1 {
 			movieInfos[index/2].MovieRatio = item[1]
 		}
 	}
 	//fmt.Println("---------------PublishDaysRe-----------")
-	submatchs = MatchTarget(publishDaysRe, content)
+	submatchs = util.MatchTarget(publishDaysRe, content)
 	for index, item := range submatchs {
 		movieInfos[index].PublishDays, _ = strconv.Atoi(item[1])
 	}
 	boxOffice.MovieInfos = movieInfos
 	return boxOffice
-}
-
-func MatchTarget(regExp, content string) [][]string {
-	cp := regexp.MustCompile(regExp)
-	//带分组的匹配
-	submatchs := cp.FindAllStringSubmatch(content, -1)
-	return submatchs
 }
