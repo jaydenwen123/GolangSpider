@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+
 	filename := "baidu.html"
 	url := "http://www.baidu.com"
 	err := util.Download(url, filename)
