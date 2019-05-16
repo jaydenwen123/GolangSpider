@@ -4,7 +4,6 @@ import (
 	"GolangSpider/common"
 	"GolangSpider/util"
 	"encoding/csv"
-	"fmt"
 	"github.com/astaxie/beego/logs"
 	"os"
 	"regexp"
@@ -12,88 +11,100 @@ import (
 	"strings"
 )
 
-//票房信息
-type BoxOffice struct {
-	Title       string
-	TodayBigBar string
-	MovieInfos  []*MovieInfo
-}
-
-//影片信息
-type MovieInfo struct {
-	//影片排名
-	RankNo int
-	//影片名称
-	MovieName string
-	//实时票房(万)
-	RealSale float64
-	//票房占比(%)
-	SaleRatio string
-	//累计票房(万)
-	AccumulateSale float64
-	//排片占比(%)
-	MovieRatio string
-	//上映天数
-	PublishDays int
-}
-
-func (this *MovieInfo) GetCsvHeader() []string {
-	csvHeader := []string{
-		"影片排名",
-		"影片名称",
-		"实时票房（万）",
-		"票房占比",
-		"累计票房（万）",
-		"排片占比",
-		"上映天数"}
-	return csvHeader
-}
-
-func (this *MovieInfo) ValueToStrArray() []string {
-	strArr := []string{}
-	strArr = append(append(append(append(append(append(append(strArr,
-		fmt.Sprintf("%d", this.RankNo)),
-		this.MovieName),
-		fmt.Sprintf("%.1f", this.RealSale)),
-		this.SaleRatio),
-		fmt.Sprintf("%.1f", this.AccumulateSale)),
-		this.MovieRatio),
-		fmt.Sprintf("%d", this.PublishDays))
-	return strArr
-
-}
-
-const (
-	JSON_BOXOFFICE = "boxoffice.json"
-	CSV_BOXOFFICE  = "boxoffice.csv"
-	XML_BOXOFFICE  = "boxoffice.xml"
-)
-
-//正则表达式变量
-var (
-	titleRe           = `<h1 onclick="GotoUrl\('/realtime'\)" class="trtop">(.*?)</h1>`
-	todayBigBarRe     = `<h6><span id="week"></span>(.*?)</h6>`
-	rankNo            = `<td.*?style='width:60px'>(.*?)</td>`
-	movieNameRe       = `<td style='width:150px'>(.*?)</td>`
-	realSaleRe        = `<td style='width:120px'>(.*?)</td>`
-	saleRatioRe       = `<td style='width:80px'>(.*?)</td>`
-	accumulateRatioRe = `<td style='width:120px'>(.*?)</td>`
-	movieRatioRe      = `<td style='width:80px'>(.*?)</td>`
-	publishDaysRe     = `<td style='width:70px;'>(.*?)</td>`
-)
-
 //中国票房
 func Main() {
-	url := "http://www.cbooo.cn"
+	//url := "http://www.cbooo.cn"
+	SpiderCboooHome()
+	SpiderMovieInfo("670808",true)
+	SpiderMovieInfo("681412",true)
+	SpiderMovieInfo("682238",true)
+}
+
+func SpiderMovieInfo(movieId string,downloadPoster bool) {
+	//1.发送请求
+	detailUrl:=getDetailUrl(movieId)
+	_, content := common.Request(detailUrl)
+	//fmt.Println(content)
+	//content=TrimSpace(content)
+	//fmt.Println(content)
+	movie := ParseMovieDetail(content)
+	//补充两个影片信息
+	movie.MovieId,_=strconv.Atoi(movieId)
+	movie.MovieDetail.MovieUrl=detailUrl
+	//fmt.Printf("%#v",movie)
+	util.Save2FormatJsonFile(movie, BASE_PATH+movieId+".json","\t")
+	if downloadPoster {
+		if err:=util.Download(movie.MoviePoster,BASE_PATH+movieId+".jpg");err!=nil{
+			logs.Error("download movie poster failed")
+		}else{
+			logs.Debug("download movie poster success")
+		}
+	}
+}
+
+func SpiderCboooHome() {
 	//1.发送http请求
-	_, content := common.Request(url)
-	//fmt.Println(string(content))
+	_, content := common.Request(cboooUrl)
+	//fmt.Println(content)
+	//解析CBO实时票房榜数据
+	SpiderBoxOffice(content)
+	//解析即将上映的影片数据
+	SpiderComing(content)
+}
+
+func SpiderComing(content string) {
+	coming := ParseComingMovie(content)
+	//保存数据到文件
+	util.Save2JsonFile(coming, JSON_COMING)
+	util.Save2XmlFile1(coming, XML_COMING)
+}
+
+//解析即将上映部分的数据
+func ParseComingMovie(content string) *Coming {
+	coming := &Coming{}
+	submatchs := util.MatchTarget(comingTitleRe, content)
+	//标题
+	coming.Title = submatchs[0][1]
+	//fmt.Println(submatchs[0][1])
+	//fmt.Println("---------------------------")
+	//解析电影数据
+	submatchs = util.MatchTarget(comingMovieRe, content)
+	comingInfos := make([]*ComingInfo, len(submatchs))
+	for index, item := range submatchs {
+		//影片Id
+		//fmt.Println(item[1])
+		comingInfo := ParseSingleComingMovieInfo(item[2])
+		//创建即将上映影片对象
+		id, _ := strconv.Atoi(item[1])
+		comingInfos[index] = &ComingInfo{Movie:
+		&MovieInfo{MovieId: id,
+			MovieName:   comingInfo[1],
+			MovieType:   comingInfo[2],
+			MoviePoster: strings.Replace(movieImgUrlTemplate, urlTmpStr, item[1], -1)},
+			ComingDay:   comingInfo[0],
+			TicketIndex: comingInfo[3]}
+		//comingInfos[index].TicketIndex,_=strconv.ParseFloat(comingInfo[3],64)
+	}
+	coming.ComingInfos = comingInfos
+	return coming
+}
+
+//解析单独一部影片信息
+//影片信息，顺序为[上映日期、影片名称、影片类别、购票指数]
+func ParseSingleComingMovieInfo(item string) []string {
+	//先正则去除空格
+	s := util.TrimSpace(item)
+	//fmt.Println(s)
+	//影片信息，顺序为[上映日期、影片名称、影片类别、购票指数]
+	infos := util.MatchTarget(comingMovieInfoRe, s)
+	//fmt.Println(infos[0][1:])
+	return infos[0][1:]
+}
+
+
+func SpiderBoxOffice(content string) {
 	//2.正则表达式解析
 	boxOffice := ParseRealTimeWithRegexp(content)
-	//for _, movieInfo := range movieInfos {
-	//	fmt.Printf("%#v", movieInfo)
-	//	fmt.Println()
-	//}
 	//3.保存成json文件
 	util.Save2JsonFile(boxOffice, JSON_BOXOFFICE)
 	//4.保存成csv文件
@@ -101,13 +112,11 @@ func Main() {
 	//5.保存成xml文件
 	util.Save2XmlFile1(boxOffice, XML_BOXOFFICE)
 	//util.Save2XmlFile2(boxOffice,"boxoffice2.xml")
-
 	//测试结构体转换为xml字符串
 	//xmlStr := util.Obj2XmlStr(boxOffice)
 	//fmt.Println(xmlStr)
 	//xmlStr=util.Obj2XmlStrIndent(boxOffice," ","\t")
 	//fmt.Println(xmlStr)
-
 }
 
 //将实时票房数据写入到csv文件中
@@ -128,7 +137,7 @@ func Save2CsvFile(bo *BoxOffice, filename string) {
 	}
 
 	//写入主要的数据
-	for index, mi := range bo.MovieInfos {
+	for index, mi := range bo.BoxOfficeInfos {
 		if index == 0 {
 			//写入票房的表头
 			if err = writer.Write(mi.GetCsvHeader()); err != nil {
@@ -165,53 +174,63 @@ func ParseRealTimeWithRegexp(content string) *BoxOffice {
 		boxOffice.TodayBigBar = strings.TrimSpace(submatchs[0][1])
 	}
 
-	//构建MovieInfos
+	//构建BoxOfficeInfos
 
 	// fmt.Println("--------------rankNo------------")
 	submatchs = util.MatchTarget(rankNo, content)
-	movieInfos := make([]*MovieInfo, len(submatchs))
+	BoxOfficeInfos := make([]*BoxOfficeInfo, len(submatchs))
 	for index, item := range submatchs {
-		movieInfos[index] = &MovieInfo{}
-		movieInfos[index].RankNo, _ = strconv.Atoi(item[1])
+		BoxOfficeInfos[index] = &BoxOfficeInfo{}
+		BoxOfficeInfos[index].RankNo, _ = strconv.Atoi(item[1])
+	}
+
+	//fmt.Println("--------------movieIdRe------------")
+	submatchs = util.MatchTarget(movieIdRe, content)
+	for index, item := range submatchs {
+		movieId, _ := strconv.Atoi(item[1])
+		BoxOfficeInfos[index].Movie = &MovieInfo{
+			MovieId:     movieId,
+			MoviePoster: getPosterUrl(item[1])}
 	}
 	//fmt.Println("--------------movieNameRe------------")
 	submatchs = util.MatchTarget(movieNameRe, content)
 	for index, item := range submatchs {
-		movieInfos[index].MovieName = item[1]
+		BoxOfficeInfos[index].Movie.MovieName = item[1]
 	}
 	//fmt.Println("--------------RealSaleRe------------")
 	submatchs = util.MatchTarget(realSaleRe, content)
 	for index, item := range submatchs {
 		if index%2 == 0 {
-			movieInfos[index/2].RealSale, _ = strconv.ParseFloat(item[1], 64)
+			BoxOfficeInfos[index/2].RealSale, _ = strconv.ParseFloat(item[1], 64)
 		}
 	}
 	//fmt.Println("---------------SaleRatioRe-----------")
 	submatchs = util.MatchTarget(saleRatioRe, content)
 	for index, item := range submatchs {
 		if index%2 == 0 {
-			movieInfos[index/2].SaleRatio = item[1]
+			BoxOfficeInfos[index/2].SaleRatio = item[1]
 		}
 	}
 	//fmt.Println("---------------AccumulateRatioRe-----------")
 	submatchs = util.MatchTarget(accumulateRatioRe, content)
 	for index, item := range submatchs {
 		if index%2 == 1 {
-			movieInfos[index/2].AccumulateSale, _ = strconv.ParseFloat(item[1], 64)
+			BoxOfficeInfos[index/2].AccumulateSale, _ = strconv.ParseFloat(item[1], 64)
 		}
 	}
 	//fmt.Println("---------------MovieRatioRe-----------")
 	submatchs = util.MatchTarget(movieRatioRe, content)
 	for index, item := range submatchs {
 		if index%2 == 1 {
-			movieInfos[index/2].MovieRatio = item[1]
+			BoxOfficeInfos[index/2].MovieRatio = item[1]
 		}
 	}
 	//fmt.Println("---------------PublishDaysRe-----------")
 	submatchs = util.MatchTarget(publishDaysRe, content)
 	for index, item := range submatchs {
-		movieInfos[index].PublishDays, _ = strconv.Atoi(item[1])
+		BoxOfficeInfos[index].PublishDays, _ = strconv.Atoi(item[1])
 	}
-	boxOffice.MovieInfos = movieInfos
+	boxOffice.BoxOfficeInfos = BoxOfficeInfos
 	return boxOffice
 }
+
