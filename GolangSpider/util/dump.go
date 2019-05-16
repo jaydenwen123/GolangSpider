@@ -9,9 +9,33 @@ import (
 	"os"
 )
 
+//保存json字符串到文件
+func SaveJsonStr2File(data string,filename string)  {
+	err := ioutil.WriteFile(filename, []byte(data), 766)
+	if err != nil {
+		logs.Error("save jsonStr to file error.",err.Error())
+		panic(err.Error())
+		return
+	}
+	logs.Debug("save jsonStr to file success.")
+}
+
 //保存成json文件
 func Save2JsonFile(vData interface{}, filename string) {
 	data, err := json.Marshal(vData)
+	if err != nil {
+		logs.Error("json error:", err.Error())
+	}
+	err = ioutil.WriteFile(filename, data, 0755)
+	if err != nil {
+		logs.Error("write file error:", err.Error())
+		return
+	}
+	logs.Debug("save json success")
+}
+//保存成json文件
+func Save2FormatJsonFile(vData interface{}, filename string,indent string) {
+	data, err := json.MarshalIndent(vData," ",indent)
 	if err != nil {
 		logs.Error("json error:", err.Error())
 	}
