@@ -13,11 +13,12 @@ import (
 func SaveJsonStr2File(data string,filename string)  {
 	err := ioutil.WriteFile(filename, []byte(data), 766)
 	if err != nil {
-		logs.Error("save jsonStr to file error.",err.Error())
+		logs.Error("save ",filename, "to file error.",err.Error())
+
 		panic(err.Error())
 		return
 	}
-	logs.Debug("save jsonStr to file success.")
+	logs.Debug("save ",filename," to file success.")
 }
 
 //保存成json文件

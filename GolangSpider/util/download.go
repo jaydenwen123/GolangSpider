@@ -2,12 +2,16 @@ package util
 
 import (
 	"github.com/astaxie/beego/logs"
+	"github.com/pkg/errors"
 	"io/ioutil"
 	"net/http"
 )
 
 //根据url下载图片、视频等二进制文件
 func Download(url string, filename string) error {
+	if len(url)==0 || url==""{
+		return errors.New("the url's format is errored.")
+	}
 	resp, err := http.Get(url)
 	if err != nil {
 		panic(err.Error())

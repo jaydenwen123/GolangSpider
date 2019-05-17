@@ -11,7 +11,6 @@ import (
 
 const (
 	USER_AGENT="Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36"
-	COOKIE="kg_mid=dc8c2ae8999da9ab67910eac60b6faed; kg_dfid=3dTilM3ox9ex0DBwK11ykf6l; kg_dfid_collect=d41d8cd98f00b204e9800998ecf8427e; Hm_lvt_aedee6983d4cfc62f509129360d6bb3d=1557830630,1557887161; Hm_lpvt_aedee6983d4cfc62f509129360d6bb3d=1557887615"
 	RETRY_TIMES=3
 )
 
@@ -29,6 +28,7 @@ func RequestJsonWithTimes(url string,headers map[string]string,count int) string
 			return data
 		}else{
 			logs.Info("there is occurd error. please wait some time.there is now downloading retry...")
+			time.Sleep(time.Millisecond*10)
 		}
 	}
 	logs.Error("there is occurd error.we have trtry for",count,"times.....")
@@ -51,29 +51,30 @@ func RequestJson(url string,headers map[string]string) string {
 	//发送请求
 	transport := &http.Transport{
 		Dial: func(netw, addr string) (net.Conn, error) {
-			deadline := time.Now().Add(60 * time.Second)
-			c, err := net.DialTimeout(netw, addr, time.Second*60)
+			deadline := time.Now().Add(120 * time.Second)
+			c, err := net.DialTimeout(netw, addr, time.Second*120)
 			if err != nil {
 				return nil, err
 			}
 			c.SetDeadline(deadline)
 			return c, nil
 		},
-		IdleConnTimeout:     60 * time.Second,
-		TLSHandshakeTimeout:   60 * time.Second,
-		ResponseHeaderTimeout: 60 * time.Second,
+		IdleConnTimeout:     120 * time.Second,
+		TLSHandshakeTimeout:   120 * time.Second,
+		ResponseHeaderTimeout: 120 * time.Second,
 	}
 
 	client := &http.Client{
-		Timeout:   60 * time.Second,
+		Timeout:   120 * time.Second,
 		Transport: transport,
 
 	}
 	resp, err := client.Do(request)
-	if err != nil && http.ErrHandlerTimeout!=err {
+	if err != nil {
 		logs.Error("http get error:", err.Error())
 		//panic(err.Error())
-		resp.Body.Close()
+		//resp.Body.Close()
+		//defer resp.Body.Close()
 		return ""
 		//logs.Info("please wait for time.there is now retrying download....")
 		//return RequestJson(url,headers)
@@ -102,15 +103,15 @@ func Request(url string) ([]byte, string) {
 	//发送请求
 	transport := &http.Transport{
 		Dial: (&net.Dialer{
-			Timeout: 60 * time.Second,
+			Timeout: 120 * time.Second,
 		}).Dial,
-		IdleConnTimeout:     60 * time.Second,
+		IdleConnTimeout:     120 * time.Second,
 		TLSHandshakeTimeout:   120 * time.Second,
-		ResponseHeaderTimeout: 60 * time.Second,
+		ResponseHeaderTimeout: 120 * time.Second,
 	}
 
 	client := &http.Client{
-		Timeout:   60 * time.Second,
+		Timeout:   120 * time.Second,
 		Transport: transport,
 	}
 	resp, err := client.Do(request)
@@ -144,11 +145,13 @@ func ResponseWithReader(url string) io.Reader {
 	resp, err := http.DefaultClient.Do(request)
 	if err != nil {
 		logs.Error("create request error")
-		panic(err.Error())
+		//panic(err.Error())
+		return nil
 	}
 	if err != nil {
 		logs.Error("http get error:", err.Error())
-		panic(err.Error())
+		//panic(err.Error())
+		return nil
 	}
 	return resp.Body
 }
