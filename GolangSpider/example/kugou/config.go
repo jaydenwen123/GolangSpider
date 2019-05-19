@@ -16,7 +16,8 @@ var	(
 //定义保存歌曲的目录
 var (
 	boardSaveDir="example/kugou/board/"
-	likeSaveDir="F:\\Program Files\\go\\workspace\\src\\GolangSpider\\example\\kugou\\like\\"
+	likeSaveDir="F:/Program Files/go/workspace/src/GolangSpider/example/kugou/like/"
+	downloadSaveDir="F:/Program Files/go/workspace/src/GolangSpider/example/kugou/download/"
 )
 
 //定义通用的url

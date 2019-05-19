@@ -32,7 +32,7 @@ func Save2JsonFile(vData interface{}, filename string) {
 		logs.Error("write file error:", err.Error())
 		return
 	}
-	logs.Debug("save json success")
+	logs.Debug("save ",filename," success")
 }
 //保存成json文件
 func Save2FormatJsonFile(vData interface{}, filename string,indent string) {

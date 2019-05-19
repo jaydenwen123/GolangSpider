@@ -41,7 +41,7 @@ func DownloadMusic(hash,savePath string,fileSuffix string,fileIndex int,done cha
 	if song.Url==""{
 		logs.Error("歌曲没有下载链接！！！")
 		done<-DownloadMsg{FileName:song.Name,FileId:fileIndex,Success:false}
-		//return
+		return
 		//time.Sleep(time.Millisecond*20)
 		//DownloadMusic(hash,savePath,done)
 		//return

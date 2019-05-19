@@ -2,6 +2,8 @@ package kugou
 
 func Main()  {
 	//SpiderAllBoardMusic()
-	DownloadSearchMusic()
+	//DownloadSearchMusic()
+	//选择操作
+	DispatcherOperation()
 }
 
