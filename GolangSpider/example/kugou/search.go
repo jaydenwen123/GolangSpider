@@ -16,6 +16,8 @@ import (
 var (
 	//歌曲信息
 	songInfos  = make([]*SongInfo, 0)
+	downloadSongInfos =make([]*SongInfo,0)
+	downloadMVInfos =make([]*SongInfo,0)
 	argMessage = `命令行版的音乐播放器使用说明：
 Usage of spider:
   -keyword string
@@ -50,6 +52,8 @@ func DownloadSearchMusic() {
 	saveBasePath := path.Join(likeSaveDir, keyword)
 	logs.Info("正在初始化目录,请等待......")
 	initSaveDir(saveBasePath)
+	initSaveDir(downloadSaveMVDir)
+	initSaveDir(downloadSaveSongDir)
 	logs.Info("初始化目录完毕.....")
 	//解析json数据放在保存前面，采用go协程去解析，解约时间
 	//解析json数据，并得到hash

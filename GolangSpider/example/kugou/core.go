@@ -11,6 +11,8 @@ import (
 )
 
 const (
+	SHOW_SONG	="ssong"
+	SHOW_MV		="smv"
 	LIST_SONG   = "lsong"
 	LIST_MV     = "lmv"
 	DOWNLOAD_SONG    = "gsong"
@@ -88,6 +90,10 @@ func HandleOperation(operation string) {
 			cmd.Arguement = "1-5"
 			cmd.Arguements = SplitBlockArguements(cmd.Arguement)
 			mp.ListMV(cmd)
+		case SHOW_SONG:
+			mp.ShowSong(cmd)
+		case SHOW_MV:
+			mp.ShowMV(cmd)
 		default:
 			fmt.Printf("%s\n", "the operation is error.please show the help doc.")
 			//ShowHelp()
@@ -242,13 +248,17 @@ func ShowHelp() {
 	//5.退出程序
 	fmt.Println("here is the usage of  ",style,":")
 	fmt.Println("\t<lsong> <first-end>\n\t\t:means show the asc range musics list ")
+	fmt.Println("\t<lmv> <first-end>:\n\t\tmeans show the asc range mv list ")
 	fmt.Println("\t<gsong> <number> or <first1-end1,first2-end2...>:\n\t\tmeans download \n\t\tone music or download according the range")
 	fmt.Println("\t<gmv> <number> or <first1-end1,first2-end2...>:\n\t\tmeans download \n\t\tone mv or download according the range")
-	fmt.Println("\t<lmv> <first-end>:\n\t\tmeans show the asc range mv list ")
 	fmt.Println("\t<psong> <number>:\n\t\tmeans play the mv")
 	fmt.Println("\t<pmv> <number>:\n\t\tmeans play the song")
 	fmt.Println("\t<qsong> <keyword>:\n\t\tmeans to query song by key word")
 	fmt.Println("\t<qmv> <keyword>:\n\t\tmeans to query mv by key word")
+	fmt.Println("\t<lsong> <first-end>\n\t\t:means show the asc range musics list ")
+	fmt.Println("\t<lmv> <first-end>:\n\t\tmeans show the asc range mv list ")
+	fmt.Println("\t<ssong> :\n\t\tmeans show the download song list ")
+	fmt.Println("\t<smv> :\n\t\tmeans show the download mv list ")
 	fmt.Println("\t<chstyle> <newstyle> or <style> <newstyle>:\n\t\tmeans to change the style...")
 	fmt.Println("\t<chdelimiter> <newdelimiter>or <delimiter> <newdelimiter>:\n\t\tmeans to change the delimiter...")
 	fmt.Println("\t<help> or <h>:\n\t\tmeans to show the help information...")

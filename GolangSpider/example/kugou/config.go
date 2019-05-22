@@ -17,7 +17,8 @@ var	(
 var (
 	boardSaveDir="example/kugou/board/"
 	likeSaveDir="F:/Program Files/go/workspace/src/GolangSpider/example/kugou/like/"
-	downloadSaveDir="F:/Program Files/go/workspace/src/GolangSpider/example/kugou/download/"
+	downloadSaveSongDir="F:/Program Files/go/workspace/src/GolangSpider/example/kugou/download/song/"
+	downloadSaveMVDir="F:/Program Files/go/workspace/src/GolangSpider/example/kugou/download/mv/"
 )
 
 //定义通用的url
