@@ -37,6 +37,7 @@ var(
 	//data:=[]byte(strings.ToUpper("E23438F0448B148E595816DCC15D0D6E")+"kugoumvcloud")
 	//val := md5.Sum(data)
 	//fmt.Printf("%x",val)
+	mvSearchUrl=`https://mvsearch.kugou.com/mv_search?keyword={keyword}&page=1&pagesize={pagesize}&platform=WebFilter`
 	mvInfoUrl=`http://trackermv.kugou.com/interface/index/cmd=100&hash={hash}&key={key}&pid=6&ext=mp4&ismp3=0`
 
 	HEADER=map[string]string{"Content-Type": CONTENT_TYPE, "Cookie": COOKIE,
@@ -59,6 +60,7 @@ const (
 	SONG_NAME_PATH="data.audio_name"
 	IMG_URL_PATH="data.img"
 	PLAY_URL_PATH="data.play_url"
+
 
 )
 

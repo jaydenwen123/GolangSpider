@@ -1,8 +1,10 @@
 package main
 
 import (
+	"crypto/md5"
 	"fmt"
 	"os"
+	"strings"
 )
 
 func main() {
@@ -35,8 +37,12 @@ func main() {
 	//fmt.Println()
 	//fmt.Printf("ssafas>\b\b\b")
 	//fmt.Println()
-	TestFmt()
-
+	//TestFmt()
+	//c83b410711be23b67b064077dc5b238a
+	//c83b410711be23b67b064077dc5b238a
+	data:=[]byte(strings.ToUpper("51967E53BB70A713E908443F5350A21C")+"kugoumvcloud")
+	val := md5.Sum(data)
+	fmt.Printf("%x",val)
 }
 
 type point struct {

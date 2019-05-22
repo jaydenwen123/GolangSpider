@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"os"
 	"strconv"
+	"strings"
 	"time"
 )
 //播放接口
@@ -32,12 +33,25 @@ type MusicPlayer struct {
 }
 
 func (p *MusicPlayer) SearchMV(cmd *Command) {
-	fmt.Printf("%+v\n", cmd)
+	keyword=cmd.Arguement
+	//fmt.Printf("%+v\n", cmd)
+	//1.接收控制台参数
+	fmt.Printf("%s <%s> %s","your serach mv keyword is:",keyword,"are you sure using this? please select yes or no:")
+	var choice string
+	fmt.Scanf("%s\n",&choice)
+	if choice=="no"{
+		keyword=AcceptInputKeyWord()
+		//2.下载歌曲
+		DownloadSearchMV()
+	}else if choice=="yes" || choice=="ok" || choice==""{
+		//2.下载歌曲
+		DownloadSearchMV()
+	}
 }
 
 func (p *MusicPlayer) SearchSong(cmd *Command) {
 	keyword=cmd.Arguement
-	fmt.Printf("%+v\n", cmd)
+	//fmt.Printf("%+v\n", cmd)
 	//1.接收控制台参数
 	fmt.Printf("%s <%s> %s","your serach song keyword is:",keyword,"are you sure using this? please select yes or no:")
 	var choice string
@@ -45,20 +59,37 @@ func (p *MusicPlayer) SearchSong(cmd *Command) {
 	if choice=="no"{
 		keyword=AcceptInputKeyWord()
 		//2.下载歌曲
-		DownloadSearchMusic()
+		DownloadSearchMusicInfo()
 	}else if choice=="yes" || choice=="ok" || choice==""{
 		//2.下载歌曲
-		DownloadSearchMusic()
+		DownloadSearchMusicInfo()
 	}
 }
 
 func (p *MusicPlayer) ListMV(cmd *Command) {
-	fmt.Printf("%+v\n", cmd)
-
+	//fmt.Printf("%+v\n", cmd)
+	//列出所有的歌曲信息
+	if mvInfos==nil || len(mvInfos)==0{
+		fmt.Println("暂时没有MV，请先搜索MV后在执行该操作")
+		//time.Sleep(time.Millisecond*100)
+		return
+	}
+	first:=true
+	var mv *MVInfo
+	fmt.Println("\t\t\t",cmd.Arguement,"首歌曲的信息如下：\t\t\t")
+	for _,sIndex:=range cmd.Arguements{
+		index,_:=strconv.Atoi(sIndex)
+		mv=mvInfos[index-1]
+		if first{
+			mv.PrintTitle()
+			first=false
+		}
+		mv.PrintMainInfo()
+	}
 }
 
 func (p *MusicPlayer) ListSong(cmd *Command) {
-	fmt.Printf("%+v\n", cmd)
+	//fmt.Printf("%+v\n", cmd)
 	//列出所有的歌曲信息
 	if songInfos==nil || len(songInfos)==0{
 		fmt.Println("暂时没有歌曲，请先搜索歌曲后在执行该操作")
@@ -80,14 +111,14 @@ func (p *MusicPlayer) ListSong(cmd *Command) {
 }
 
 func (p *MusicPlayer) PlayMV(cmd *Command) {
-	fmt.Printf("%+v\n", cmd)
+	//fmt.Printf("%+v\n", cmd)
 	fmt.Println("暂时未开发该功能，请采用其他播放器播放下载的MV")
 	fmt.Println("下载的MV保存路径：",downloadSaveSongDir)
 
 }
 
 func (p *MusicPlayer) PlaySong(cmd *Command) {
-	fmt.Printf("%+v\n", cmd)
+	//fmt.Printf("%+v\n", cmd)
 	//fmt.Println()
 	songId,err:=strconv.Atoi(cmd.Arguements[0])
 	if err != nil {
@@ -123,7 +154,7 @@ func (p *MusicPlayer) PlaySong(cmd *Command) {
 }
 
 func (p *MusicPlayer) DownloadSong(cmd *Command) {
-	fmt.Printf("%+v\n", cmd)
+	//fmt.Printf("%+v\n", cmd)
 	start:=time.Now()
 	//遍历下载
 	dmsg:=make(chan DownloadMsg)
@@ -140,7 +171,7 @@ func (p *MusicPlayer) DownloadSong(cmd *Command) {
 			}
 			index++
 			song:=songInfos[songId]
-			go DownloadMusic(song.FileHash,downloadSaveSongDir,".mp3",songId+1,dmsg)
+			go DownloadMusic(song.FileHash,downloadSaveSongDir+keyword,".mp3",songId+1,dmsg)
 		}
 	}
 	download:=0
@@ -161,30 +192,52 @@ func (p *MusicPlayer) DownloadSong(cmd *Command) {
 		logs.Info("总共下载",downloadCount, "个文件!\t下载成功", download,"个文件\t","下载失败",downloadCount-download,"个文件\t","总耗时为", fmt.Sprintf("%v", time.Since(start)))
 	}
 
-
 }
 func (p *MusicPlayer) DownloadMV(cmd *Command) {
-	fmt.Printf("%+v\n", cmd)
+	//fmt.Printf("%+v\n", cmd)
+	start:=time.Now()
 	//遍历下载
-	/*dmsg:=make(chan DownloadMsg)
-	for _,songIds:=range cmd.Arguements{
-		if songId, err := strconv.Atoi(songIds);err!=nil{
-			fmt.Fprintf(os.Stderr,"%s",err.Error())
+	dmsg:=make(chan DownloadMsg)
+	index:=0
+	downloadCount:=len(cmd.Arguements)
+	//遍历下载
+	for _,mvIds:=range cmd.Arguements{
+		mvId, err := strconv.Atoi(mvIds)
+		if err != nil {
+			fmt.Println("你选择的MV的编号不是数字，请检查后重新输入.",err.Error())
 		}else{
-			song:=songInfos[songId]
-			go DownloadMusic(song.FileHash,likeSaveDir,".mp3",songId,dmsg)
+			mvId=mvId-1
+			if mvId>len(mvInfos)-1 {
+				fmt.Println("当前MV编号",mvId+1,"过大下载的MV总共有",len(mvInfos),"首，请等待其他MV下载完成后在重新选择MV")
+				continue
+			}
+			index++
+			mv:=mvInfos[mvId]
+			go DownloadMV(mv,downloadSaveMVDir+keyword,".mp4",mvId+1,dmsg)
 		}
+
 	}
-	for  range cmd.Arguements{
+
+	download:=0
+	hasDownload:=false
+	for index>0{
 		downloadInfo:=<-dmsg
+		hasDownload=true
 		if downloadInfo.Success {
-			logs.Info("第  (", downloadInfo.FileId, ")  个歌曲  [", downloadInfo.FileName, "]  ", "下载成功")
+			logs.Info("第  (", downloadInfo.FileId, ")  个MV  [", downloadInfo.FileName, "]  ", "下载成功")
+			download++
 		} else {
-			logs.Error("第  (", downloadInfo.FileId, ")  个歌曲  [", downloadInfo.FileName, "]  ", "下载失败")
+			logs.Error("第  (", downloadInfo.FileId, ")  个MV  [", downloadInfo.FileName, "]  ", "下载失败")
 		}
+		index--
 	}
-	logs.Info("指定的歌曲下载完毕，请继续选择操作!!!!")*/
+	if hasDownload{
+		logs.Info("指定的MV下载完毕，请继续选择操作!!!!")
+		logs.Info("总共下载",downloadCount, "个MV!\t下载成功", download,"个文件\t","下载失败",downloadCount-download,"个文件\t","总耗时为", fmt.Sprintf("%v", time.Since(start)))
+	}
 }
+
+
 //显示已经下载的歌曲
 func (p *MusicPlayer) ShowSong(command *Command) {
 	//downloadSaveDir
@@ -199,26 +252,72 @@ func  ListDownload(dirPath string) {
 		fmt.Println("暂时无法读取到下载的歌曲或者MV信息，请稍后重试...")
 		return
 	}
-
+	id:=0
 	if dirPath==downloadSaveSongDir{
 		fmt.Println("歌曲编号\t\t歌曲大小\t\t歌曲名称")
-		for index, file := range files {
-			fmt.Println("   ", index, "\t\t\t", fmt.Sprintf("%.2f", (float64(file.Size()) / float64(1024*1024))), "M\t\t", file.Name())
-			downloadSongInfos=append(downloadSongInfos,&SongInfo{
-				FileId:strconv.Itoa(index),
-				Name:file.Name(),
-				FileSize:fmt.Sprintf("%.2f", (float64(file.Size()) / float64(1024*1024)))+"M",
-			})
+		for _, file := range files {
+			if !file.IsDir(){
+				if strings.HasSuffix(file.Name(),".mp3"){
+					fmt.Println("   ", id, "\t\t\t", fmt.Sprintf("%.2f", (float64(file.Size()) / float64(1024*1024))), "M\t\t", file.Name())
+					downloadSongInfos = append(downloadSongInfos, &SongInfo{
+						FileId:   strconv.Itoa(id),
+						Name:     file.Name(),
+						FileSize: fmt.Sprintf("%.2f", (float64(file.Size()) / float64(1024*1024))) + "M",
+					})
+					id++
+				}
+			}else{
+				if fileinfos, err := ioutil.ReadDir(dirPath+"/"+file.Name());err!=nil{
+					logs.Error("read download files error.", err.Error())
+					fmt.Println("暂时无法读取到下载的歌曲或者MV信息，请稍后重试...")
+					return
+				}else{
+					for _,fileinfo:=range fileinfos{
+						if strings.HasSuffix(fileinfo.Name(),".mp3"){
+							fmt.Println("   ", id, "\t\t\t", fmt.Sprintf("%.2f", (float64(fileinfo.Size()) / float64(1024*1024))), "M\t\t", fileinfo.Name())
+							downloadSongInfos = append(downloadSongInfos, &SongInfo{
+								FileId:   strconv.Itoa(id),
+								Name:     fileinfo.Name(),
+								FileSize: fmt.Sprintf("%.2f", (float64(fileinfo.Size()) / float64(1024*1024))) + "M",
+							})
+							id++
+						}
+					}
+				}
+			}
 		}
 	}else if dirPath==downloadSaveMVDir{
 		fmt.Println("歌曲编号\t\tMV大小\t\tMV名称")
-		for index, file := range files {
-			fmt.Println("   ", index, "\t\t\t", fmt.Sprintf("%.2f", (float64(file.Size()) / float64(1024*1024))), "M\t\t", file.Name())
-			downloadMVInfos=append(downloadMVInfos,&SongInfo{
-				FileId:strconv.Itoa(index),
-				Name:file.Name(),
-				FileSize:fmt.Sprintf("%.2f", (float64(file.Size()) / float64(1024*1024)))+"M",
-			})
+		for _, file := range files {
+			if !file.IsDir(){
+				if strings.HasSuffix(file.Name(),".mp4"){
+					fmt.Println("   ", id, "\t\t\t", fmt.Sprintf("%3.2f", (float64(file.Size()) / float64(1024*1024))), "M\t\t", file.Name())
+					downloadMVInfos = append(downloadMVInfos, &MVInfo{
+						MVId:   strconv.Itoa(id),
+						MVName: file.Name(),
+						Size:fmt.Sprintf("%3.2f", (float64(file.Size()) / float64(1024*1024)))+"M",
+					})
+					id++
+				}
+			}else{
+				if fileinfos, err := ioutil.ReadDir(dirPath+"/"+file.Name());err!=nil{
+					logs.Error("read download files error.", err.Error())
+					fmt.Println("暂时无法读取到下载的歌曲或者MV信息，请稍后重试...")
+					return
+				}else{
+					for _,fileinfo:=range fileinfos{
+						if strings.HasSuffix(fileinfo.Name(),".mp4"){
+							fmt.Println("   ", id, "\t\t\t", fmt.Sprintf("%3.2f", (float64(fileinfo.Size()) / float64(1024*1024))), "M\t\t", fileinfo.Name())
+							downloadMVInfos=append(downloadMVInfos,&MVInfo{
+								MVId:strconv.Itoa(id),
+								MVName:fileinfo.Name(),
+								Size:fmt.Sprintf("%3.2f", (float64(fileinfo.Size()) / float64(1024*1024)))+"M",
+							})
+							id++
+						}
+					}
+				}
+			}
 		}
 	}
 

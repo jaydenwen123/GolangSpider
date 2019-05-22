@@ -1,6 +1,47 @@
 package kugou
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
+
+type MVDetail struct {
+	MVHash   string
+	MVKey      string
+	MVHashMark string
+	Duration   string
+	MVSize     string
+	MVUrl	string
+}
+
+//mv信息
+type MVInfo struct {
+	MVId	string
+	MVName 	string
+	MVDetail map[string]*MVDetail
+	Hash 	string
+	Key		string
+	DetailUrl	string
+	HashMark string
+	Duration   string
+	Size     string
+}
+
+func (mv *MVInfo) PrintTitle() {
+	fmt.Println("MV编号\t\t  MV大小\t\tMV时长\t\t\tMV名称\t\t")
+	fmt.Println("------------------------------------------------------" +
+		"-------------------------------------------------------------------" +
+		"-------------------")
+}
+
+func (mv *MVInfo) PrintMainInfo() {
+	fmt.Println("  ",mv.MVId,"\t\t",mv.Size,"\t\t",mv.Duration,"\t\t",mv.MVName,"\t\t")
+}
+
+func (mv *MVInfo) ToString() string{
+	return "MV名称："+mv.MVName+"\nMV原链接："+mv.DetailUrl+"\n该MV总共有:"+strconv.Itoa(len(mv.MVDetail))+"个版本"
+}
+
 
 type SongInfo struct {
 	FileId string
@@ -51,3 +92,5 @@ func (this *SongInfo) PrintTitle()  {
 	fmt.Printf( "%5s%15s%13s%13s%50s\n","歌曲编号","专辑名称","文件大小",
 		"时长","歌曲名称")
 }
+
+

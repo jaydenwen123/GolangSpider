@@ -255,8 +255,6 @@ func ShowHelp() {
 	fmt.Println("\t<pmv> <number>:\n\t\tmeans play the song")
 	fmt.Println("\t<qsong> <keyword>:\n\t\tmeans to query song by key word")
 	fmt.Println("\t<qmv> <keyword>:\n\t\tmeans to query mv by key word")
-	fmt.Println("\t<lsong> <first-end>\n\t\t:means show the asc range musics list ")
-	fmt.Println("\t<lmv> <first-end>:\n\t\tmeans show the asc range mv list ")
 	fmt.Println("\t<ssong> :\n\t\tmeans show the download song list ")
 	fmt.Println("\t<smv> :\n\t\tmeans show the download mv list ")
 	fmt.Println("\t<chstyle> <newstyle> or <style> <newstyle>:\n\t\tmeans to change the style...")

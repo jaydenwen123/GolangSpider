@@ -1,0 +1,40 @@
+here is the usage of   somusic :
+	<lsong> <first-end>
+		:means show the asc range musics list 
+	<lmv> <first-end>:
+		means show the asc range mv list 
+	<gsong> <number> or <first1-end1,first2-end2...>:
+		means download 
+		one music or download according the range
+	<gmv> <number> or <first1-end1,first2-end2...>:
+		means download 
+		one mv or download according the range
+	<psong> <number>:
+		means play the mv
+	<pmv> <number>:
+		means play the song
+	<qsong> <keyword>:
+		means to query song by key word
+	<qmv> <keyword>:
+		means to query mv by key word
+	<lsong> <first-end>
+		:means show the asc range musics list 
+	<lmv> <first-end>:
+		means show the asc range mv list 
+	<ssong> :
+		means show the download song list 
+	<smv> :
+		means show the download mv list 
+	<chstyle> <newstyle> or <style> <newstyle>:
+		means to change the style...
+	<chdelimiter> <newdelimiter>or <delimiter> <newdelimiter>:
+		means to change the delimiter...
+	<help> or <h>:
+		means to show the help information...
+	<quit> or CTRL+C:
+		means to quit the program...
+	<exit> or CTRL+C:
+		means to exit the program...
+	<cls> or <clear>:
+		means to clear the log info...
+somusic>somusic>somusic>
