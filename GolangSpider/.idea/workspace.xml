@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26f46a43-501d-4b25-ade2-0a72ecc14bbb" name="Default Changelist" comment=" 完成了一些工具类如下载文件、保存json文件、xml文件等工具类。同时完成了中国票房——实时票房榜的数据爬取和存储">
-      <change afterPath="$PROJECT_DIR$/example/kugou/mv.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/kugou/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/example/kugou/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/kugou/core.go" beforeDir="false" afterPath="$PROJECT_DIR$/example/kugou/core.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/kugou/download/song/沈木 - 脑子要灵活不然怎么当老大.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/kugou/download/song/沐泽 - 忍者时代即将结束.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/kugou/download/song/沐泽 - 极致纯电音 (沐泽remix).mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/kugou/download/song/沐泽 - 沈木-沐泽-最火EA7（DJ版）（沐泽 remix）.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/kugou/download/song/禹豪 - 极致纯电音.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/kugou/download/song/蹦迪的词叔 - 笑到最后是大哥.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/kugou/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/example/kugou/model.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/kugou/player.go" beforeDir="false" afterPath="$PROJECT_DIR$/example/kugou/player.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/kugou/search.go" beforeDir="false" afterPath="$PROJECT_DIR$/example/kugou/song.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +69,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example/kugou/core.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
+            <state relative-caret-position="5934">
               <caret line="266" selection-start-line="266" selection-end-line="266" />
             </state>
           </provider>
@@ -90,8 +78,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/example/kugou/player.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="330" column="21" lean-forward="true" selection-start-line="330" selection-start-column="21" selection-end-line="330" selection-end-column="21" />
+            <state relative-caret-position="316">
+              <caret line="299" column="24" selection-start-line="299" selection-start-column="24" selection-end-line="299" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -99,7 +87,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example/kugou/mv.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
+            <state relative-caret-position="3220">
               <caret line="151" column="29" selection-start-line="151" selection-start-column="29" selection-end-line="151" selection-end-column="29" />
             </state>
           </provider>
@@ -108,7 +96,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example/kugou/common.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
+            <state relative-caret-position="391">
               <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
             </state>
           </provider>
@@ -282,7 +270,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="675" />
     <option name="width" value="691" />
     <option name="height" value="728" />
@@ -305,19 +293,6 @@
               <item name="GolangSpider" type="b2602c69:ProjectViewProjectNode" />
               <item name="GolangSpider" type="462c0819:PsiDirectoryNode" />
               <item name="example" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GolangSpider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GolangSpider" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="kugou" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GolangSpider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GolangSpider" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="kugou" type="462c0819:PsiDirectoryNode" />
-              <item name="download" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -430,10 +405,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6870416" visible="true" weight="0.23146747" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6870416" visible="true" weight="0.1603631" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924356" weight="0.3295082" />
@@ -448,12 +422,12 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.6240545" side_tool="true" weight="0.40819672" />
       <window_info anchor="bottom" x="0" y="0" width="295" height="544" id="Documentation" order="11" sideWeight="0.44553706" side_tool="true" weight="0.3852459" />
       <window_info anchor="bottom" id="Database Console" order="12" sideWeight="0.44326776" weight="0.32786885" />
-      <window_info anchor="bottom" x="8" y="31" width="1012" height="689" id="Terminal" order="13" sideWeight="0.5544629" visible="true" weight="0.4180328" />
+      <window_info anchor="bottom" x="8" y="31" width="1352" height="689" id="Terminal" order="13" sideWeight="0.5544629" type="WINDOWED" weight="0.7" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" sideWeight="0.4975" weight="0.12859304" />
-      <window_info active="true" anchor="right" id="Structure" order="4" sideWeight="0.44356954" side_tool="true" visible="true" weight="0.15582451" />
+      <window_info anchor="right" id="Structure" order="4" sideWeight="0.44356954" side_tool="true" visible="true" weight="0.15582451" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6870416" visible="true" weight="0.21633889" />
@@ -562,13 +536,7 @@
     <entry file="file://$PROJECT_DIR$/example/kugou/rank/list.json" />
     <entry file="file://$PROJECT_DIR$/example/kugou/like/list.json" />
     <entry file="file://$PROJECT_DIR$/example/kugou/like/极致纯电音.json" />
-    <entry file="file://$PROJECT_DIR$/example/log.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1650">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/example/log.txt" />
     <entry file="file://$PROJECT_DIR$/example/kugou/like/你一定要幸福/你一定要幸福.json" />
     <entry file="file://$USER_HOME$/Desktop/recovery/core.go" />
     <entry file="file://$PROJECT_DIR$/example/kugou/spider.go" />
@@ -699,6 +667,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="91" column="16" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/kugou/core.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5934">
+          <caret line="266" selection-start-line="266" selection-end-line="266" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/kugou/mv.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3220">
+          <caret line="151" column="29" selection-start-line="151" selection-start-column="29" selection-end-line="151" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/kugou/common.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/example/kugou/song.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1610">
@@ -737,38 +733,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="91" column="16" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/kugou/mv.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="151" column="29" selection-start-line="151" selection-start-column="29" selection-end-line="151" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/kugou/common.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/kugou/core.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="266" selection-start-line="266" selection-end-line="266" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/example/kugou/player.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="330" column="21" lean-forward="true" selection-start-line="330" selection-start-column="21" selection-end-line="330" selection-end-column="21" />
+        <state relative-caret-position="316">
+          <caret line="299" column="24" selection-start-line="299" selection-start-column="24" selection-end-line="299" selection-end-column="24" />
         </state>
       </provider>
     </entry>
