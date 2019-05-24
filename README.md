@@ -17,5 +17,5 @@ framework to complete this project.Now let's start.
 3. gorm(https://github.com/jinzhu/gorm)
 4. beego orm(https://github.com/astaxie/beego/orm)
 5. beego logs(https://github.com/astaxie/beego/logs)
-6. regexp   standard library
-7. net/http  standard library
+6. regexp   standard library(https://studygolang.com/pkgdoc)
+7. net/http  standard library(https://studygolang.com/pkgdoc)
