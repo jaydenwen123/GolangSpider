@@ -2,6 +2,16 @@
 this is my network spider with golang language.in this project,I use the following  real examples and  the following technology  and 
 framework to complete this project.Now let's start.
 
+## Using Technology And FrameWork ##
+1. gjson(https://github.com/tidwall/gjson)
+2. goquery(https://github.com/PuerkitoBio/goquery)
+3. gorm(https://github.com/jinzhu/gorm)
+4. beego orm(https://github.com/astaxie/beego/orm)
+5. beego logs(https://github.com/astaxie/beego/logs)
+6. regexp   standard library(https://studygolang.com/pkgdoc)
+7. net/http  standard library(https://studygolang.com/pkgdoc)
+8. channel&goroutine(https://gobyexample.com)
+
 ## Using Examples ##
 1. **中国票房**(http://www.cbooo.cn/)
 ![中国票房](https://github.com/wenxiaofeiCode/GolangSpider/blob/master/GolangSpider/example/images/cbooo.png)
@@ -34,15 +44,8 @@ framework to complete this project.Now let's start.
 7. **拉勾网**
 ![拉勾网](https://github.com/wenxiaofeiCode/GolangSpider/blob/master/GolangSpider/example/images/lagou.png)
 
-## Using Technology And FrameWork ##
-1. gjson(https://github.com/tidwall/gjson)
-2. goquery(https://github.com/PuerkitoBio/goquery)
-3. gorm(https://github.com/jinzhu/gorm)
-4. beego orm(https://github.com/astaxie/beego/orm)
-5. beego logs(https://github.com/astaxie/beego/logs)
-6. regexp   standard library(https://studygolang.com/pkgdoc)
-7. net/http  standard library(https://studygolang.com/pkgdoc)
-
 ## Other Reference ##
 1. command line music downloader.(....)
 2. mybook(.....)
+3. gobyexample(https://gobyexample.com)
+4. https://github.com/GopherCoder/Go-Spider
