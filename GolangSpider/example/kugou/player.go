@@ -5,6 +5,7 @@ import (
 	"github.com/astaxie/beego/logs"
 	"io/ioutil"
 	"os"
+	"path/filepath"
 	"strconv"
 	"strings"
 	"time"
@@ -27,9 +28,71 @@ type Player interface {
 	DownloadSong(cmd *Command)
 	//DOWNLOAD_MV:
 	DownloadMV(cmd *Command)
+	//PATH_SONG:
+	ShowSongPath(cmd *Command)
+	//PATH_MV:
+	ShowMVPath(cmd *Command)
+	//CHANGE_PATH_SONG:
+	ChangeSongPath(cmd *Command)
+	//CHANGE_PATH_MV:
+	ChangeMVPath(cmd *Command)
 }
 
 type MusicPlayer struct {
+}
+
+func (p *MusicPlayer) ShowSongPath(cmd *Command) {
+	if !filepath.IsAbs(downloadSaveSongDir){
+		if abs, err := filepath.Abs(downloadSaveSongDir);err!=nil{
+			fmt.Println("当前的歌曲目录有问题，请使用命令重新设置歌曲保存目录..",err.Error())
+		}else{
+			fmt.Println(abs)
+		}
+	} else {
+		fmt.Println(downloadSaveSongDir)
+	}
+}
+
+func (p *MusicPlayer) ShowMVPath(cmd *Command) {
+	if !filepath.IsAbs(downloadSaveMVDir){
+		if abs, err := filepath.Abs(downloadSaveMVDir);err!=nil{
+			fmt.Println("当前的MV目录有问题，请使用命令重新设置MV保存目录..",err.Error())
+		}else{
+			fmt.Println(abs)
+		}
+	}else{
+		fmt.Println(downloadSaveMVDir)
+	}
+}
+
+func (p *MusicPlayer) ChangeSongPath(cmd *Command) {
+	newPath:=cmd.Arguement
+	if newPath=="~"{
+		downloadSaveSongDir=downloadSaveSongDirDefault
+		return
+	}
+	//校验目录是否正确
+	if err := initDir(newPath+"\\"+keyword);err==nil{
+		fmt.Println("初始化新目录完毕....")
+		downloadSaveSongDir,_=filepath.Abs(newPath)
+		downloadSaveSongDir=downloadSaveSongDir+"\\"
+	}
+}
+
+func (p *MusicPlayer) ChangeMVPath(cmd *Command) {
+
+	newPath:=cmd.Arguement
+	if newPath=="~"{
+		downloadSaveMVDir=downloadSaveMVDirDefault
+		return
+	}
+
+	//校验目录是否正确
+	if err := initDir(newPath+"\\"+keyword);err==nil{
+		fmt.Println("初始化新目录完毕....")
+		downloadSaveMVDir,_=filepath.Abs(newPath)
+		downloadSaveMVDir=downloadSaveMVDir+"\\"
+	}
 }
 
 func (p *MusicPlayer) SearchMV(cmd *Command) {

@@ -21,6 +21,11 @@ const (
 	PLAY_MV     = "pmv"
 	SEARCH_SONG = "qsong"
 	SEARCH_MV   = "qmv"
+	PATH_MV = "mvpath"
+	PATH_SONG   = "songpath"
+	CHANGE_PATH_MV = "chmvpath"
+	CHANGE_PATH_SONG   = "chsongpath"
+
 	CHSTYLE   = "chstyle"
 	STYLE   = "style"
 	CHDELIMITER   = "chdelimiter"
@@ -94,6 +99,10 @@ func HandleOperation(operation string) {
 			mp.ShowSong(cmd)
 		case SHOW_MV:
 			mp.ShowMV(cmd)
+		case PATH_SONG:
+			mp.ShowSongPath(cmd)
+		case PATH_MV:
+			mp.ShowMVPath(cmd)
 		default:
 			fmt.Printf("%s\n", "the operation is error.please show the help doc.")
 			//ShowHelp()
@@ -170,6 +179,10 @@ func HandleOperation(operation string) {
 			style=op[1]
 		case CHSTYLE:
 			style=op[1]
+		case CHANGE_PATH_SONG:
+			mp.ChangeSongPath(cmd)
+		case CHANGE_PATH_MV:
+			mp.ChangeMVPath(cmd)
 		default:
 			fmt.Println("unsupported action,please select operation again..")
 			//ShowHelp()
@@ -238,29 +251,3 @@ func SplitBlockArguements(args string) []string {
 	return arguements
 }
 
-//显示操作说明
-func ShowHelp() {
-	//1.下载排名靠前的多少首歌曲
-
-	//2.查看歌曲信息列表<歌曲名、专辑、时长>
-	//3.播放歌曲
-	//4.查看帮助文档
-	//5.退出程序
-	fmt.Println("here is the usage of  ",style,":")
-	fmt.Println("\t<lsong> <first-end>\n\t\t:means show the asc range musics list ")
-	fmt.Println("\t<lmv> <first-end>:\n\t\tmeans show the asc range mv list ")
-	fmt.Println("\t<gsong> <number> or <first1-end1,first2-end2...>:\n\t\tmeans download \n\t\tone music or download according the range")
-	fmt.Println("\t<gmv> <number> or <first1-end1,first2-end2...>:\n\t\tmeans download \n\t\tone mv or download according the range")
-	fmt.Println("\t<psong> <number>:\n\t\tmeans play the mv")
-	fmt.Println("\t<pmv> <number>:\n\t\tmeans play the song")
-	fmt.Println("\t<qsong> <keyword>:\n\t\tmeans to query song by key word")
-	fmt.Println("\t<qmv> <keyword>:\n\t\tmeans to query mv by key word")
-	fmt.Println("\t<ssong> :\n\t\tmeans show the download song list ")
-	fmt.Println("\t<smv> :\n\t\tmeans show the download mv list ")
-	fmt.Println("\t<chstyle> <newstyle> or <style> <newstyle>:\n\t\tmeans to change the style...")
-	fmt.Println("\t<chdelimiter> <newdelimiter>or <delimiter> <newdelimiter>:\n\t\tmeans to change the delimiter...")
-	fmt.Println("\t<help> or <h>:\n\t\tmeans to show the help information...")
-	fmt.Println("\t<quit> or CTRL+C:\n\t\tmeans to quit the program...")
-	fmt.Println("\t<exit> or CTRL+C:\n\t\tmeans to exit the program...")
-	fmt.Println("\t<cls> or <clear>:\n\t\tmeans to clear the log info...")
-}

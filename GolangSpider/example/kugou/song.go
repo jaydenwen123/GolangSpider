@@ -52,9 +52,9 @@ func DownloadSearchMusicInfo() {
 	//初始化保存歌曲目录
 	saveBasePath := path.Join(downloadSaveSongDir, keyword)
 	logs.Info("正在初始化目录,请等待......")
-	initSaveDir(saveBasePath)
+	initDir(saveBasePath)
 	//initSaveDir(downloadSaveMVDir)
-	initSaveDir(downloadSaveSongDir)
+	initDir(downloadSaveSongDir)
 	logs.Info("初始化目录完毕.....")
 	//解析json数据放在保存前面，采用go协程去解析，解约时间
 	//解析json数据，并得到hash

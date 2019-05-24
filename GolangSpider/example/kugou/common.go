@@ -12,15 +12,15 @@ import (
 )
 
 //目录不存在则创建，存在则跳过
-func initSaveDir(basePath string) {
+func initDir(basePath string) error{
 	_, err := os.Stat(basePath)
 	if err != nil && os.IsNotExist(err) {
 		err = os.MkdirAll(basePath,os.ModeDir)
 		if err != nil {
-			logs.Error("create save board music direcotry error.")
+			logs.Error("create directory error.",err.Error())
 		}
 	}
-
+	return err
 }
 
 //根据每首歌曲的hash值下载歌曲

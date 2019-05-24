@@ -37,7 +37,7 @@ func SpiderAllBoardMusic() {
 func DownMusicBoardSongs(name string, url string, finish chan bool) {
 	//1.创建目录
 	savePath:=path.Join(boardSaveDir,name)
-	initSaveDir(savePath)
+	initDir(savePath)
 	//fmt.Println("歌曲保存的路径：",savePath)
 	//2.解析歌曲数据，歌曲数据放在javascript中，所以需要解析
 	songInfos := ParseBoardSongsInfo(url)
