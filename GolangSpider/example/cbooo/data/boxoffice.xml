@@ -1,8 +1,23 @@
  <BoxOffice>
  	<Title>CBO实时票房榜</Title>
- 	<TodayBigBar>&amp;nbsp;&amp;nbsp;今日大盘 ： 1867.3万</TodayBigBar>
+ 	<TodayBigBar>&amp;nbsp;&amp;nbsp;今日大盘 ： 10392.5万</TodayBigBar>
  	<BoxOfficeInfos>
  		<RankNo>1</RankNo>
+ 		<Movie>
+ 			<MovieId>681635</MovieId>
+ 			<MovieName>阿拉丁</MovieName>
+ 			<NickName></NickName>
+ 			<MovieType></MovieType>
+ 			<MoviePoster>http://www.cbooo.cn/moviepic/681635.jpg</MoviePoster>
+ 		</Movie>
+ 		<RealSale>3625.1</RealSale>
+ 		<SaleRatio>34.88%</SaleRatio>
+ 		<AccumulateSale>6559.1</AccumulateSale>
+ 		<MovieRatio>27.12%</MovieRatio>
+ 		<PublishDays>2</PublishDays>
+ 	</BoxOfficeInfos>
+ 	<BoxOfficeInfos>
+ 		<RankNo>2</RankNo>
  		<Movie>
  			<MovieId>670828</MovieId>
  			<MovieName>大侦探皮卡丘</MovieName>
@@ -10,29 +25,74 @@
  			<MovieType></MovieType>
  			<MoviePoster>http://www.cbooo.cn/moviepic/670828.jpg</MoviePoster>
  		</Movie>
- 		<RealSale>833.5</RealSale>
- 		<SaleRatio>44.64%</SaleRatio>
- 		<AccumulateSale>28625</AccumulateSale>
- 		<MovieRatio>39.11%</MovieRatio>
- 		<PublishDays>4</PublishDays>
- 	</BoxOfficeInfos>
- 	<BoxOfficeInfos>
- 		<RankNo>2</RankNo>
- 		<Movie>
- 			<MovieId>670808</MovieId>
- 			<MovieName>复仇者联盟4：...</MovieName>
- 			<NickName></NickName>
- 			<MovieType></MovieType>
- 			<MoviePoster>http://www.cbooo.cn/moviepic/670808.jpg</MoviePoster>
- 		</Movie>
- 		<RealSale>542.5</RealSale>
- 		<SaleRatio>29.05%</SaleRatio>
- 		<AccumulateSale>411599.9</AccumulateSale>
- 		<MovieRatio>23.08%</MovieRatio>
- 		<PublishDays>20</PublishDays>
+ 		<RealSale>1796.4</RealSale>
+ 		<SaleRatio>17.29%</SaleRatio>
+ 		<AccumulateSale>55468.8</AccumulateSale>
+ 		<MovieRatio>14.10%</MovieRatio>
+ 		<PublishDays>16</PublishDays>
  	</BoxOfficeInfos>
  	<BoxOfficeInfos>
  		<RankNo>3</RankNo>
+ 		<Movie>
+ 			<MovieId>682691</MovieId>
+ 			<MovieName>哥斯拉2：怪兽...</MovieName>
+ 			<NickName></NickName>
+ 			<MovieType></MovieType>
+ 			<MoviePoster>http://www.cbooo.cn/moviepic/682691.jpg</MoviePoster>
+ 		</Movie>
+ 		<RealSale>1322</RealSale>
+ 		<SaleRatio>12.72%</SaleRatio>
+ 		<AccumulateSale>1322</AccumulateSale>
+ 		<MovieRatio>0.51%</MovieRatio>
+ 		<PublishDays>0</PublishDays>
+ 	</BoxOfficeInfos>
+ 	<BoxOfficeInfos>
+ 		<RankNo>4</RankNo>
+ 		<Movie>
+ 			<MovieId>681795</MovieId>
+ 			<MovieName>一条狗的使命2</MovieName>
+ 			<NickName></NickName>
+ 			<MovieType></MovieType>
+ 			<MoviePoster>http://www.cbooo.cn/moviepic/681795.jpg</MoviePoster>
+ 		</Movie>
+ 		<RealSale>1094.9</RealSale>
+ 		<SaleRatio>10.54%</SaleRatio>
+ 		<AccumulateSale>15034.6</AccumulateSale>
+ 		<MovieRatio>12.94%</MovieRatio>
+ 		<PublishDays>9</PublishDays>
+ 	</BoxOfficeInfos>
+ 	<BoxOfficeInfos>
+ 		<RankNo>5</RankNo>
+ 		<Movie>
+ 			<MovieId>692267</MovieId>
+ 			<MovieName>五月天人生无限...</MovieName>
+ 			<NickName></NickName>
+ 			<MovieType></MovieType>
+ 			<MoviePoster>http://www.cbooo.cn/moviepic/692267.jpg</MoviePoster>
+ 		</Movie>
+ 		<RealSale>885.4</RealSale>
+ 		<SaleRatio>8.52%</SaleRatio>
+ 		<AccumulateSale>2040</AccumulateSale>
+ 		<MovieRatio>12.53%</MovieRatio>
+ 		<PublishDays>2</PublishDays>
+ 	</BoxOfficeInfos>
+ 	<BoxOfficeInfos>
+ 		<RankNo>6</RankNo>
+ 		<Movie>
+ 			<MovieId>683927</MovieId>
+ 			<MovieName>龙珠超：布罗利</MovieName>
+ 			<NickName></NickName>
+ 			<MovieType></MovieType>
+ 			<MoviePoster>http://www.cbooo.cn/moviepic/683927.jpg</MoviePoster>
+ 		</Movie>
+ 		<RealSale>625.8</RealSale>
+ 		<SaleRatio>6.02%</SaleRatio>
+ 		<AccumulateSale>1319.9</AccumulateSale>
+ 		<MovieRatio>13.10%</MovieRatio>
+ 		<PublishDays>2</PublishDays>
+ 	</BoxOfficeInfos>
+ 	<BoxOfficeInfos>
+ 		<RankNo>7</RankNo>
  		<Movie>
  			<MovieId>681412</MovieId>
  			<MovieName>何以为家</MovieName>
@@ -40,14 +100,14 @@
  			<MovieType></MovieType>
  			<MoviePoster>http://www.cbooo.cn/moviepic/681412.jpg</MoviePoster>
  		</Movie>
- 		<RealSale>206.8</RealSale>
- 		<SaleRatio>11.08%</SaleRatio>
- 		<AccumulateSale>28665.9</AccumulateSale>
- 		<MovieRatio>16.13%</MovieRatio>
- 		<PublishDays>15</PublishDays>
+ 		<RealSale>353.9</RealSale>
+ 		<SaleRatio>3.41%</SaleRatio>
+ 		<AccumulateSale>35847.3</AccumulateSale>
+ 		<MovieRatio>3.80%</MovieRatio>
+ 		<PublishDays>27</PublishDays>
  	</BoxOfficeInfos>
  	<BoxOfficeInfos>
- 		<RankNo>4</RankNo>
+ 		<RankNo>8</RankNo>
  		<Movie>
  			<MovieId>667122</MovieId>
  			<MovieName>一个母亲的复仇</MovieName>
@@ -55,100 +115,40 @@
  			<MovieType></MovieType>
  			<MoviePoster>http://www.cbooo.cn/moviepic/667122.jpg</MoviePoster>
  		</Movie>
- 		<RealSale>176.4</RealSale>
- 		<SaleRatio>9.45%</SaleRatio>
- 		<AccumulateSale>4238.6</AccumulateSale>
- 		<MovieRatio>12.42%</MovieRatio>
- 		<PublishDays>4</PublishDays>
- 	</BoxOfficeInfos>
- 	<BoxOfficeInfos>
- 		<RankNo>5</RankNo>
- 		<Movie>
- 			<MovieId>682089</MovieId>
- 			<MovieName>罗马</MovieName>
- 			<NickName></NickName>
- 			<MovieType></MovieType>
- 			<MoviePoster>http://www.cbooo.cn/moviepic/682089.jpg</MoviePoster>
- 		</Movie>
- 		<RealSale>23.2</RealSale>
- 		<SaleRatio>1.24%</SaleRatio>
- 		<AccumulateSale>307.4</AccumulateSale>
- 		<MovieRatio>1.29%</MovieRatio>
- 		<PublishDays>4</PublishDays>
- 	</BoxOfficeInfos>
- 	<BoxOfficeInfos>
- 		<RankNo>6</RankNo>
- 		<Movie>
- 			<MovieId>691925</MovieId>
- 			<MovieName>进京城</MovieName>
- 			<NickName></NickName>
- 			<MovieType></MovieType>
- 			<MoviePoster>http://www.cbooo.cn/moviepic/691925.jpg</MoviePoster>
- 		</Movie>
- 		<RealSale>17.4</RealSale>
- 		<SaleRatio>0.93%</SaleRatio>
- 		<AccumulateSale>365.8</AccumulateSale>
- 		<MovieRatio>1.42%</MovieRatio>
- 		<PublishDays>4</PublishDays>
- 	</BoxOfficeInfos>
- 	<BoxOfficeInfos>
- 		<RankNo>7</RankNo>
- 		<Movie>
- 			<MovieId>683832</MovieId>
- 			<MovieName>下一任：前任</MovieName>
- 			<NickName></NickName>
- 			<MovieType></MovieType>
- 			<MoviePoster>http://www.cbooo.cn/moviepic/683832.jpg</MoviePoster>
- 		</Movie>
- 		<RealSale>13.7</RealSale>
- 		<SaleRatio>0.73%</SaleRatio>
- 		<AccumulateSale>11760.8</AccumulateSale>
- 		<MovieRatio>2.11%</MovieRatio>
- 		<PublishDays>13</PublishDays>
- 	</BoxOfficeInfos>
- 	<BoxOfficeInfos>
- 		<RankNo>8</RankNo>
- 		<Movie>
- 			<MovieId>674197</MovieId>
- 			<MovieName>港珠澳大桥</MovieName>
- 			<NickName></NickName>
- 			<MovieType></MovieType>
- 			<MoviePoster>http://www.cbooo.cn/moviepic/674197.jpg</MoviePoster>
- 		</Movie>
- 		<RealSale>11.6</RealSale>
- 		<SaleRatio>0.62%</SaleRatio>
- 		<AccumulateSale>254.1</AccumulateSale>
- 		<MovieRatio>0.27%</MovieRatio>
- 		<PublishDays>13</PublishDays>
+ 		<RealSale>177.1</RealSale>
+ 		<SaleRatio>1.70%</SaleRatio>
+ 		<AccumulateSale>10035.6</AccumulateSale>
+ 		<MovieRatio>2.67%</MovieRatio>
+ 		<PublishDays>16</PublishDays>
  	</BoxOfficeInfos>
  	<BoxOfficeInfos>
  		<RankNo>9</RankNo>
  		<Movie>
- 			<MovieId>682238</MovieId>
- 			<MovieName>反贪风暴4</MovieName>
+ 			<MovieId>685416</MovieId>
+ 			<MovieName>潜艇总动员：外...</MovieName>
  			<NickName></NickName>
  			<MovieType></MovieType>
- 			<MoviePoster>http://www.cbooo.cn/moviepic/682238.jpg</MoviePoster>
+ 			<MoviePoster>http://www.cbooo.cn/moviepic/685416.jpg</MoviePoster>
  		</Movie>
- 		<RealSale>9.8</RealSale>
- 		<SaleRatio>0.53%</SaleRatio>
- 		<AccumulateSale>79046</AccumulateSale>
- 		<MovieRatio>0.81%</MovieRatio>
- 		<PublishDays>40</PublishDays>
+ 		<RealSale>103</RealSale>
+ 		<SaleRatio>0.99%</SaleRatio>
+ 		<AccumulateSale>103</AccumulateSale>
+ 		<MovieRatio>3.06%</MovieRatio>
+ 		<PublishDays>0</PublishDays>
  	</BoxOfficeInfos>
  	<BoxOfficeInfos>
  		<RankNo>10</RankNo>
  		<Movie>
- 			<MovieId>681192</MovieId>
- 			<MovieName>雪暴</MovieName>
+ 			<MovieId>643548</MovieId>
+ 			<MovieName>海蒂和爷爷</MovieName>
  			<NickName></NickName>
  			<MovieType></MovieType>
- 			<MoviePoster>http://www.cbooo.cn/moviepic/681192.jpg</MoviePoster>
+ 			<MoviePoster>http://www.cbooo.cn/moviepic/643548.jpg</MoviePoster>
  		</Movie>
- 		<RealSale>5.4</RealSale>
- 		<SaleRatio>0.29%</SaleRatio>
- 		<AccumulateSale>2748.1</AccumulateSale>
- 		<MovieRatio>0.83%</MovieRatio>
- 		<PublishDays>14</PublishDays>
+ 		<RealSale>92.6</RealSale>
+ 		<SaleRatio>0.89%</SaleRatio>
+ 		<AccumulateSale>1695.4</AccumulateSale>
+ 		<MovieRatio>0.84%</MovieRatio>
+ 		<PublishDays>10</PublishDays>
  	</BoxOfficeInfos>
  </BoxOffice>

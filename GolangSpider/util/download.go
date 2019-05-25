@@ -11,6 +11,7 @@ import (
 )
 const (
 	DOWNLOAD_TETRY_TIMES=3
+	TIMEOUT=120
 )
 
 func DownloadWithRetry(url string,filename string)  error{
@@ -50,15 +51,15 @@ func Download(url string, filename string) error {
 	//发送请求
 	transport := &http.Transport{
 		Dial: (&net.Dialer{
-			Timeout: 60 * time.Second,
+			Timeout: TIMEOUT * time.Second,
 		}).Dial,
-		IdleConnTimeout:       60 * time.Second,
-		TLSHandshakeTimeout:   60* time.Second,
-		ResponseHeaderTimeout: 60 * time.Second,
+		IdleConnTimeout:       TIMEOUT * time.Second,
+		TLSHandshakeTimeout:   TIMEOUT* time.Second,
+		ResponseHeaderTimeout: TIMEOUT * time.Second,
 	}
 
 	client := &http.Client{
-		Timeout:   60 * time.Second,
+		Timeout:   TIMEOUT * time.Second,
 		Transport: transport,
 	}
 	resp, err := client.Do(request)

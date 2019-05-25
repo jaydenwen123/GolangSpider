@@ -1,8 +1,8 @@
 package cbooo
 
 import (
-	"GolangSpider/common"
-	"GolangSpider/util"
+	"GolangSpider/GolangSpider/common"
+	"GolangSpider/GolangSpider/util"
 	"encoding/csv"
 	"github.com/astaxie/beego/logs"
 	"os"

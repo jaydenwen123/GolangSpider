@@ -1,8 +1,8 @@
 package kugou
 
 import (
-	"GolangSpider/common"
-	"GolangSpider/util"
+	"GolangSpider/GolangSpider/common"
+	"GolangSpider/GolangSpider/util"
 	"crypto/md5"
 	"fmt"
 	"github.com/astaxie/beego/logs"
@@ -12,7 +12,6 @@ import (
 	"strings"
 	"time"
 )
-
 //1.搜索MV数据
 func SearchMV() []*MVInfo {
 	jsonStr := common.RequestJsonWithRetry(mvSearchUrl, HEADER)
@@ -90,7 +89,7 @@ func DownloadSearchMV()  {
 	saveBasePath := path.Join(downloadSaveMVDir, keyword)
 	logs.Info("正在初始化目录,请等待......")
 	//initSaveDir(saveBasePath)
-	initDir(saveBasePath)
+	util.InitDir(saveBasePath)
 	//initSaveDir(downloadSaveSongDir)
 	logs.Info("初始化目录完毕.....")
 	//解析json数据放在保存前面，采用go协程去解析，解约时间
@@ -155,7 +154,7 @@ func ToDownload(mvDetail *MVDetail, done chan DownloadMsg, mv *MVInfo, fileIndex
 		return
 	}
 	//3.正式下载
-	err := util.Download(mvDetail.MVUrl, dirPath+"/"+mv.MVName+suffix)
+	err := util.DownloadWithRetry(mvDetail.MVUrl, dirPath+"/"+mv.MVName+suffix)
 	if err != nil {
 		//logs.Error("歌曲：",song.Name,"下载失败...")
 		done <- DownloadMsg{FileName: mv.MVName, Success: false, FileId: fileIndex}

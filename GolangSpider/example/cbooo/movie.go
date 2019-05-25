@@ -1,7 +1,7 @@
 package cbooo
 
 import (
-	"GolangSpider/util"
+	"GolangSpider/GolangSpider/util"
 	"strings"
 )
 

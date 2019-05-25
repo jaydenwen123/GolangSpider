@@ -11,6 +11,7 @@ func ShowHelp() {
 	//4.查看帮助文档
 	//5.退出程序
 	fmt.Println("here is the usage of  ",style,":")
+	fmt.Println("\t<gboard> \n\t\t:means download the kugou rank board all song. ")
 	fmt.Println("\t<lsong> <first-end>\n\t\t:means show the asc range musics list ")
 	fmt.Println("\t<lmv> <first-end>:\n\t\tmeans show the asc range mv list ")
 	fmt.Println("\t<gsong> <number> or <first1-end1,first2-end2...>:\n\t\tmeans download \n\t\tone music or download according the range")

@@ -17,10 +17,10 @@ var	(
 var (
 	boardSaveDir="example/kugou/board/"
 	likeSaveDir="F:/Program Files/go/workspace/src/GolangSpider/example/kugou/like/"
-	downloadSaveSongDir="F:/Program Files/go/workspace/src/GolangSpider/example/kugou/download/song/"
-	downloadSaveMVDir="F:/Program Files/go/workspace/src/GolangSpider/example/kugou/download/mv/"
-	downloadSaveSongDirDefault="F:/Program Files/go/workspace/src/GolangSpider/example/kugou/download/song/"
-	downloadSaveMVDirDefault="F:/Program Files/go/workspace/src/GolangSpider/example/kugou/download/mv/"
+	downloadSaveSongDir="F:/Program Files/go/workspace/src/GolangSpider/GolangSpider/example/kugou/download/song/"
+	downloadSaveMVDir="F:/Program Files/go/workspace/src/GolangSpider/GolangSpider/example/kugou/download/mv/"
+	downloadSaveSongDirDefault="F:/Program Files/go/workspace/src/GolangSpider/GolangSpider/example/kugou/download/song/"
+	downloadSaveMVDirDefault="F:/Program Files/go/workspace/src/GolangSpider/GolangSpider/example/kugou/download/mv/"
 )
 
 //定义通用的url

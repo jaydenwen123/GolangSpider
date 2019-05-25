@@ -10,11 +10,13 @@ import (
 	"strings"
 )
 
+
 const (
 	SHOW_SONG	="ssong"
 	SHOW_MV		="smv"
 	LIST_SONG   = "lsong"
 	LIST_MV     = "lmv"
+	DOWNLOAD_BOARD	="gboard"
 	DOWNLOAD_SONG    = "gsong"
 	DOWNLOAD_MV    = "gmv"
 	PLAY_SONG   = "psong"
@@ -103,6 +105,8 @@ func HandleOperation(operation string) {
 			mp.ShowSongPath(cmd)
 		case PATH_MV:
 			mp.ShowMVPath(cmd)
+		case DOWNLOAD_BOARD:
+			mp.DownloadBoardMusic(cmd)
 		default:
 			fmt.Printf("%s\n", "the operation is error.please show the help doc.")
 			//ShowHelp()
@@ -199,9 +203,9 @@ func checkIsNull(arg string) bool{
 }
 
 func clearLog() {
-		cmd := exec.Command("cmd", "/c", "cls")
-		cmd.Stdout = os.Stdout
-		cmd.Run()
+	cmd := exec.Command("cmd", "/c", "cls")
+	cmd.Stdout = os.Stdout
+	cmd.Run()
 }
 
 //分割参数

@@ -1,8 +1,8 @@
 package gushiwen
 
 import (
-	"GolangSpider/example/gushiwen/db"
-	"GolangSpider/util"
+	"GolangSpider/GolangSpider/example/gushiwen/db"
+	"GolangSpider/GolangSpider/util"
 	"fmt"
 	"github.com/astaxie/beego/logs"
 	"io/ioutil"

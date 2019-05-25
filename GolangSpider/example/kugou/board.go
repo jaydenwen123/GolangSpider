@@ -1,9 +1,8 @@
 package kugou
 
 import (
-	"GolangSpider/common"
-	"GolangSpider/util"
-	"fmt"
+	"GolangSpider/GolangSpider/common"
+	"GolangSpider/GolangSpider/util"
 	"github.com/PuerkitoBio/goquery"
 	"github.com/astaxie/beego/logs"
 	"github.com/tidwall/gjson"
@@ -14,7 +13,7 @@ import (
 func SpiderAllBoardMusic() {
 	//1.爬取所有榜单url
 	urls := ParseAllBoardUrls()
-	fmt.Println(urls)
+	//fmt.Println(urls)
 	done := make(chan bool, len(urls))
 	index := 0
 	for key, value := range urls {
@@ -27,17 +26,15 @@ func SpiderAllBoardMusic() {
 	//利用channel阻塞程序
 	for i := 0; i < len(urls); i++ {
 		<-done
-		if i==3{
-			logs.Info("download finish")
-			break
-		}
+		logs.Info("download finish")
+		break
 	}
 }
 //下载所有榜单的歌曲
 func DownMusicBoardSongs(name string, url string, finish chan bool) {
 	//1.创建目录
 	savePath:=path.Join(boardSaveDir,name)
-	initDir(savePath)
+	util.InitDir(savePath)
 	//fmt.Println("歌曲保存的路径：",savePath)
 	//2.解析歌曲数据，歌曲数据放在javascript中，所以需要解析
 	songInfos := ParseBoardSongsInfo(url)

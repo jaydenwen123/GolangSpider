@@ -28,15 +28,18 @@ type MVInfo struct {
 }
 
 func (mv *MVInfo) PrintTitle() {
-	fmt.Println("MV编号\t\t  MV大小\t\tMV时长\t\t\tMV名称\t\t")
+	fmt.Println("MV编号\t\t  MV大小\t\t MV时长\t\t\tMV名称\t\t")
 	fmt.Println("------------------------------------------------------" +
 		"-------------------------------------------------------------------" +
 		"-------------------")
 }
 
 func (mv *MVInfo) PrintMainInfo() {
-	fmt.Println("  ",mv.MVId,"\t\t",mv.Size,"\t\t",mv.Duration,"\t\t",mv.MVName,"\t\t")
+	sizeShow := transferFileSize(mv.Size)
+	duration:=transferDuration(mv.Duration)
+	fmt.Println("  ", mv.MVId, "\t\t ", sizeShow, "\t\t", duration, "\t\t", mv.MVName, "\t\t")
 }
+
 
 func (mv *MVInfo) ToString() string{
 	return "MV名称："+mv.MVName+"\nMV原链接："+mv.DetailUrl+"\n该MV总共有:"+strconv.Itoa(len(mv.MVDetail))+"个版本"
@@ -65,6 +68,14 @@ type SongInfo struct {
 	SourceUrl string
 }
 
+func NewSongInfo(FileId string, Name string, AlbumName string, Duration string, FileSize string,FileHash string) *SongInfo {
+
+	if AlbumName=="" || len(AlbumName)==0{
+		AlbumName="暂无专辑"
+	}
+	return &SongInfo{FileId: FileId, Name: Name, AlbumName: AlbumName, Duration: Duration, FileSize: FileSize, FileHash:FileHash}
+}
+
 
 
 
@@ -84,13 +95,44 @@ func (this *SongInfo) ToString() string {
 
 //歌曲信息
 func (this *SongInfo) PrintMainInfo() {
-	fmt.Printf("%3s%2s%18s%15s%15s%50s\n",this.FileId," ",
-		this.AlbumName,this.FileSize,this.Duration,this.Name)
+	//fmt.Printf("%3s%2s%18s%15s%15s%50s\n",this.FileId," ",
+	//	this.AlbumName,this.FileSize,this.Duration,this.Name)
+	sizeShow := transferFileSize(this.FileSize)
+	duration:=transferDuration(this.Duration)
+	fmt.Println("  ",this.FileId,"\t\t",sizeShow," \t",duration,
+		"\t\t\t",this.AlbumName,"\t\t\t\t",this.Name,"\t\t")
+
 }
 
 func (this *SongInfo) PrintTitle()  {
-	fmt.Printf( "%5s%15s%13s%13s%50s\n","歌曲编号","专辑名称","文件大小",
-		"时长","歌曲名称")
+	//fmt.Printf( "%5s%15s%13s%13s%50s\n","歌曲编号","专辑名称","文件大小",
+	//	"时长","歌曲名称")
+	fmt.Println("歌曲编号\t歌曲大小\t歌曲时长\t\t专辑名称\t\t\t\t\t歌曲名称\t\t")
+	fmt.Println("------------------------------------------------------" +
+		"-------------------------------------------------------------------" +
+		"-------------------")
 }
 
 
+
+//将整数的文件大小转换为用户能识别的带单位的文件大小
+func transferFileSize(size string) string{
+	sizeInt, _ := strconv.Atoi(size)
+	sizeShow := fmt.Sprintf("%.2f", (float64(sizeInt) / float64(1024*1024))) + "M"
+	return sizeShow
+}
+//将整数转换为分钟和秒的形式
+func transferDuration(sDuration string) string {
+	duration,_:=strconv.Atoi(sDuration)
+	minute:=duration/60
+	second:=duration-60*minute
+	secondS:=""
+	if second<10 && second>0{
+		secondS="0"+strconv.Itoa(second)
+	}else if second==0{
+		secondS="00"
+	}else{
+		secondS=strconv.Itoa(second)
+	}
+	return strconv.Itoa(minute)+"m"+secondS+"s"
+}

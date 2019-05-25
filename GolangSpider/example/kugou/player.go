@@ -1,6 +1,7 @@
 package kugou
 
 import (
+	"GolangSpider/GolangSpider/util"
 	"fmt"
 	"github.com/astaxie/beego/logs"
 	"io/ioutil"
@@ -36,6 +37,8 @@ type Player interface {
 	ChangeSongPath(cmd *Command)
 	//CHANGE_PATH_MV:
 	ChangeMVPath(cmd *Command)
+
+	DownloadBoardMusic(command *Command)
 }
 
 type MusicPlayer struct {
@@ -72,10 +75,10 @@ func (p *MusicPlayer) ChangeSongPath(cmd *Command) {
 		return
 	}
 	//校验目录是否正确
-	if err := initDir(newPath+"\\"+keyword);err==nil{
+	if err := util.InitDir(newPath+"/"+keyword);err==nil{
 		fmt.Println("初始化新目录完毕....")
 		downloadSaveSongDir,_=filepath.Abs(newPath)
-		downloadSaveSongDir=downloadSaveSongDir+"\\"
+		downloadSaveSongDir=downloadSaveSongDir+"/"
 	}
 }
 
@@ -88,10 +91,10 @@ func (p *MusicPlayer) ChangeMVPath(cmd *Command) {
 	}
 
 	//校验目录是否正确
-	if err := initDir(newPath+"\\"+keyword);err==nil{
+	if err := util.InitDir(newPath+"/"+keyword);err==nil{
 		fmt.Println("初始化新目录完毕....")
 		downloadSaveMVDir,_=filepath.Abs(newPath)
-		downloadSaveMVDir=downloadSaveMVDir+"\\"
+		downloadSaveMVDir=downloadSaveMVDir+"/"
 	}
 }
 
@@ -161,7 +164,7 @@ func (p *MusicPlayer) ListSong(cmd *Command) {
 	}
 	first:=true
 	var song *SongInfo
-	fmt.Println("\t\t\t",cmd.Arguement,"首歌曲的信息如下：\t\t\t")
+	fmt.Println("\t\t\t\t",cmd.Arguement,"首歌曲的信息如下：\t\t\t")
 	for _,sIndex:=range cmd.Arguements{
 		index,_:=strconv.Atoi(sIndex)
 		song=songInfos[index-1]
@@ -218,7 +221,7 @@ func (p *MusicPlayer) PlaySong(cmd *Command) {
 
 func (p *MusicPlayer) DownloadSong(cmd *Command) {
 	//fmt.Printf("%+v\n", cmd)
-	start:=time.Now()
+	cost:=util.NewCost(time.Now())
 	//遍历下载
 	dmsg:=make(chan DownloadMsg)
 	index:=0
@@ -252,13 +255,13 @@ func (p *MusicPlayer) DownloadSong(cmd *Command) {
 	}
 	if hasDownload{
 		logs.Info("指定的歌曲下载完毕，请继续选择操作!!!!")
-		logs.Info("总共下载",downloadCount, "个文件!\t下载成功", download,"个文件\t","下载失败",downloadCount-download,"个文件\t","总耗时为", fmt.Sprintf("%v", time.Since(start)))
+		logs.Info("总共下载",downloadCount, "个文件!\t下载成功", download,"个文件\t","下载失败",downloadCount-download,"个文件\t","总耗时为", cost.CostWithNowAsString())
 	}
 
 }
 func (p *MusicPlayer) DownloadMV(cmd *Command) {
 	//fmt.Printf("%+v\n", cmd)
-	start:=time.Now()
+	cost:=util.NewCost(time.Now())
 	//遍历下载
 	dmsg:=make(chan DownloadMsg)
 	index:=0
@@ -296,7 +299,7 @@ func (p *MusicPlayer) DownloadMV(cmd *Command) {
 	}
 	if hasDownload{
 		logs.Info("指定的MV下载完毕，请继续选择操作!!!!")
-		logs.Info("总共下载",downloadCount, "个MV!\t下载成功", download,"个文件\t","下载失败",downloadCount-download,"个文件\t","总耗时为", fmt.Sprintf("%v", time.Since(start)))
+		logs.Info("总共下载",downloadCount, "个MV!\t下载成功", download,"个文件\t","下载失败",downloadCount-download,"个文件\t","总耗时为", cost.CostWithNowAsString())
 	}
 }
 
@@ -350,7 +353,7 @@ func  ListDownload(dirPath string) {
 			}
 		}
 	}else if dirPath==downloadSaveMVDir{
-		fmt.Println("歌曲编号\t\tMV大小\t\tMV名称")
+		fmt.Println("歌曲编号\t\tMV大小\t\t\t\tMV名称")
 		for _, file := range files {
 			if !file.IsDir(){
 				if strings.HasSuffix(file.Name(),".mp4"){
@@ -388,6 +391,10 @@ func  ListDownload(dirPath string) {
 //显示已经下载的MV
 func (p *MusicPlayer) ShowMV(command *Command) {
 	ListDownload(downloadSaveMVDir)
+}
+
+func (p *MusicPlayer) DownloadBoardMusic(command *Command) {
+	SpiderAllBoardMusic()
 }
 
 //定义命令显示

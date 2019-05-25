@@ -1,9 +1,9 @@
 package gushiwen
 
 import (
-	"GolangSpider/common"
-	"GolangSpider/example/gushiwen/db"
-	"GolangSpider/util"
+	"GolangSpider/GolangSpider/common"
+	"GolangSpider/GolangSpider/example/gushiwen/db"
+	"GolangSpider/GolangSpider/util"
 	"github.com/PuerkitoBio/goquery"
 	"github.com/astaxie/beego/logs"
 	_ "github.com/jinzhu/gorm/dialects/postgres"

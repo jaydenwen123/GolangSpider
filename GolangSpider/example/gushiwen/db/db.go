@@ -1,7 +1,7 @@
 package db
 
 import (
-	"GolangSpider/util"
+	"GolangSpider/GolangSpider/util"
 	"github.com/jinzhu/gorm"
 )
 
