@@ -10,43 +10,42 @@ import (
 )
 
 const (
-	USER_AGENT="Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36"
-	RETRY_TIMES=3
+	USER_AGENT  = "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36"
+	RETRY_TIMES = 3
 )
 
-func RequestJsonWithRetry(url string,headers map[string]string) string {
+func RequestJsonWithRetry(url string, headers map[string]string) string {
 
-	return RequestJsonWithTimes(url,headers,RETRY_TIMES)
+	return RequestJsonWithTimes(url, headers, RETRY_TIMES)
 }
 
+func RequestJsonWithTimes(url string, headers map[string]string, count int) string {
 
-func RequestJsonWithTimes(url string,headers map[string]string,count int) string {
-
-	for i:=0; i<count; i++ {
-		data:= RequestJson(url ,headers)
-		if len(data)>0 && data!=""{
+	for i := 0; i < count; i++ {
+		data := RequestJson(url, headers)
+		if len(data) > 0 && data != "" {
 			return data
-		}else{
+		} else {
 			logs.Info("there is occurd error. please wait some time.there is now downloading retry...")
-			time.Sleep(time.Millisecond*10)
+			time.Sleep(time.Millisecond * 30)
 		}
 	}
-	logs.Error("there is occurd error.we have trtry for",count,"times.....")
+	logs.Error("there is occurd error.we have trtry for", count, "times.....")
 	return ""
 }
 
 //通过get发送请求，返回数据
 //第一个参数为字节数组，第二个参数为默认编码为utf-8的字符串
-func RequestJson(url string,headers map[string]string) string {
+func RequestJson(url string, headers map[string]string) string {
 
 	//1.发请求，获取数据
 	//如果需要自己设置请求头，则通过http.NewRequest
 	//resp, err := http.Get(url)
 	request, err := http.NewRequest("GET", url, nil)
 	//设置请求头
-	request.Header.Add("User-Agent",USER_AGENT)
-	for key,value:=range headers{
-		request.Header.Add(key,value)
+	request.Header.Add("User-Agent", USER_AGENT)
+	for key, value := range headers {
+		request.Header.Add(key, value)
 	}
 	//发送请求
 	transport := &http.Transport{
@@ -59,7 +58,7 @@ func RequestJson(url string,headers map[string]string) string {
 			c.SetDeadline(deadline)
 			return c, nil
 		},
-		IdleConnTimeout:     120 * time.Second,
+		IdleConnTimeout:       120 * time.Second,
 		TLSHandshakeTimeout:   120 * time.Second,
 		ResponseHeaderTimeout: 120 * time.Second,
 	}
@@ -67,7 +66,6 @@ func RequestJson(url string,headers map[string]string) string {
 	client := &http.Client{
 		Timeout:   120 * time.Second,
 		Transport: transport,
-
 	}
 	resp, err := client.Do(request)
 	if err != nil {
@@ -79,7 +77,7 @@ func RequestJson(url string,headers map[string]string) string {
 		//logs.Info("please wait for time.there is now retrying download....")
 		//return RequestJson(url,headers)
 	}
-	data,_:=ioutil.ReadAll(resp.Body)
+	data, _ := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		logs.Error("ioutil ReadAll error:", err.Error())
 		return ""
@@ -88,24 +86,37 @@ func RequestJson(url string,headers map[string]string) string {
 		logs.Error("resp Body Close error:", err.Error())
 		return ""
 	}
-	return  string(data)
+	return string(data)
 }
+
 //通过get发送请求，返回数据
 //第一个参数为字节数组，第二个参数为默认编码为utf-8的字符串
 func Request(url string) ([]byte, string) {
+
+	return RequestWithHeader(url, nil)
+}
+
+//通过get发送请求，返回数据
+//第一个参数为字节数组，第二个参数为默认编码为utf-8的字符串
+func RequestWithHeader(url string, headers map[string]string) ([]byte, string) {
 
 	//1.发请求，获取数据
 	//如果需要自己设置请求头，则通过http.NewRequest
 	//resp, err := http.Get(url)
 	request, err := http.NewRequest("GET", url, nil)
 	//设置请求头
-	request.Header.Add("User-Agent",USER_AGENT)
+	request.Header.Add("User-Agent", USER_AGENT)
+	if headers!=nil{
+		for key, value := range headers {
+			request.Header.Add(key, value)
+		}
+	}
 	//发送请求
 	transport := &http.Transport{
 		Dial: (&net.Dialer{
 			Timeout: 120 * time.Second,
 		}).Dial,
-		IdleConnTimeout:     120 * time.Second,
+		IdleConnTimeout:       120 * time.Second,
 		TLSHandshakeTimeout:   120 * time.Second,
 		ResponseHeaderTimeout: 120 * time.Second,
 	}
@@ -140,7 +151,7 @@ func ResponseWithReader(url string) io.Reader {
 	//resp, err := http.Get(url)
 	request, err := http.NewRequest("GET", url, nil)
 	//设置请求头
-	request.Header.Add("User-Agent",USER_AGENT)
+	request.Header.Add("User-Agent", USER_AGENT)
 	//发送请求
 	resp, err := http.DefaultClient.Do(request)
 	if err != nil {

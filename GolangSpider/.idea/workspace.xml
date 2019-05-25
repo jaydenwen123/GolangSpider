@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26f46a43-501d-4b25-ade2-0a72ecc14bbb" name="Default Changelist" comment=" 完成了一些工具类如下载文件、保存json文件、xml文件等工具类。同时完成了中国票房——实时票房榜的数据爬取和存储" />
+    <list default="true" id="26f46a43-501d-4b25-ade2-0a72ecc14bbb" name="Default Changelist" comment=" 完成了一些工具类如下载文件、保存json文件、xml文件等工具类。同时完成了中国票房——实时票房榜的数据爬取和存储">
+      <change afterPath="$PROJECT_DIR$/example/pexels/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/pexels/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/pexels/search.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/costtime.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/directory.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/HttpRequest.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/HttpRequest.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/spider.go" beforeDir="false" afterPath="$PROJECT_DIR$/example/spider.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/download.go" beforeDir="false" afterPath="$PROJECT_DIR$/util/download.go" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,64 +78,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/kugou/core.go">
+        <entry file="file://$PROJECT_DIR$/example/pexels/search.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="182" column="21" selection-start-line="182" selection-start-column="21" selection-end-line="182" selection-end-column="21" />
+            <state relative-caret-position="141">
+              <caret line="222" column="34" selection-start-line="222" selection-start-column="34" selection-end-line="222" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/kugou/help.go">
+        <entry file="file://$PROJECT_DIR$/util/download.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="28" column="140" selection-start-line="28" selection-start-column="140" selection-end-line="28" selection-end-column="140" />
+            <state relative-caret-position="-255">
+              <caret line="68" column="6" selection-start-line="68" selection-start-column="6" selection-end-line="68" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/kugou/mv.go">
+        <entry file="file://$PROJECT_DIR$/example/pexels/config.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="542">
-              <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
+            <state relative-caret-position="157">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/kugou/board.go">
+        <entry file="file://$PROJECT_DIR$/example/pexels/model.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/kugou/common.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/kugou/model.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/kugou/config.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+            <state relative-caret-position="-305">
+              <caret line="56" column="59" selection-start-line="56" selection-start-column="59" selection-end-line="56" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -133,8 +116,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/example/spider.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state>
+              <caret column="12" selection-start-column="12" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -151,11 +134,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$</find>
-      <find>&quot;$&quot;</find>
-      <find>TrimSpace</find>
-      <find>SpiderComing</find>
-      <find>example/gushiwen/data/</find>
       <find>sdnClick</find>
       <find>logs.Error(&quot;下载失败&quot;)</find>
       <find>全部排行榜歌曲下载完毕</find>
@@ -181,6 +159,11 @@
       <find>Atoi</find>
       <find>ParseSearchSongsInfos</find>
       <find>saveBasePath</find>
+      <find>common</find>
+      <find>39246</find>
+      <find>large</find>
+      <find>medium</find>
+      <find>数据的url</find>
     </findStrings>
     <replaceStrings>
       <replace>util.MatchTarget</replace>
@@ -205,17 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/example/gushiwen/data/poems/与李十二白同寻范十隐居.json" />
-        <option value="$PROJECT_DIR$/example/gushiwen/model.go" />
-        <option value="$PROJECT_DIR$/example/gushiwen/data/poems/一七令·山.json" />
-        <option value="$PROJECT_DIR$/example/gushiwen/data/poems/一丛花·初春病起.json" />
-        <option value="$PROJECT_DIR$/util/db.go" />
-        <option value="$PROJECT_DIR$/example/gushiwen/data/Db.go" />
-        <option value="$PROJECT_DIR$/example/gushiwen/Db.go" />
-        <option value="$PROJECT_DIR$/example/gushiwen/db/Db.go" />
-        <option value="$PROJECT_DIR$/example/gushiwen/config.go" />
-        <option value="$PROJECT_DIR$/example/gushiwen/db/db.go" />
-        <option value="$PROJECT_DIR$/example/gushiwen/shiwen.go" />
         <option value="$PROJECT_DIR$/util/load.go" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b692cdf5-8bf3-468b-9ee7-c016d23654a8/console.sql" />
         <option value="$PROJECT_DIR$/example/gushiwen/poem.go" />
@@ -229,16 +201,13 @@
         <option value="$PROJECT_DIR$/example/kugou/like/list.json" />
         <option value="$PROJECT_DIR$/example/kugou/rank/search.go" />
         <option value="$PROJECT_DIR$/example/kugou/like/你一定要幸福/你一定要幸福.json" />
-        <option value="$PROJECT_DIR$/util/download.go" />
         <option value="$PROJECT_DIR$/example/kugou/board/DJ热歌榜/DJ热歌榜.json" />
-        <option value="$PROJECT_DIR$/common/HttpRequest.go" />
         <option value="$PROJECT_DIR$/example/kugou/like/common.go" />
         <option value="$PROJECT_DIR$/example/kugou/like/player.go" />
         <option value="$PROJECT_DIR$/example/kugou/like/极致纯电音/songs.json" />
         <option value="$PROJECT_DIR$/util/dump.go" />
         <option value="$PROJECT_DIR$/example/kugou/like/小幸运/songs.json" />
         <option value="$PROJECT_DIR$/example/kugou/kugou.go" />
-        <option value="$PROJECT_DIR$/example/spider.go" />
         <option value="$PROJECT_DIR$/example/kugou/search.go" />
         <option value="$PROJECT_DIR$/example/kugou/like/mv.go" />
         <option value="$PROJECT_DIR$/main.go" />
@@ -256,6 +225,20 @@
         <option value="$PROJECT_DIR$/example/kugou/config.go" />
         <option value="$PROJECT_DIR$/example/kugou/help.go" />
         <option value="$PROJECT_DIR$/example/kugou/player.go" />
+        <option value="$PROJECT_DIR$/example/pexels/mian.go" />
+        <option value="$PROJECT_DIR$/example/pexels/picture/肌肉/第1页.json" />
+        <option value="$PROJECT_DIR$/example/pexels/picture/肌肉/第2页.json" />
+        <option value="$PROJECT_DIR$/common/HttpRequest.go" />
+        <option value="$PROJECT_DIR$/example/pexels/picture/李连杰/第5页.json" />
+        <option value="$PROJECT_DIR$/example/pexels/model.go" />
+        <option value="$PROJECT_DIR$/util/costtime.go" />
+        <option value="$PROJECT_DIR$/util/directory.go" />
+        <option value="$PROJECT_DIR$/example/spider.go" />
+        <option value="$PROJECT_DIR$/example/pexels/picture/李连杰/第1页.json" />
+        <option value="$PROJECT_DIR$/example/pexels/config.go" />
+        <option value="$PROJECT_DIR$/util/download.go" />
+        <option value="$PROJECT_DIR$/example/pexels/picture/muscle/第10页.json" />
+        <option value="$PROJECT_DIR$/example/pexels/search.go" />
       </list>
     </option>
   </component>
@@ -281,7 +264,38 @@
             <path>
               <item name="GolangSpider" type="b2602c69:ProjectViewProjectNode" />
               <item name="GolangSpider" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GolangSpider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GolangSpider" type="462c0819:PsiDirectoryNode" />
               <item name="example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GolangSpider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GolangSpider" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="pexels" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GolangSpider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GolangSpider" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="pexels" type="462c0819:PsiDirectoryNode" />
+              <item name="picture" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GolangSpider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GolangSpider" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="pexels" type="462c0819:PsiDirectoryNode" />
+              <item name="picture" type="462c0819:PsiDirectoryNode" />
+              <item name="muscle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GolangSpider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GolangSpider" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -326,16 +340,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
-    <configuration name="go build config.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="GolangSpider" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/example/gushiwen/config.go" />
-      <package value="GolangSpider" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Build.go build spider.go">
     <configuration name="go build kugou.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="GolangSpider" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -363,6 +368,15 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="go build search.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="GolangSpider" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/example/pexels/search.go" />
+      <package value="GolangSpider" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build spider.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="GolangSpider" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -374,11 +388,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build spider.go" />
+        <item itemvalue="Go Build.go build search.go" />
+        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build kugou.go" />
         <item itemvalue="Go Build.go build poem.go" />
-        <item itemvalue="Go Build.go build config.go" />
       </list>
     </recent_temporary>
   </component>
@@ -396,13 +410,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5770492" visible="true" weight="0.15431164" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5770492" visible="true" weight="0.15582451" />
       <window_info id="Favorites" order="1" sideWeight="0.42295083" side_tool="true" weight="0.16263238" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924356" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5733737" weight="0.27868852" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4773071" visible="true" weight="0.8557377" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49926794" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -410,15 +423,15 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.3295082" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49926794" weight="0.32786885" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.6240545" side_tool="true" weight="0.40819672" />
-      <window_info anchor="bottom" x="0" y="0" width="295" height="544" id="Documentation" order="11" sideWeight="0.4462935" side_tool="true" weight="0.4180328" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5219365" side_tool="true" weight="0.2967213" />
+      <window_info anchor="bottom" x="0" y="0" width="295" height="544" id="Documentation" order="11" sideWeight="0.5226929" side_tool="true" weight="0.43770492" />
       <window_info anchor="bottom" id="Database Console" order="12" sideWeight="0.44326776" weight="0.32786885" />
-      <window_info anchor="bottom" x="-130" y="66" width="1366" height="728" id="Terminal" order="13" sideWeight="0.5537065" weight="0.752459" />
+      <window_info anchor="bottom" x="-130" y="66" width="1366" height="728" id="Terminal" order="13" sideWeight="0.5537065" weight="0.36557376" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" sideWeight="0.4975" weight="0.12859304" />
-      <window_info anchor="right" id="Structure" order="4" sideWeight="0.44356954" side_tool="true" visible="true" weight="0.15582451" />
+      <window_info anchor="right" id="Structure" order="4" sideWeight="0.44356954" side_tool="true" visible="true" weight="0.1785174" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6870416" visible="true" weight="0.21633889" />
@@ -493,43 +506,6 @@
     <option name="LAST_COMMIT_MESSAGE" value=" 完成了一些工具类如下载文件、保存json文件、xml文件等工具类。同时完成了中国票房——实时票房榜的数据爬取和存储" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/example/kugou/rank/韩国新歌榜/data.json" />
-    <entry file="file://$PROJECT_DIR$/../github.com/tidwall/gjson/gjson_ngae.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../github.com/tidwall/gjson/gjson.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="1466" column="9" selection-start-line="1466" selection-start-column="9" selection-end-line="1466" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/kugou/rank/创造营2019榜/data.json" />
-    <entry file="file://$PROJECT_DIR$/example/kugou/rank/欧美新歌榜/data.json" />
-    <entry file="file://$PROJECT_DIR$/example/kugou/rank/DJ热歌榜/王贰浪 - 像鱼 (DJ阳少版).jpg" />
-    <entry file="file://$PROJECT_DIR$/example/kugou/rank/DJ热歌榜/秦博 - 好嗨哟 (DJ版).jpg" />
-    <entry file="file://$PROJECT_DIR$/example/kugou/rank/DJ热歌榜/王琪 - 为你放弃全世界 (dj阿远 2019 Extended Mix).jpg" />
-    <entry file="file://$PROJECT_DIR$/example/kugou/rank/DJ热歌榜/泽亦龙 - 让我做你的眼睛 (DJ版).jpg" />
-    <entry file="file://$PROJECT_DIR$/example/kugou/rank/欧美新歌榜/张靓颖、Migos - Work for it (Remix).jpg" />
-    <entry file="file://$PROJECT_DIR$/example/kugou/rank/DJ热歌榜/花姐 - 狂浪 (光音坊音乐DJ REMIX1).jpg" />
-    <entry file="file://$PROJECT_DIR$/example/kugou/rank/list.json" />
-    <entry file="file://$PROJECT_DIR$/example/kugou/like/list.json" />
-    <entry file="file://$PROJECT_DIR$/example/kugou/like/极致纯电音.json" />
-    <entry file="file://$PROJECT_DIR$/example/log.txt" />
-    <entry file="file://$PROJECT_DIR$/example/kugou/like/你一定要幸福/你一定要幸福.json" />
-    <entry file="file://$USER_HOME$/Desktop/recovery/core.go" />
-    <entry file="file://$PROJECT_DIR$/example/kugou/spider.go" />
-    <entry file="file://$PROJECT_DIR$/example/gushiwen/config.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/example/kugou/board/DJ热歌榜/DJ热歌榜.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -594,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/download.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Program Files/go/src/strings/strings.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -633,20 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/HttpRequest.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="91" column="16" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -688,13 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example/kugou/config.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/example/kugou/board.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -723,10 +671,168 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/example/kugou/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="23">
+            <caret line="1" selection-start-line="1" selection-end-line="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/kugou/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="60" column="7" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/pexels/mian.go" />
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="91" column="16" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/regexp.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/go/src/time/time.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="630" column="5" selection-start-line="630" selection-start-column="5" selection-end-line="630" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/pexels/picture/肌肉/第2页.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/pexels/picture/肌肉/第1页.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="991" column="1" selection-start-line="991" selection-end-line="991" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/pexels/picture/李连杰/56904[640-426].jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/pexels/picture/李连杰/第2页.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="25" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/pexels/picture/李连杰/第5页.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="162" column="152" lean-forward="true" selection-start-line="162" selection-start-column="16" selection-end-line="162" selection-end-column="152" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/db.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-471" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/HttpRequest.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/pexels/picture/李连杰/第1页.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1679">
+          <caret line="152" column="14" lean-forward="true" selection-start-line="152" selection-start-column="14" selection-end-line="152" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/pexels/picture/李连杰/第3页.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/pexels/picture/李连杰/第4页.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5672" selection-start-column="5667" selection-end-column="5672" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/costtime.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-508">
+          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+          <folding>
+            <element signature="e#14#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/directory.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-117">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#14#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/pexels/picture/muscle/第10页.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="117" column="7" lean-forward="true" selection-start-line="117" selection-start-column="7" selection-end-line="117" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/pexels/model.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-305">
+          <caret line="56" column="59" selection-start-line="56" selection-start-column="59" selection-end-line="56" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/pexels/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/download.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="68" column="6" selection-start-line="68" selection-start-column="6" selection-end-line="68" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/pexels/search.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="222" column="34" selection-start-line="222" selection-start-column="34" selection-end-line="222" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/example/spider.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
