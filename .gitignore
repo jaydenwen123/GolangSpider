@@ -2,3 +2,4 @@ GolangSpider/example/kugou/like
 GolangSpider/example/kugou/board
 GolangSpider/example/kugou/download/*.mp3
 ../FlowAnalysis
+/GolangSpider/.idea
