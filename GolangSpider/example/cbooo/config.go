@@ -46,7 +46,8 @@ var (
 	movieDetailBlockRe=`<div class="cont">(?s:(.*?))</div>`
 	//[复仇者联盟4：终局之战 2019 Avengers:Endgame 2247.5万 393406.5万 科幻/动作/冒险 181min 2019-4-24（中国） 3D/IMAX 美国 http://www.cbooo.cn/c/6 中国电影集团公司]
 //<h2>(.*?)<span>（(.*?)）</span><p>(.*?)</p></h2><p><spanclass="m-span">今日实时票房<br/>(.*?)</span><spanclass="m-span">累计票房<br/>(.*?)</span></p><p>类型：(.*?)</p><p>片长：(.*?)</p><p>上映时间：(.*?)</p><p>制式：(.*?)</p><p>国家及地区：(.*?)</p><p>发行公司：<atarget="_blank"href="(.*?)"title=".*?">(.*?)</a></p>
-	movieDetailRe=`<h2>(.*?)<span>（(.*?)）</span><p>(.*?)</p></h2><p><spanclass="m-span">今日实时票房<br/>(.*?)</span><spanclass="m-span">累计票房<br/>(.*?)</span></p><p>类型：(.*?)</p><p>片长：(.*?)</p><p>上映时间：(.*?)</p><p>制式：(.*?)</p><p>国家及地区：(.*?)</p><p>发行公司：<atarget="_blank"href="(.*?)"title=".*?">(.*?)</a></p>`
+	//预防某些电影没有今日实时票房这一项，因此正则表达式需要考虑如下书写
+	movieDetailRe=`<h2>(.*?)<span>（(.*?)）</span><p>(.*?)</p></h2><p>(<spanclass="m-span">今日实时票房<br/>(.*?)</span>){0,1}<spanclass="m-span">累计票房<br/>(.*?)</span></p><p>类型：(.*?)</p><p>片长：(.*?)</p><p>上映时间：(.*?)</p><p>制式：(.*?)</p><p>国家及地区：(.*?)</p><p>发行公司：<atarget="_blank"href="(.*?)"title=".*?">(.*?)</a></p>`
 	moviePersonBlockRe=`<dd>(?s:(.*?))</dd>`
 	//http://www.cbooo.cn/p/216930
 	moviePersonDetailRe=`<p><atarget="_blank"href="(.*?)"title=".*?">(.*?)</a><span></span></p>`

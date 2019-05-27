@@ -66,6 +66,7 @@ func setMovieDetail(content string,movie *MovieInfo) {
 	//fmt.Println(movieDetailBlock)
 	//开始匹配
 	movieDet:=util.MatchTarget(movieDetailRe,movieDetailBlock)[0][1:]
+	arrLen:=len(movieDet)
 	//fmt.Println(movieDet)
 	//movieDet=movieDet[0][1:]
 	//[复仇者联盟4：终局之战
@@ -80,18 +81,22 @@ func setMovieDetail(content string,movie *MovieInfo) {
 	// 美国
 	// http://www.cbooo.cn/c/6
 	// 中国电影集团公司]
+
+
 	movie.MovieName=movieDet[0]
 	movie.NickName=movieDet[2]
-	movie.MovieType=movieDet[5]
-	movie.MovieDetail.TodayRealSale=movieDet[3]
-	movie.MovieDetail.AccumulateSale=movieDet[4]
-	movie.MovieDetail.Duration=movieDet[6]
-	movie.MovieDetail.MovieDate=movieDet[7]
-	movie.MovieDetail.MovieFormat=movieDet[8]
-	movie.MovieDetail.MovieCountry=movieDet[9]
+	movie.MovieType=movieDet[arrLen-7]
+	if arrLen>11{
+		movie.MovieDetail.TodayRealSale=movieDet[arrLen-9]
+	}
+	movie.MovieDetail.AccumulateSale=movieDet[arrLen-8]
+	movie.MovieDetail.Duration=movieDet[arrLen-6]
+	movie.MovieDetail.MovieDate=movieDet[arrLen-5]
+	movie.MovieDetail.MovieFormat=movieDet[arrLen-4]
+	movie.MovieDetail.MovieCountry=movieDet[arrLen-3]
 	movie.MovieDetail.MovieYear=movieDet[1]
 	//公司（url）
-	movie.MovieDetail.MovieCompany=movieDet[11]+"("+movieDet[10]+")"
+	movie.MovieDetail.MovieCompany=movieDet[arrLen-1]+"("+movieDet[arrLen-2]+")"
 }
 
 //解析影片的详细信息如导演、主演、片长等信息
