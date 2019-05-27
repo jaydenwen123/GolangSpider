@@ -1,0 +1,166 @@
+{
+  "Title": "CBO实时票房榜",
+  "TodayBigBar": "\u0026nbsp;\u0026nbsp;今日大盘 ： 3146.5万",
+  "BoxOfficeInfos": [
+    {
+      "RankNo": 1,
+      "Movie": {
+        "MovieId": 681635,
+        "MovieName": "阿拉丁",
+        "NickName": "",
+        "MovieType": "",
+        "MoviePoster": "http://www.cbooo.cn/moviepic/681635.jpg",
+        "MovieDetail": null
+      },
+      "RealSale": 1469.6,
+      "SaleRatio": "46.70%",
+      "AccumulateSale": 14564.5,
+      "MovieRatio": "29.20%",
+      "PublishDays": 4
+    },
+    {
+      "RankNo": 2,
+      "Movie": {
+        "MovieId": 670828,
+        "MovieName": "大侦探皮卡丘",
+        "NickName": "",
+        "MovieType": "",
+        "MoviePoster": "http://www.cbooo.cn/moviepic/670828.jpg",
+        "MovieDetail": null
+      },
+      "RealSale": 408.7,
+      "SaleRatio": "12.99%",
+      "AccumulateSale": 58422.4,
+      "MovieRatio": "16.87%",
+      "PublishDays": 18
+    },
+    {
+      "RankNo": 3,
+      "Movie": {
+        "MovieId": 681795,
+        "MovieName": "一条狗的使命2",
+        "NickName": "",
+        "MovieType": "",
+        "MoviePoster": "http://www.cbooo.cn/moviepic/681795.jpg",
+        "MovieDetail": null
+      },
+      "RealSale": 364.7,
+      "SaleRatio": "11.59%",
+      "AccumulateSale": 17107.5,
+      "MovieRatio": "15.03%",
+      "PublishDays": 11
+    },
+    {
+      "RankNo": 4,
+      "Movie": {
+        "MovieId": 692267,
+        "MovieName": "五月天人生无限...",
+        "NickName": "",
+        "MovieType": "",
+        "MoviePoster": "http://www.cbooo.cn/moviepic/692267.jpg",
+        "MovieDetail": null
+      },
+      "RealSale": 304.8,
+      "SaleRatio": "9.69%",
+      "AccumulateSale": 3490.7,
+      "MovieRatio": "10.46%",
+      "PublishDays": 4
+    },
+    {
+      "RankNo": 5,
+      "Movie": {
+        "MovieId": 683927,
+        "MovieName": "龙珠超：布罗利",
+        "NickName": "",
+        "MovieType": "",
+        "MoviePoster": "http://www.cbooo.cn/moviepic/683927.jpg",
+        "MovieDetail": null
+      },
+      "RealSale": 198.1,
+      "SaleRatio": "6.29%",
+      "AccumulateSale": 2337.3,
+      "MovieRatio": "10.39%",
+      "PublishDays": 4
+    },
+    {
+      "RankNo": 6,
+      "Movie": {
+        "MovieId": 681412,
+        "MovieName": "何以为家",
+        "NickName": "",
+        "MovieType": "",
+        "MoviePoster": "http://www.cbooo.cn/moviepic/681412.jpg",
+        "MovieDetail": null
+      },
+      "RealSale": 128.1,
+      "SaleRatio": "4.07%",
+      "AccumulateSale": 36487.6,
+      "MovieRatio": "5.55%",
+      "PublishDays": 29
+    },
+    {
+      "RankNo": 7,
+      "Movie": {
+        "MovieId": 667122,
+        "MovieName": "一个母亲的复仇",
+        "NickName": "",
+        "MovieType": "",
+        "MoviePoster": "http://www.cbooo.cn/moviepic/667122.jpg",
+        "MovieDetail": null
+      },
+      "RealSale": 94.9,
+      "SaleRatio": "3.02%",
+      "AccumulateSale": 10443.1,
+      "MovieRatio": "3.65%",
+      "PublishDays": 18
+    },
+    {
+      "RankNo": 8,
+      "Movie": {
+        "MovieId": 643548,
+        "MovieName": "海蒂和爷爷",
+        "NickName": "",
+        "MovieType": "",
+        "MoviePoster": "http://www.cbooo.cn/moviepic/643548.jpg",
+        "MovieDetail": null
+      },
+      "RealSale": 34.3,
+      "SaleRatio": "1.09%",
+      "AccumulateSale": 1833.1,
+      "MovieRatio": "1.17%",
+      "PublishDays": 12
+    },
+    {
+      "RankNo": 9,
+      "Movie": {
+        "MovieId": 691925,
+        "MovieName": "进京城",
+        "NickName": "",
+        "MovieType": "",
+        "MoviePoster": "http://www.cbooo.cn/moviepic/691925.jpg",
+        "MovieDetail": null
+      },
+      "RealSale": 23.5,
+      "SaleRatio": "0.75%",
+      "AccumulateSale": 905.9,
+      "MovieRatio": "0.30%",
+      "PublishDays": 18
+    },
+    {
+      "RankNo": 10,
+      "Movie": {
+        "MovieId": 692046,
+        "MovieName": "周恩来回延安",
+        "NickName": "",
+        "MovieType": "",
+        "MoviePoster": "http://www.cbooo.cn/moviepic/692046.jpg",
+        "MovieDetail": null
+      },
+      "RealSale": 21.6,
+      "SaleRatio": "0.69%",
+      "AccumulateSale": 436,
+      "MovieRatio": "0.70%",
+      "PublishDays": 13
+    }
+  ]
+}

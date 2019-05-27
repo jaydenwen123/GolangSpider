@@ -12,11 +12,11 @@
 
 ### 爬取的实时票房榜的数据信息 ###
 
-中国实时票房榜JSON数据![中国实时票房榜](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/cbooo/images/boxoffice_json.png)
+中国实时票房榜JSON数据 ![中国实时票房榜](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/cbooo/images/boxoffice_json.png)
 
-中国实时票房榜XML数据![中国实时票房榜](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/cbooo/images/boxoffice_xml.png)
+中国实时票房榜XML数据 ![中国实时票房榜](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/cbooo/images/boxoffice_xml.png)
 
-中国实时票房榜CSV数据![中国实时票房榜](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/cbooo/images/boxoffice_csv.png)
+中国实时票房榜CSV数据 ![中国实时票房榜](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/cbooo/images/boxoffice_csv.png)
 
 
 ## 2.即将上映 ##
@@ -27,9 +27,9 @@
 
 ### 爬取的即将上映的数据信息 ###
 
-即将上映JSON数据![即将上映](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/cbooo/images/coming_json.png)
+即将上映JSON数据 ![即将上映](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/cbooo/images/coming_json.png)
 
-即将上映XML数据![即将上映](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/cbooo/images/coming_xml.png)
+即将上映XML数据 ![即将上映](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/cbooo/images/coming_xml.png)
 
 
 ## 3.电影信息 ##
