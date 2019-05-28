@@ -18,8 +18,11 @@
 1.分析搜索接口
 
 >//中文：
+>
 >zhPageUrl=`https://www.pexels.com/zh-cn/search/{keyword}/?format=html&page={page}&type=`
+>
 >//英文：
+>
 >enPageUrl=`https://www.pexels.com/search/{keyword}/?format=html&page={page}&type=`
 >
 
@@ -32,6 +35,7 @@
 5.并发下载图片保存到本地
 
 >下载不同尺寸的图片链接：
+>
 > pictureUrl=`{url}?crop=entropy&cs=srgb&fit=crop&fm=jpg&h={height}&w={width}`
 > 
 
