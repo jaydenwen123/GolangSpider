@@ -22,15 +22,15 @@
 
 3.诗人信息
 
->![诗人信息](https://github.com/jaydenwen123/GolangSpider/tree/master/GolangSpider/example/gushiwen/images/poemer.png)
+>![诗人信息](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/gushiwen/images/poemer.png)
 
 4.诗文详细信息
 
->![诗文详细信息](https://github.com/jaydenwen123/GolangSpider/tree/master/GolangSpider/example/gushiwen/images/poemjson.png)
+>![诗文详细信息](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/gushiwen/images/poemjson.png)
 
 5.数据库存储信息
 
->![数据库存储信息](https://github.com/jaydenwen123/GolangSpider/tree/master/GolangSpider/example/gushiwen/images/poem_postgresql.png)
+>![数据库存储信息](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/gushiwen/images/poem_postgresql.png)
 
 ## 所涉及的技术 ##
 
