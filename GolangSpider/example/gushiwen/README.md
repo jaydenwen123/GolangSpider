@@ -6,9 +6,20 @@
 
 ## 该实例主要的工作： ##
 
-1. 爬取该网站所有的诗文类型
-2. 爬取所有类型的诗文链接
-3. 爬取每首诗文的详细信息并保存到JSON文件和PostgreSQL数据库中
+1.爬取该网站所有的诗文类型
+
+>![爬取该网站所有的诗文类型](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/gushiwen/images/shiwen.png)
+
+
+2.爬取所有类型的诗文链接
+
+>![爬取所有类型的诗文链接](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/gushiwen/images/type.png)
+
+
+3.爬取每首诗文的详细信息并保存到JSON文件和PostgreSQL数据库中
+
+>![爬取每首诗文的详细信息并保存到JSON文件和PostgreSQL数据库中](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/gushiwen/images/poem.png)
+
 
 ## 爬取成果展示 ##
 
