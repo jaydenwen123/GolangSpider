@@ -2,7 +2,7 @@
 
 网站链接：[古诗文网](https://www.gushiwen.org/)
 
-![古诗文网](https://github.com/jaydenwen123/GolangSpider/tree/master/GolangSpider/example/gushiwen/images/home.png)
+![古诗文网](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/gushiwen/images/home.png)
 
 ## 该实例主要的工作： ##
 
@@ -14,11 +14,11 @@
 
 1.朝代信息
 
->![朝代信息](https://github.com/jaydenwen123/GolangSpider/tree/master/GolangSpider/example/gushiwen/images/dynasty.png)
+>![朝代信息](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/gushiwen/images/dynasty.png)
 
 2.诗文分类信息
 
->![诗文分类信息](https://github.com/jaydenwen123/GolangSpider/tree/master/GolangSpider/example/gushiwen/images/typejson.png)
+>![诗文分类信息](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/gushiwen/images/typejson.png)
 
 3.诗人信息
 
