@@ -1,0 +1,985 @@
+{
+  "data": {
+    "topicTag": {
+      "name": "Heap",
+      "translatedName": "\u5806",
+      "questions": [
+        {
+          "status": null,
+          "questionId": "23",
+          "questionFrontendId": "23",
+          "title": "Merge k Sorted Lists",
+          "titleSlug": "merge-k-sorted-lists",
+          "translatedTitle": "\u5408\u5e76K\u4e2a\u6392\u5e8f\u94fe\u8868",
+          "stats": "{\"totalAccepted\": \"24.6K\", \"totalSubmission\": \"53.5K\", \"totalAcceptedRaw\": 24619, \"totalSubmissionRaw\": 53508, \"acRate\": \"46.0%\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Linked List",
+              "translatedName": "\u94fe\u8868",
+              "slug": "linked-list",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Divide and Conquer",
+              "translatedName": "\u5206\u6cbb\u7b97\u6cd5",
+              "slug": "divide-and-conquer",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "215",
+          "questionFrontendId": "215",
+          "title": "Kth Largest Element in an Array",
+          "titleSlug": "kth-largest-element-in-an-array",
+          "translatedTitle": "\u6570\u7ec4\u4e2d\u7684\u7b2cK\u4e2a\u6700\u5927\u5143\u7d20",
+          "stats": "{\"totalAccepted\": \"26.5K\", \"totalSubmission\": \"46.2K\", \"totalAcceptedRaw\": 26451, \"totalSubmissionRaw\": 46204, \"acRate\": \"57.2%\"}",
+          "difficulty": "Medium",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Divide and Conquer",
+              "translatedName": "\u5206\u6cbb\u7b97\u6cd5",
+              "slug": "divide-and-conquer",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "218",
+          "questionFrontendId": "218",
+          "title": "The Skyline Problem",
+          "titleSlug": "the-skyline-problem",
+          "translatedTitle": "\u5929\u9645\u7ebf\u95ee\u9898",
+          "stats": "{\"totalAccepted\": \"1.3K\", \"totalSubmission\": \"3.4K\", \"totalAcceptedRaw\": 1270, \"totalSubmissionRaw\": 3366, \"acRate\": \"37.7%\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Binary Indexed Tree",
+              "translatedName": "\u6811\u72b6\u6570\u7ec4",
+              "slug": "binary-indexed-tree",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Segment Tree",
+              "translatedName": "\u7ebf\u6bb5\u6811",
+              "slug": "segment-tree",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Divide and Conquer",
+              "translatedName": "\u5206\u6cbb\u7b97\u6cd5",
+              "slug": "divide-and-conquer",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Line Sweep",
+              "translatedName": null,
+              "slug": "line-sweep",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "239",
+          "questionFrontendId": "239",
+          "title": "Sliding Window Maximum",
+          "titleSlug": "sliding-window-maximum",
+          "translatedTitle": "\u6ed1\u52a8\u7a97\u53e3\u6700\u5927\u503c",
+          "stats": "{\"totalAccepted\": \"7.2K\", \"totalSubmission\": \"17.5K\", \"totalAcceptedRaw\": 7163, \"totalSubmissionRaw\": 17453, \"acRate\": \"41.0%\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Sliding Window",
+              "translatedName": null,
+              "slug": "sliding-window",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "253",
+          "questionFrontendId": "253",
+          "title": "Meeting Rooms II",
+          "titleSlug": "meeting-rooms-ii",
+          "translatedTitle": "\u4f1a\u8bae\u5ba4 II",
+          "stats": "{\"totalAccepted\": \"18\", \"totalSubmission\": \"51\", \"totalAcceptedRaw\": 18, \"totalSubmissionRaw\": 51, \"acRate\": \"35.3%\"}",
+          "difficulty": "Medium",
+          "isPaidOnly": true,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Greedy",
+              "translatedName": "\u8d2a\u5fc3\u7b97\u6cd5",
+              "slug": "greedy",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Sort",
+              "translatedName": "\u6392\u5e8f",
+              "slug": "sort",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "264",
+          "questionFrontendId": "264",
+          "title": "Ugly Number II",
+          "titleSlug": "ugly-number-ii",
+          "translatedTitle": "\u4e11\u6570 II",
+          "stats": "{\"totalAccepted\": \"5.2K\", \"totalSubmission\": \"11.7K\", \"totalAcceptedRaw\": 5234, \"totalSubmissionRaw\": 11737, \"acRate\": \"44.6%\"}",
+          "difficulty": "Medium",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Math",
+              "translatedName": "\u6570\u5b66",
+              "slug": "math",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Dynamic Programming",
+              "translatedName": "\u52a8\u6001\u89c4\u5212",
+              "slug": "dynamic-programming",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "295",
+          "questionFrontendId": "295",
+          "title": "Find Median from Data Stream",
+          "titleSlug": "find-median-from-data-stream",
+          "translatedTitle": "\u6570\u636e\u6d41\u7684\u4e2d\u4f4d\u6570",
+          "stats": "{\"totalAccepted\": \"3K\", \"totalSubmission\": \"8.6K\", \"totalAcceptedRaw\": 3006, \"totalSubmissionRaw\": 8585, \"acRate\": \"35.0%\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Design",
+              "translatedName": "\u8bbe\u8ba1",
+              "slug": "design",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "313",
+          "questionFrontendId": "313",
+          "title": "Super Ugly Number",
+          "titleSlug": "super-ugly-number",
+          "translatedTitle": "\u8d85\u7ea7\u4e11\u6570",
+          "stats": "{\"totalAccepted\": \"1.8K\", \"totalSubmission\": \"3.3K\", \"totalAcceptedRaw\": 1764, \"totalSubmissionRaw\": 3281, \"acRate\": \"53.8%\"}",
+          "difficulty": "Medium",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Math",
+              "translatedName": "\u6570\u5b66",
+              "slug": "math",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "347",
+          "questionFrontendId": "347",
+          "title": "Top K Frequent Elements",
+          "titleSlug": "top-k-frequent-elements",
+          "translatedTitle": "\u524dK\u4e2a\u9ad8\u9891\u5143\u7d20",
+          "stats": "{\"totalAccepted\": \"12.3K\", \"totalSubmission\": \"21.6K\", \"totalAcceptedRaw\": 12261, \"totalSubmissionRaw\": 21647, \"acRate\": \"56.6%\"}",
+          "difficulty": "Medium",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Hash Table",
+              "translatedName": "\u54c8\u5e0c\u8868",
+              "slug": "hash-table",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "355",
+          "questionFrontendId": "355",
+          "title": "Design Twitter",
+          "titleSlug": "design-twitter",
+          "translatedTitle": "\u8bbe\u8ba1\u63a8\u7279",
+          "stats": "{\"totalAccepted\": \"750\", \"totalSubmission\": \"2.3K\", \"totalAcceptedRaw\": 750, \"totalSubmissionRaw\": 2279, \"acRate\": \"32.9%\"}",
+          "difficulty": "Medium",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Design",
+              "translatedName": "\u8bbe\u8ba1",
+              "slug": "design",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Hash Table",
+              "translatedName": "\u54c8\u5e0c\u8868",
+              "slug": "hash-table",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "358",
+          "questionFrontendId": "358",
+          "title": "Rearrange String k Distance Apart",
+          "titleSlug": "rearrange-string-k-distance-apart",
+          "translatedTitle": "K \u8ddd\u79bb\u95f4\u9694\u91cd\u6392\u5b57\u7b26\u4e32",
+          "stats": "{\"totalAccepted\": \"5\", \"totalSubmission\": \"20\", \"totalAcceptedRaw\": 5, \"totalSubmissionRaw\": 20, \"acRate\": \"25.0%\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": true,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Greedy",
+              "translatedName": "\u8d2a\u5fc3\u7b97\u6cd5",
+              "slug": "greedy",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Hash Table",
+              "translatedName": "\u54c8\u5e0c\u8868",
+              "slug": "hash-table",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "373",
+          "questionFrontendId": "373",
+          "title": "Find K Pairs with Smallest Sums",
+          "titleSlug": "find-k-pairs-with-smallest-sums",
+          "translatedTitle": "\u67e5\u627e\u548c\u6700\u5c0f\u7684K\u5bf9\u6570\u5b57",
+          "stats": "{\"totalAccepted\": \"1.3K\", \"totalSubmission\": \"3.6K\", \"totalAcceptedRaw\": 1300, \"totalSubmissionRaw\": 3615, \"acRate\": \"36.0%\"}",
+          "difficulty": "Medium",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "378",
+          "questionFrontendId": "378",
+          "title": "Kth Smallest Element in a Sorted Matrix",
+          "titleSlug": "kth-smallest-element-in-a-sorted-matrix",
+          "translatedTitle": "\u6709\u5e8f\u77e9\u9635\u4e2d\u7b2cK\u5c0f\u7684\u5143\u7d20",
+          "stats": "{\"totalAccepted\": \"4.5K\", \"totalSubmission\": \"8.3K\", \"totalAcceptedRaw\": 4526, \"totalSubmissionRaw\": 8253, \"acRate\": \"54.8%\"}",
+          "difficulty": "Medium",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Binary Search",
+              "translatedName": "\u4e8c\u5206\u67e5\u627e",
+              "slug": "binary-search",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "407",
+          "questionFrontendId": "407",
+          "title": "Trapping Rain Water II",
+          "titleSlug": "trapping-rain-water-ii",
+          "translatedTitle": "\u63a5\u96e8\u6c34 II",
+          "stats": "{\"totalAccepted\": \"528\", \"totalSubmission\": \"1.7K\", \"totalAcceptedRaw\": 528, \"totalSubmissionRaw\": 1726, \"acRate\": \"30.6%\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Breadth-first Search",
+              "translatedName": "\u5e7f\u5ea6\u4f18\u5148\u641c\u7d22",
+              "slug": "breadth-first-search",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "451",
+          "questionFrontendId": "451",
+          "title": "Sort Characters By Frequency",
+          "titleSlug": "sort-characters-by-frequency",
+          "translatedTitle": "\u6839\u636e\u5b57\u7b26\u51fa\u73b0\u9891\u7387\u6392\u5e8f",
+          "stats": "{\"totalAccepted\": \"4.8K\", \"totalSubmission\": \"8.3K\", \"totalAcceptedRaw\": 4811, \"totalSubmissionRaw\": 8281, \"acRate\": \"58.1%\"}",
+          "difficulty": "Medium",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Hash Table",
+              "translatedName": "\u54c8\u5e0c\u8868",
+              "slug": "hash-table",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "502",
+          "questionFrontendId": "502",
+          "title": "IPO",
+          "titleSlug": "ipo",
+          "translatedTitle": "IPO",
+          "stats": "{\"totalAccepted\": \"497\", \"totalSubmission\": \"1.4K\", \"totalAcceptedRaw\": 497, \"totalSubmissionRaw\": 1402, \"acRate\": \"35.4%\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Greedy",
+              "translatedName": "\u8d2a\u5fc3\u7b97\u6cd5",
+              "slug": "greedy",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "659",
+          "questionFrontendId": "659",
+          "title": "Split Array into Consecutive Subsequences",
+          "titleSlug": "split-array-into-consecutive-subsequences",
+          "translatedTitle": "\u5206\u5272\u6570\u7ec4\u4e3a\u8fde\u7eed\u5b50\u5e8f\u5217",
+          "stats": "{\"totalAccepted\": \"746\", \"totalSubmission\": \"1.9K\", \"totalAcceptedRaw\": 746, \"totalSubmissionRaw\": 1908, \"acRate\": \"39.1%\"}",
+          "difficulty": "Medium",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Greedy",
+              "translatedName": "\u8d2a\u5fc3\u7b97\u6cd5",
+              "slug": "greedy",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "692",
+          "questionFrontendId": "692",
+          "title": "Top K Frequent Words",
+          "titleSlug": "top-k-frequent-words",
+          "translatedTitle": "\u524dK\u4e2a\u9ad8\u9891\u5355\u8bcd",
+          "stats": "{\"totalAccepted\": \"1.9K\", \"totalSubmission\": \"4.9K\", \"totalAcceptedRaw\": 1933, \"totalSubmissionRaw\": 4902, \"acRate\": \"39.4%\"}",
+          "difficulty": "Medium",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Trie",
+              "translatedName": "\u5b57\u5178\u6811",
+              "slug": "trie",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Hash Table",
+              "translatedName": "\u54c8\u5e0c\u8868",
+              "slug": "hash-table",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "719",
+          "questionFrontendId": "719",
+          "title": "Find K-th Smallest Pair Distance",
+          "titleSlug": "find-k-th-smallest-pair-distance",
+          "translatedTitle": "\u627e\u51fa\u7b2c k \u5c0f\u7684\u8ddd\u79bb\u5bf9",
+          "stats": "{\"totalAccepted\": \"939\", \"totalSubmission\": \"3.3K\", \"totalAcceptedRaw\": 939, \"totalSubmissionRaw\": 3278, \"acRate\": \"28.6%\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Array",
+              "translatedName": "\u6570\u7ec4",
+              "slug": "array",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Binary Search",
+              "translatedName": "\u4e8c\u5206\u67e5\u627e",
+              "slug": "binary-search",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "744",
+          "questionFrontendId": "743",
+          "title": "Network Delay Time",
+          "titleSlug": "network-delay-time",
+          "translatedTitle": "\u7f51\u7edc\u5ef6\u8fdf\u65f6\u95f4",
+          "stats": "{\"totalAccepted\": \"1.7K\", \"totalSubmission\": \"4K\", \"totalAcceptedRaw\": 1715, \"totalSubmissionRaw\": 3993, \"acRate\": \"43.0%\"}",
+          "difficulty": "Medium",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Depth-first Search",
+              "translatedName": "\u6df1\u5ea6\u4f18\u5148\u641c\u7d22",
+              "slug": "depth-first-search",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Breadth-first Search",
+              "translatedName": "\u5e7f\u5ea6\u4f18\u5148\u641c\u7d22",
+              "slug": "breadth-first-search",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Graph",
+              "translatedName": "\u56fe",
+              "slug": "graph",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "761",
+          "questionFrontendId": "759",
+          "title": "Employee Free Time",
+          "titleSlug": "employee-free-time",
+          "translatedTitle": "\u5458\u5de5\u7a7a\u95f2\u65f6\u95f4",
+          "stats": "{\"totalAccepted\": \"0\", \"totalSubmission\": \"0\", \"totalAcceptedRaw\": 0, \"totalSubmissionRaw\": 0, \"acRate\": \"N/A\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": true,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Greedy",
+              "translatedName": "\u8d2a\u5fc3\u7b97\u6cd5",
+              "slug": "greedy",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "778",
+          "questionFrontendId": "767",
+          "title": "Reorganize String",
+          "titleSlug": "reorganize-string",
+          "translatedTitle": "\u91cd\u6784\u5b57\u7b26\u4e32",
+          "stats": "{\"totalAccepted\": \"1.2K\", \"totalSubmission\": \"3.6K\", \"totalAcceptedRaw\": 1186, \"totalSubmissionRaw\": 3633, \"acRate\": \"32.6%\"}",
+          "difficulty": "Medium",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Greedy",
+              "translatedName": "\u8d2a\u5fc3\u7b97\u6cd5",
+              "slug": "greedy",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Sort",
+              "translatedName": "\u6392\u5e8f",
+              "slug": "sort",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "String",
+              "translatedName": "\u5b57\u7b26\u4e32",
+              "slug": "string",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "789",
+          "questionFrontendId": "703",
+          "title": "Kth Largest Element in a Stream",
+          "titleSlug": "kth-largest-element-in-a-stream",
+          "translatedTitle": "\u6570\u636e\u6d41\u4e2d\u7684\u7b2cK\u5927\u5143\u7d20",
+          "stats": "{\"totalAccepted\": \"4.7K\", \"totalSubmission\": \"12.3K\", \"totalAcceptedRaw\": 4688, \"totalSubmissionRaw\": 12278, \"acRate\": \"38.2%\"}",
+          "difficulty": "Easy",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "794",
+          "questionFrontendId": "778",
+          "title": "Swim in Rising Water",
+          "titleSlug": "swim-in-rising-water",
+          "translatedTitle": "\u6c34\u4f4d\u4e0a\u5347\u7684\u6cf3\u6c60\u4e2d\u6e38\u6cf3",
+          "stats": "{\"totalAccepted\": \"365\", \"totalSubmission\": \"843\", \"totalAcceptedRaw\": 365, \"totalSubmissionRaw\": 843, \"acRate\": \"43.3%\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Depth-first Search",
+              "translatedName": "\u6df1\u5ea6\u4f18\u5148\u641c\u7d22",
+              "slug": "depth-first-search",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Union Find",
+              "translatedName": "\u5e76\u67e5\u96c6",
+              "slug": "union-find",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Binary Search",
+              "translatedName": "\u4e8c\u5206\u67e5\u627e",
+              "slug": "binary-search",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "802",
+          "questionFrontendId": "786",
+          "title": "K-th Smallest Prime Fraction",
+          "titleSlug": "k-th-smallest-prime-fraction",
+          "translatedTitle": "\u7b2c K \u4e2a\u6700\u5c0f\u7684\u7d20\u6570\u5206\u6570",
+          "stats": "{\"totalAccepted\": \"264\", \"totalSubmission\": \"930\", \"totalAcceptedRaw\": 264, \"totalSubmissionRaw\": 930, \"acRate\": \"28.4%\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Binary Search",
+              "translatedName": "\u4e8c\u5206\u67e5\u627e",
+              "slug": "binary-search",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "803",
+          "questionFrontendId": "787",
+          "title": "Cheapest Flights Within K Stops",
+          "titleSlug": "cheapest-flights-within-k-stops",
+          "translatedTitle": "K \u7ad9\u4e2d\u8f6c\u5185\u6700\u4fbf\u5b9c\u7684\u822a\u73ed",
+          "stats": "{\"totalAccepted\": \"1K\", \"totalSubmission\": \"3K\", \"totalAcceptedRaw\": 1006, \"totalSubmissionRaw\": 3025, \"acRate\": \"33.3%\"}",
+          "difficulty": "Medium",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Breadth-first Search",
+              "translatedName": "\u5e7f\u5ea6\u4f18\u5148\u641c\u7d22",
+              "slug": "breadth-first-search",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Dynamic Programming",
+              "translatedName": "\u52a8\u6001\u89c4\u5212",
+              "slug": "dynamic-programming",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "836",
+          "questionFrontendId": "818",
+          "title": "Race Car",
+          "titleSlug": "race-car",
+          "translatedTitle": "\u8d5b\u8f66",
+          "stats": "{\"totalAccepted\": \"240\", \"totalSubmission\": \"1K\", \"totalAcceptedRaw\": 240, \"totalSubmissionRaw\": 1024, \"acRate\": \"23.4%\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Dynamic Programming",
+              "translatedName": "\u52a8\u6001\u89c4\u5212",
+              "slug": "dynamic-programming",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "887",
+          "questionFrontendId": "857",
+          "title": "Minimum Cost to Hire K Workers",
+          "titleSlug": "minimum-cost-to-hire-k-workers",
+          "translatedTitle": "\u96c7\u4f63 K \u540d\u5de5\u4eba\u7684\u6700\u4f4e\u6210\u672c",
+          "stats": "{\"totalAccepted\": \"281\", \"totalSubmission\": \"824\", \"totalAcceptedRaw\": 281, \"totalSubmissionRaw\": 824, \"acRate\": \"34.1%\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "895",
+          "questionFrontendId": "864",
+          "title": "Shortest Path to Get All Keys",
+          "titleSlug": "shortest-path-to-get-all-keys",
+          "translatedTitle": "\u83b7\u53d6\u6240\u6709\u94a5\u5319\u7684\u6700\u77ed\u8def\u5f84",
+          "stats": "{\"totalAccepted\": \"242\", \"totalSubmission\": \"666\", \"totalAcceptedRaw\": 242, \"totalSubmissionRaw\": 666, \"acRate\": \"36.3%\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Breadth-first Search",
+              "translatedName": "\u5e7f\u5ea6\u4f18\u5148\u641c\u7d22",
+              "slug": "breadth-first-search",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "902",
+          "questionFrontendId": "871",
+          "title": "Minimum Number of Refueling Stops",
+          "titleSlug": "minimum-number-of-refueling-stops",
+          "translatedTitle": "\u6700\u4f4e\u52a0\u6cb9\u6b21\u6570",
+          "stats": "{\"totalAccepted\": \"748\", \"totalSubmission\": \"2.8K\", \"totalAcceptedRaw\": 748, \"totalSubmissionRaw\": 2831, \"acRate\": \"26.4%\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Dynamic Programming",
+              "translatedName": "\u52a8\u6001\u89c4\u5212",
+              "slug": "dynamic-programming",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "918",
+          "questionFrontendId": "882",
+          "title": "Reachable Nodes In Subdivided Graph",
+          "titleSlug": "reachable-nodes-in-subdivided-graph",
+          "translatedTitle": "\u7ec6\u5206\u56fe\u4e2d\u7684\u53ef\u5230\u8fbe\u7ed3\u70b9",
+          "stats": "{\"totalAccepted\": \"148\", \"totalSubmission\": \"512\", \"totalAcceptedRaw\": 148, \"totalSubmissionRaw\": 512, \"acRate\": \"28.9%\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "1014",
+          "questionFrontendId": "973",
+          "title": "K Closest Points to Origin",
+          "titleSlug": "k-closest-points-to-origin",
+          "translatedTitle": "\u6700\u63a5\u8fd1\u539f\u70b9\u7684 K \u4e2a\u70b9",
+          "stats": "{\"totalAccepted\": \"3.4K\", \"totalSubmission\": \"5.7K\", \"totalAcceptedRaw\": 3434, \"totalSubmissionRaw\": 5732, \"acRate\": \"59.9%\"}",
+          "difficulty": "Medium",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Sort",
+              "translatedName": "\u6392\u5e8f",
+              "slug": "sort",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Divide and Conquer",
+              "translatedName": "\u5206\u6cbb\u7b97\u6cd5",
+              "slug": "divide-and-conquer",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "1127",
+          "questionFrontendId": "1046",
+          "title": "Last Stone Weight",
+          "titleSlug": "last-stone-weight",
+          "translatedTitle": "\u6700\u540e\u4e00\u5757\u77f3\u5934\u7684\u91cd\u91cf",
+          "stats": "{\"totalAccepted\": \"932\", \"totalSubmission\": \"1.8K\", \"totalAcceptedRaw\": 932, \"totalSubmissionRaw\": 1838, \"acRate\": \"50.7%\"}",
+          "difficulty": "Easy",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Greedy",
+              "translatedName": "\u8d2a\u5fc3\u7b97\u6cd5",
+              "slug": "greedy",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "1140",
+          "questionFrontendId": "1054",
+          "title": "Distant Barcodes",
+          "titleSlug": "distant-barcodes",
+          "translatedTitle": "\u8ddd\u79bb\u76f8\u7b49\u7684\u6761\u5f62\u7801",
+          "stats": "{\"totalAccepted\": \"437\", \"totalSubmission\": \"1.9K\", \"totalAcceptedRaw\": 437, \"totalSubmissionRaw\": 1858, \"acRate\": \"23.5%\"}",
+          "difficulty": "Medium",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Sort",
+              "translatedName": "\u6392\u5e8f",
+              "slug": "sort",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        }
+      ],
+      "frequencies": null,
+      "__typename": "TopicTagNode"
+    },
+    "favoritesLists": {
+      "publicFavorites": [],
+      "privateFavorites": [],
+      "__typename": "FavoritesNode"
+    }
+  }
+}
