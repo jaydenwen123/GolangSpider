@@ -1,1 +1,107 @@
-{"data":{"topicTag":{"name":"Line Sweep","translatedName":null,"questions":[{"status":null,"questionId":"218","questionFrontendId":"218","title":"The Skyline Problem","titleSlug":"the-skyline-problem","translatedTitle":"\u5929\u9645\u7ebf\u95ee\u9898","stats":"{\"totalAccepted\": \"1.3K\", \"totalSubmission\": \"3.4K\", \"totalAcceptedRaw\": 1270, \"totalSubmissionRaw\": 3366, \"acRate\": \"37.7%\"}","difficulty":"Hard","isPaidOnly":false,"topicTags":[{"name":"Heap","translatedName":"\u5806","slug":"heap","__typename":"TopicTagNode"},{"name":"Binary Indexed Tree","translatedName":"\u6811\u72b6\u6570\u7ec4","slug":"binary-indexed-tree","__typename":"TopicTagNode"},{"name":"Segment Tree","translatedName":"\u7ebf\u6bb5\u6811","slug":"segment-tree","__typename":"TopicTagNode"},{"name":"Divide and Conquer","translatedName":"\u5206\u6cbb\u7b97\u6cd5","slug":"divide-and-conquer","__typename":"TopicTagNode"},{"name":"Line Sweep","translatedName":null,"slug":"line-sweep","__typename":"TopicTagNode"}],"__typename":"QuestionNode"},{"status":null,"questionId":"391","questionFrontendId":"391","title":"Perfect Rectangle","titleSlug":"perfect-rectangle","translatedTitle":"\u5b8c\u7f8e\u77e9\u5f62","stats":"{\"totalAccepted\": \"337\", \"totalSubmission\": \"1.6K\", \"totalAcceptedRaw\": 337, \"totalSubmissionRaw\": 1570, \"acRate\": \"21.5%\"}","difficulty":"Hard","isPaidOnly":false,"topicTags":[{"name":"Line Sweep","translatedName":null,"slug":"line-sweep","__typename":"TopicTagNode"}],"__typename":"QuestionNode"},{"status":null,"questionId":"880","questionFrontendId":"850","title":"Rectangle Area II","titleSlug":"rectangle-area-ii","translatedTitle":"\u77e9\u5f62\u9762\u79ef II","stats":"{\"totalAccepted\": \"213\", \"totalSubmission\": \"582\", \"totalAcceptedRaw\": 213, \"totalSubmissionRaw\": 582, \"acRate\": \"36.6%\"}","difficulty":"Hard","isPaidOnly":false,"topicTags":[{"name":"Segment Tree","translatedName":"\u7ebf\u6bb5\u6811","slug":"segment-tree","__typename":"TopicTagNode"},{"name":"Line Sweep","translatedName":null,"slug":"line-sweep","__typename":"TopicTagNode"}],"__typename":"QuestionNode"}],"frequencies":null,"__typename":"TopicTagNode"},"favoritesLists":{"publicFavorites":[],"privateFavorites":[],"__typename":"FavoritesNode"}}}
+{
+  "data": {
+    "topicTag": {
+      "name": "Line Sweep",
+      "translatedName": null,
+      "questions": [
+        {
+          "status": null,
+          "questionId": "218",
+          "questionFrontendId": "218",
+          "title": "The Skyline Problem",
+          "titleSlug": "the-skyline-problem",
+          "translatedTitle": "\u5929\u9645\u7ebf\u95ee\u9898",
+          "stats": "{\"totalAccepted\": \"1.3K\", \"totalSubmission\": \"3.4K\", \"totalAcceptedRaw\": 1270, \"totalSubmissionRaw\": 3366, \"acRate\": \"37.7%\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Heap",
+              "translatedName": "\u5806",
+              "slug": "heap",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Binary Indexed Tree",
+              "translatedName": "\u6811\u72b6\u6570\u7ec4",
+              "slug": "binary-indexed-tree",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Segment Tree",
+              "translatedName": "\u7ebf\u6bb5\u6811",
+              "slug": "segment-tree",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Divide and Conquer",
+              "translatedName": "\u5206\u6cbb\u7b97\u6cd5",
+              "slug": "divide-and-conquer",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Line Sweep",
+              "translatedName": null,
+              "slug": "line-sweep",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "391",
+          "questionFrontendId": "391",
+          "title": "Perfect Rectangle",
+          "titleSlug": "perfect-rectangle",
+          "translatedTitle": "\u5b8c\u7f8e\u77e9\u5f62",
+          "stats": "{\"totalAccepted\": \"337\", \"totalSubmission\": \"1.6K\", \"totalAcceptedRaw\": 337, \"totalSubmissionRaw\": 1570, \"acRate\": \"21.5%\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Line Sweep",
+              "translatedName": null,
+              "slug": "line-sweep",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        },
+        {
+          "status": null,
+          "questionId": "880",
+          "questionFrontendId": "850",
+          "title": "Rectangle Area II",
+          "titleSlug": "rectangle-area-ii",
+          "translatedTitle": "\u77e9\u5f62\u9762\u79ef II",
+          "stats": "{\"totalAccepted\": \"213\", \"totalSubmission\": \"582\", \"totalAcceptedRaw\": 213, \"totalSubmissionRaw\": 582, \"acRate\": \"36.6%\"}",
+          "difficulty": "Hard",
+          "isPaidOnly": false,
+          "topicTags": [
+            {
+              "name": "Segment Tree",
+              "translatedName": "\u7ebf\u6bb5\u6811",
+              "slug": "segment-tree",
+              "__typename": "TopicTagNode"
+            },
+            {
+              "name": "Line Sweep",
+              "translatedName": null,
+              "slug": "line-sweep",
+              "__typename": "TopicTagNode"
+            }
+          ],
+          "__typename": "QuestionNode"
+        }
+      ],
+      "frequencies": null,
+      "__typename": "TopicTagNode"
+    },
+    "favoritesLists": {
+      "publicFavorites": [],
+      "privateFavorites": [],
+      "__typename": "FavoritesNode"
+    }
+  }
+}

@@ -1,1 +1,2312 @@
-{"user_name": "", "num_solved": 0, "num_total": 100, "ac_easy": 0, "ac_medium": 0, "ac_hard": 0, "stat_status_pairs": [{"stat": {"question_id": 739, "question__article__live": null, "question__article__slug": null, "question__title": "Daily Temperatures", "question__title_slug": "daily-temperatures", "question__hide": false, "total_acs": 5544, "total_submitted": 9593, "total_column_articles": 4, "frontend_question_id": 739, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 647, "question__article__live": null, "question__article__slug": null, "question__title": "Palindromic Substrings", "question__title_slug": "palindromic-substrings", "question__hide": false, "total_acs": 3785, "total_submitted": 7004, "total_column_articles": 1, "frontend_question_id": 647, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 621, "question__article__live": null, "question__article__slug": null, "question__title": "Task Scheduler", "question__title_slug": "task-scheduler", "question__hide": false, "total_acs": 2799, "total_submitted": 6311, "total_column_articles": 0, "frontend_question_id": 621, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 617, "question__article__live": null, "question__article__slug": null, "question__title": "Merge Two Binary Trees", "question__title_slug": "merge-two-binary-trees", "question__hide": false, "total_acs": 10708, "total_submitted": 15231, "total_column_articles": 2, "frontend_question_id": 617, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 581, "question__article__live": null, "question__article__slug": null, "question__title": "Shortest Unsorted Continuous Subarray", "question__title_slug": "shortest-unsorted-continuous-subarray", "question__hide": false, "total_acs": 4619, "total_submitted": 14256, "total_column_articles": 2, "frontend_question_id": 581, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 560, "question__article__live": null, "question__article__slug": null, "question__title": "Subarray Sum Equals K", "question__title_slug": "subarray-sum-equals-k", "question__hide": false, "total_acs": 2961, "total_submitted": 7913, "total_column_articles": 0, "frontend_question_id": 560, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 543, "question__article__live": null, "question__article__slug": null, "question__title": "Diameter of Binary Tree", "question__title_slug": "diameter-of-binary-tree", "question__hide": false, "total_acs": 4294, "total_submitted": 9817, "total_column_articles": 3, "frontend_question_id": 543, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 538, "question__article__live": null, "question__article__slug": null, "question__title": "Convert BST to Greater Tree", "question__title_slug": "convert-bst-to-greater-tree", "question__hide": false, "total_acs": 4094, "total_submitted": 7670, "total_column_articles": 3, "frontend_question_id": 538, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 494, "question__article__live": null, "question__article__slug": null, "question__title": "Target Sum", "question__title_slug": "target-sum", "question__hide": false, "total_acs": 4363, "total_submitted": 10631, "total_column_articles": 4, "frontend_question_id": 494, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 461, "question__article__live": null, "question__article__slug": null, "question__title": "Hamming Distance", "question__title_slug": "hamming-distance", "question__hide": false, "total_acs": 18596, "total_submitted": 26637, "total_column_articles": 6, "frontend_question_id": 461, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 448, "question__article__live": null, "question__article__slug": null, "question__title": "Find All Numbers Disappeared in an Array", "question__title_slug": "find-all-numbers-disappeared-in-an-array", "question__hide": false, "total_acs": 7915, "total_submitted": 16086, "total_column_articles": 4, "frontend_question_id": 448, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 438, "question__article__live": null, "question__article__slug": null, "question__title": "Find All Anagrams in a String", "question__title_slug": "find-all-anagrams-in-a-string", "question__hide": false, "total_acs": 5094, "total_submitted": 13698, "total_column_articles": 2, "frontend_question_id": 438, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 437, "question__article__live": null, "question__article__slug": null, "question__title": "Path Sum III", "question__title_slug": "path-sum-iii", "question__hide": false, "total_acs": 5550, "total_submitted": 11178, "total_column_articles": 3, "frontend_question_id": 437, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 416, "question__article__live": null, "question__article__slug": null, "question__title": "Partition Equal Subset Sum", "question__title_slug": "partition-equal-subset-sum", "question__hide": false, "total_acs": 3984, "total_submitted": 9854, "total_column_articles": 2, "frontend_question_id": 416, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 406, "question__article__live": null, "question__article__slug": null, "question__title": "Queue Reconstruction by Height", "question__title_slug": "queue-reconstruction-by-height", "question__hide": false, "total_acs": 2584, "total_submitted": 4205, "total_column_articles": 0, "frontend_question_id": 406, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 399, "question__article__live": null, "question__article__slug": null, "question__title": "Evaluate Division", "question__title_slug": "evaluate-division", "question__hide": false, "total_acs": 711, "total_submitted": 1514, "total_column_articles": 5, "frontend_question_id": 399, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 394, "question__article__live": null, "question__article__slug": null, "question__title": "Decode String", "question__title_slug": "decode-string", "question__hide": false, "total_acs": 3333, "total_submitted": 7715, "total_column_articles": 3, "frontend_question_id": 394, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 347, "question__article__live": null, "question__article__slug": null, "question__title": "Top K Frequent Elements", "question__title_slug": "top-k-frequent-elements", "question__hide": false, "total_acs": 12261, "total_submitted": 21647, "total_column_articles": 4, "frontend_question_id": 347, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 338, "question__article__live": null, "question__article__slug": null, "question__title": "Counting Bits", "question__title_slug": "counting-bits", "question__hide": false, "total_acs": 8561, "total_submitted": 11889, "total_column_articles": 2, "frontend_question_id": 338, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 337, "question__article__live": null, "question__article__slug": null, "question__title": "House Robber III", "question__title_slug": "house-robber-iii", "question__hide": false, "total_acs": 3418, "total_submitted": 6391, "total_column_articles": 2, "frontend_question_id": 337, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 322, "question__article__live": null, "question__article__slug": null, "question__title": "Coin Change", "question__title_slug": "coin-change", "question__hide": false, "total_acs": 10753, "total_submitted": 33289, "total_column_articles": 2, "frontend_question_id": 322, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 312, "question__article__live": null, "question__article__slug": null, "question__title": "Burst Balloons", "question__title_slug": "burst-balloons", "question__hide": false, "total_acs": 1793, "total_submitted": 3323, "total_column_articles": 1, "frontend_question_id": 312, "is_new_question": false}, "status": null, "difficulty": {"level": 3}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 309, "question__article__live": null, "question__article__slug": null, "question__title": "Best Time to Buy and Sell Stock with Cooldown", "question__title_slug": "best-time-to-buy-and-sell-stock-with-cooldown", "question__hide": false, "total_acs": 3391, "total_submitted": 7168, "total_column_articles": 2, "frontend_question_id": 309, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 301, "question__article__live": null, "question__article__slug": null, "question__title": "Remove Invalid Parentheses", "question__title_slug": "remove-invalid-parentheses", "question__hide": false, "total_acs": 1206, "total_submitted": 3034, "total_column_articles": 2, "frontend_question_id": 301, "is_new_question": false}, "status": null, "difficulty": {"level": 3}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 300, "question__article__live": null, "question__article__slug": null, "question__title": "Longest Increasing Subsequence", "question__title_slug": "longest-increasing-subsequence", "question__hide": false, "total_acs": 13406, "total_submitted": 32323, "total_column_articles": 1, "frontend_question_id": 300, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 297, "question__article__live": null, "question__article__slug": null, "question__title": "Serialize and Deserialize Binary Tree", "question__title_slug": "serialize-and-deserialize-binary-tree", "question__hide": false, "total_acs": 4439, "total_submitted": 11404, "total_column_articles": 2, "frontend_question_id": 297, "is_new_question": false}, "status": null, "difficulty": {"level": 3}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 287, "question__article__live": null, "question__article__slug": null, "question__title": "Find the Duplicate Number", "question__title_slug": "find-the-duplicate-number", "question__hide": false, "total_acs": 10597, "total_submitted": 17833, "total_column_articles": 1, "frontend_question_id": 287, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 283, "question__article__live": null, "question__article__slug": null, "question__title": "Move Zeroes", "question__title_slug": "move-zeroes", "question__hide": false, "total_acs": 47759, "total_submitted": 87800, "total_column_articles": 9, "frontend_question_id": 283, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 279, "question__article__live": null, "question__article__slug": null, "question__title": "Perfect Squares", "question__title_slug": "perfect-squares", "question__hide": false, "total_acs": 10580, "total_submitted": 21316, "total_column_articles": 4, "frontend_question_id": 279, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 253, "question__article__live": null, "question__article__slug": null, "question__title": "Meeting Rooms II", "question__title_slug": "meeting-rooms-ii", "question__hide": false, "total_acs": 18, "total_submitted": 51, "total_column_articles": 0, "frontend_question_id": 253, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": true, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 240, "question__article__live": null, "question__article__slug": null, "question__title": "Search a 2D Matrix II", "question__title_slug": "search-a-2d-matrix-ii", "question__hide": false, "total_acs": 16189, "total_submitted": 44070, "total_column_articles": 5, "frontend_question_id": 240, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 239, "question__article__live": null, "question__article__slug": null, "question__title": "Sliding Window Maximum", "question__title_slug": "sliding-window-maximum", "question__hide": false, "total_acs": 7163, "total_submitted": 17453, "total_column_articles": 1, "frontend_question_id": 239, "is_new_question": false}, "status": null, "difficulty": {"level": 3}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 238, "question__article__live": null, "question__article__slug": null, "question__title": "Product of Array Except Self", "question__title_slug": "product-of-array-except-self", "question__hide": false, "total_acs": 10151, "total_submitted": 16641, "total_column_articles": 4, "frontend_question_id": 238, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 236, "question__article__live": null, "question__article__slug": null, "question__title": "Lowest Common Ancestor of a Binary Tree", "question__title_slug": "lowest-common-ancestor-of-a-binary-tree", "question__hide": false, "total_acs": 13925, "total_submitted": 25578, "total_column_articles": 4, "frontend_question_id": 236, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 234, "question__article__live": null, "question__article__slug": null, "question__title": "Palindrome Linked List", "question__title_slug": "palindrome-linked-list", "question__hide": false, "total_acs": 24623, "total_submitted": 66622, "total_column_articles": 10, "frontend_question_id": 234, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 226, "question__article__live": null, "question__article__slug": null, "question__title": "Invert Binary Tree", "question__title_slug": "invert-binary-tree", "question__hide": false, "total_acs": 17435, "total_submitted": 24999, "total_column_articles": 4, "frontend_question_id": 226, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 221, "question__article__live": null, "question__article__slug": null, "question__title": "Maximal Square", "question__title_slug": "maximal-square", "question__hide": false, "total_acs": 5552, "total_submitted": 15023, "total_column_articles": 2, "frontend_question_id": 221, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 215, "question__article__live": null, "question__article__slug": null, "question__title": "Kth Largest Element in an Array", "question__title_slug": "kth-largest-element-in-an-array", "question__hide": false, "total_acs": 26446, "total_submitted": 46199, "total_column_articles": 8, "frontend_question_id": 215, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 208, "question__article__live": null, "question__article__slug": null, "question__title": "Implement Trie (Prefix Tree)", "question__title_slug": "implement-trie-prefix-tree", "question__hide": false, "total_acs": 6891, "total_submitted": 11782, "total_column_articles": 5, "frontend_question_id": 208, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 207, "question__article__live": null, "question__article__slug": null, "question__title": "Course Schedule", "question__title_slug": "course-schedule", "question__hide": false, "total_acs": 4912, "total_submitted": 10727, "total_column_articles": 0, "frontend_question_id": 207, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 206, "question__article__live": true, "question__article__slug": "reverse-linked-list", "question__title": "Reverse Linked List", "question__title_slug": "reverse-linked-list", "question__hide": false, "total_acs": 60190, "total_submitted": 97669, "total_column_articles": 14, "frontend_question_id": 206, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 200, "question__article__live": null, "question__article__slug": null, "question__title": "Number of Islands", "question__title_slug": "number-of-islands", "question__hide": false, "total_acs": 14747, "total_submitted": 34076, "total_column_articles": 8, "frontend_question_id": 200, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 198, "question__article__live": null, "question__article__slug": null, "question__title": "House Robber", "question__title_slug": "house-robber", "question__hide": false, "total_acs": 26053, "total_submitted": 64941, "total_column_articles": 6, "frontend_question_id": 198, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 169, "question__article__live": false, "question__article__slug": "majority-element", "question__title": "Majority Element", "question__title_slug": "majority-element", "question__hide": false, "total_acs": 44333, "total_submitted": 74744, "total_column_articles": 9, "frontend_question_id": 169, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 160, "question__article__live": null, "question__article__slug": null, "question__title": "Intersection of Two Linked Lists", "question__title_slug": "intersection-of-two-linked-lists", "question__hide": false, "total_acs": 27291, "total_submitted": 63205, "total_column_articles": 5, "frontend_question_id": 160, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 155, "question__article__live": null, "question__article__slug": null, "question__title": "Min Stack", "question__title_slug": "min-stack", "question__hide": false, "total_acs": 27864, "total_submitted": 57100, "total_column_articles": 8, "frontend_question_id": 155, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 152, "question__article__live": null, "question__article__slug": null, "question__title": "Maximum Product Subarray", "question__title_slug": "maximum-product-subarray", "question__hide": false, "total_acs": 10486, "total_submitted": 30824, "total_column_articles": 3, "frontend_question_id": 152, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 148, "question__article__live": null, "question__article__slug": null, "question__title": "Sort List", "question__title_slug": "sort-list", "question__hide": false, "total_acs": 13445, "total_submitted": 22256, "total_column_articles": 3, "frontend_question_id": 148, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 146, "question__article__live": null, "question__article__slug": null, "question__title": "LRU Cache", "question__title_slug": "lru-cache", "question__hide": false, "total_acs": 8498, "total_submitted": 20808, "total_column_articles": 6, "frontend_question_id": 146, "is_new_question": false}, "status": null, "difficulty": {"level": 3}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 142, "question__article__live": null, "question__article__slug": null, "question__title": "Linked List Cycle II", "question__title_slug": "linked-list-cycle-ii", "question__hide": false, "total_acs": 16861, "total_submitted": 42703, "total_column_articles": 4, "frontend_question_id": 142, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 141, "question__article__live": true, "question__article__slug": "linked-list-cycle", "question__title": "Linked List Cycle", "question__title_slug": "linked-list-cycle", "question__hide": false, "total_acs": 42158, "total_submitted": 106421, "total_column_articles": 8, "frontend_question_id": 141, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 139, "question__article__live": null, "question__article__slug": null, "question__title": "Word Break", "question__title_slug": "word-break", "question__hide": false, "total_acs": 9949, "total_submitted": 24147, "total_column_articles": 2, "frontend_question_id": 139, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 136, "question__article__live": null, "question__article__slug": null, "question__title": "Single Number", "question__title_slug": "single-number", "question__hide": false, "total_acs": 69989, "total_submitted": 114459, "total_column_articles": 12, "frontend_question_id": 136, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 128, "question__article__live": null, "question__article__slug": null, "question__title": "Longest Consecutive Sequence", "question__title_slug": "longest-consecutive-sequence", "question__hide": false, "total_acs": 8010, "total_submitted": 18297, "total_column_articles": 5, "frontend_question_id": 128, "is_new_question": false}, "status": null, "difficulty": {"level": 3}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 124, "question__article__live": null, "question__article__slug": null, "question__title": "Binary Tree Maximum Path Sum", "question__title_slug": "binary-tree-maximum-path-sum", "question__hide": false, "total_acs": 7375, "total_submitted": 20899, "total_column_articles": 5, "frontend_question_id": 124, "is_new_question": false}, "status": null, "difficulty": {"level": 3}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 121, "question__article__live": true, "question__article__slug": "best-time-to-buy-and-sell-stock", "question__title": "Best Time to Buy and Sell Stock", "question__title_slug": "best-time-to-buy-and-sell-stock", "question__hide": false, "total_acs": 47768, "total_submitted": 96033, "total_column_articles": 6, "frontend_question_id": 121, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 114, "question__article__live": null, "question__article__slug": null, "question__title": "Flatten Binary Tree to Linked List", "question__title_slug": "flatten-binary-tree-to-linked-list", "question__hide": false, "total_acs": 7132, "total_submitted": 11651, "total_column_articles": 3, "frontend_question_id": 114, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 105, "question__article__live": null, "question__article__slug": null, "question__title": "Construct Binary Tree from Preorder and Inorder Traversal", "question__title_slug": "construct-binary-tree-from-preorder-and-inorder-traversal", "question__hide": false, "total_acs": 13421, "total_submitted": 23144, "total_column_articles": 2, "frontend_question_id": 105, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 104, "question__article__live": true, "question__article__slug": "maximum-depth-of-binary-tree", "question__title": "Maximum Depth of Binary Tree", "question__title_slug": "maximum-depth-of-binary-tree", "question__hide": false, "total_acs": 48177, "total_submitted": 69699, "total_column_articles": 9, "frontend_question_id": 104, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 102, "question__article__live": null, "question__article__slug": null, "question__title": "Binary Tree Level Order Traversal", "question__title_slug": "binary-tree-level-order-traversal", "question__hide": false, "total_acs": 26818, "total_submitted": 47767, "total_column_articles": 5, "frontend_question_id": 102, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 101, "question__article__live": true, "question__article__slug": "symmetric-tree", "question__title": "Symmetric Tree", "question__title_slug": "symmetric-tree", "question__hide": false, "total_acs": 33966, "total_submitted": 72854, "total_column_articles": 6, "frontend_question_id": 101, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 98, "question__article__live": null, "question__article__slug": null, "question__title": "Validate Binary Search Tree", "question__title_slug": "validate-binary-search-tree", "question__hide": false, "total_acs": 23562, "total_submitted": 90950, "total_column_articles": 8, "frontend_question_id": 98, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 96, "question__article__live": null, "question__article__slug": null, "question__title": "Unique Binary Search Trees", "question__title_slug": "unique-binary-search-trees", "question__hide": false, "total_acs": 8629, "total_submitted": 14319, "total_column_articles": 3, "frontend_question_id": 96, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 94, "question__article__live": null, "question__article__slug": null, "question__title": "Binary Tree Inorder Traversal", "question__title_slug": "binary-tree-inorder-traversal", "question__hide": false, "total_acs": 33081, "total_submitted": 50396, "total_column_articles": 3, "frontend_question_id": 94, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 85, "question__article__live": null, "question__article__slug": null, "question__title": "Maximal Rectangle", "question__title_slug": "maximal-rectangle", "question__hide": false, "total_acs": 4086, "total_submitted": 9424, "total_column_articles": 2, "frontend_question_id": 85, "is_new_question": false}, "status": null, "difficulty": {"level": 3}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 84, "question__article__live": null, "question__article__slug": null, "question__title": "Largest Rectangle in Histogram", "question__title_slug": "largest-rectangle-in-histogram", "question__hide": false, "total_acs": 6856, "total_submitted": 18127, "total_column_articles": 1, "frontend_question_id": 84, "is_new_question": false}, "status": null, "difficulty": {"level": 3}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 79, "question__article__live": null, "question__article__slug": null, "question__title": "Word Search", "question__title_slug": "word-search", "question__hide": false, "total_acs": 10693, "total_submitted": 28476, "total_column_articles": 3, "frontend_question_id": 79, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 78, "question__article__live": null, "question__article__slug": null, "question__title": "Subsets", "question__title_slug": "subsets", "question__hide": false, "total_acs": 20646, "total_submitted": 28156, "total_column_articles": 6, "frontend_question_id": 78, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 76, "question__article__live": null, "question__article__slug": null, "question__title": "Minimum Window Substring", "question__title_slug": "minimum-window-substring", "question__hide": false, "total_acs": 5400, "total_submitted": 15371, "total_column_articles": 2, "frontend_question_id": 76, "is_new_question": false}, "status": null, "difficulty": {"level": 3}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 75, "question__article__live": null, "question__article__slug": null, "question__title": "Sort Colors", "question__title_slug": "sort-colors", "question__hide": false, "total_acs": 19740, "total_submitted": 37777, "total_column_articles": 6, "frontend_question_id": 75, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 72, "question__article__live": null, "question__article__slug": null, "question__title": "Edit Distance", "question__title_slug": "edit-distance", "question__hide": false, "total_acs": 6865, "total_submitted": 13523, "total_column_articles": 4, "frontend_question_id": 72, "is_new_question": false}, "status": null, "difficulty": {"level": 3}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 70, "question__article__live": true, "question__article__slug": "climbing-stairs", "question__title": "Climbing Stairs", "question__title_slug": "climbing-stairs", "question__hide": false, "total_acs": 50049, "total_submitted": 110190, "total_column_articles": 12, "frontend_question_id": 70, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 64, "question__article__live": null, "question__article__slug": null, "question__title": "Minimum Path Sum", "question__title_slug": "minimum-path-sum", "question__hide": false, "total_acs": 16360, "total_submitted": 26853, "total_column_articles": 5, "frontend_question_id": 64, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 62, "question__article__live": null, "question__article__slug": null, "question__title": "Unique Paths", "question__title_slug": "unique-paths", "question__hide": false, "total_acs": 22042, "total_submitted": 40796, "total_column_articles": 9, "frontend_question_id": 62, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 56, "question__article__live": null, "question__article__slug": null, "question__title": "Merge Intervals", "question__title_slug": "merge-intervals", "question__hide": false, "total_acs": 15527, "total_submitted": 43212, "total_column_articles": 7, "frontend_question_id": 56, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 55, "question__article__live": null, "question__article__slug": null, "question__title": "Jump Game", "question__title_slug": "jump-game", "question__hide": false, "total_acs": 18195, "total_submitted": 51752, "total_column_articles": 6, "frontend_question_id": 55, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 53, "question__article__live": null, "question__article__slug": null, "question__title": "Maximum Subarray", "question__title_slug": "maximum-subarray", "question__hide": false, "total_acs": 59150, "total_submitted": 130996, "total_column_articles": 17, "frontend_question_id": 53, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 49, "question__article__live": true, "question__article__slug": "group-anagrams", "question__title": "Group Anagrams", "question__title_slug": "group-anagrams", "question__hide": false, "total_acs": 17038, "total_submitted": 30450, "total_column_articles": 3, "frontend_question_id": 49, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 48, "question__article__live": null, "question__article__slug": null, "question__title": "Rotate Image", "question__title_slug": "rotate-image", "question__hide": false, "total_acs": 23713, "total_submitted": 38421, "total_column_articles": 13, "frontend_question_id": 48, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 46, "question__article__live": null, "question__article__slug": null, "question__title": "Permutations", "question__title_slug": "permutations", "question__hide": false, "total_acs": 25739, "total_submitted": 37246, "total_column_articles": 9, "frontend_question_id": 46, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 42, "question__article__live": null, "question__article__slug": null, "question__title": "Trapping Rain Water", "question__title_slug": "trapping-rain-water", "question__hide": false, "total_acs": 15042, "total_submitted": 34154, "total_column_articles": 6, "frontend_question_id": 42, "is_new_question": false}, "status": null, "difficulty": {"level": 3}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 39, "question__article__live": null, "question__article__slug": null, "question__title": "Combination Sum", "question__title_slug": "combination-sum", "question__hide": false, "total_acs": 19323, "total_submitted": 29816, "total_column_articles": 7, "frontend_question_id": 39, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 34, "question__article__live": null, "question__article__slug": null, "question__title": "Find First and Last Position of Element in Sorted Array", "question__title_slug": "find-first-and-last-position-of-element-in-sorted-array", "question__hide": false, "total_acs": 19279, "total_submitted": 52751, "total_column_articles": 11, "frontend_question_id": 34, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 33, "question__article__live": null, "question__article__slug": null, "question__title": "Search in Rotated Sorted Array", "question__title_slug": "search-in-rotated-sorted-array", "question__hide": false, "total_acs": 25606, "total_submitted": 69789, "total_column_articles": 16, "frontend_question_id": 33, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 32, "question__article__live": null, "question__article__slug": null, "question__title": "Longest Valid Parentheses", "question__title_slug": "longest-valid-parentheses", "question__hide": false, "total_acs": 11284, "total_submitted": 41791, "total_column_articles": 4, "frontend_question_id": 32, "is_new_question": false}, "status": null, "difficulty": {"level": 3}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 31, "question__article__live": true, "question__article__slug": "next-permutation", "question__title": "Next Permutation", "question__title_slug": "next-permutation", "question__hide": false, "total_acs": 13353, "total_submitted": 43358, "total_column_articles": 4, "frontend_question_id": 31, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 23, "question__article__live": null, "question__article__slug": null, "question__title": "Merge k Sorted Lists", "question__title_slug": "merge-k-sorted-lists", "question__hide": false, "total_acs": 24614, "total_submitted": 53498, "total_column_articles": 7, "frontend_question_id": 23, "is_new_question": false}, "status": null, "difficulty": {"level": 3}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 22, "question__article__live": true, "question__article__slug": "generate-parentheses", "question__title": "Generate Parentheses", "question__title_slug": "generate-parentheses", "question__hide": false, "total_acs": 23915, "total_submitted": 33989, "total_column_articles": 5, "frontend_question_id": 22, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 21, "question__article__live": null, "question__article__slug": null, "question__title": "Merge Two Sorted Lists", "question__title_slug": "merge-two-sorted-lists", "question__hide": false, "total_acs": 71690, "total_submitted": 131356, "total_column_articles": 19, "frontend_question_id": 21, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 20, "question__article__live": true, "question__article__slug": "valid-parentheses", "question__title": "Valid Parentheses", "question__title_slug": "valid-parentheses", "question__hide": false, "total_acs": 78166, "total_submitted": 204472, "total_column_articles": 15, "frontend_question_id": 20, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 19, "question__article__live": true, "question__article__slug": "remove-nth-node-from-end-of-list", "question__title": "Remove Nth Node From End of List", "question__title_slug": "remove-nth-node-from-end-of-list", "question__hide": false, "total_acs": 46117, "total_submitted": 136745, "total_column_articles": 19, "frontend_question_id": 19, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 17, "question__article__live": null, "question__article__slug": null, "question__title": "Letter Combinations of a Phone Number", "question__title_slug": "letter-combinations-of-a-phone-number", "question__hide": false, "total_acs": 25725, "total_submitted": 52117, "total_column_articles": 15, "frontend_question_id": 17, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 15, "question__article__live": null, "question__article__slug": null, "question__title": "3Sum", "question__title_slug": "3sum", "question__hide": false, "total_acs": 57706, "total_submitted": 256672, "total_column_articles": 17, "frontend_question_id": 15, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 11, "question__article__live": true, "question__article__slug": "container-with-most-water", "question__title": "Container With Most Water", "question__title_slug": "container-with-most-water", "question__hide": false, "total_acs": 47478, "total_submitted": 85020, "total_column_articles": 11, "frontend_question_id": 11, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 10, "question__article__live": null, "question__article__slug": null, "question__title": "Regular Expression Matching", "question__title_slug": "regular-expression-matching", "question__hide": false, "total_acs": 16241, "total_submitted": 70680, "total_column_articles": 10, "frontend_question_id": 10, "is_new_question": false}, "status": null, "difficulty": {"level": 3}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 5, "question__article__live": true, "question__article__slug": "longest-palindromic-substring", "question__title": "Longest Palindromic Substring", "question__title_slug": "longest-palindromic-substring", "question__hide": false, "total_acs": 62374, "total_submitted": 246723, "total_column_articles": 20, "frontend_question_id": 5, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 4, "question__article__live": true, "question__article__slug": "median-of-two-sorted-arrays", "question__title": "Median of Two Sorted Arrays", "question__title_slug": "median-of-two-sorted-arrays", "question__hide": false, "total_acs": 57296, "total_submitted": 163882, "total_column_articles": 27, "frontend_question_id": 4, "is_new_question": false}, "status": null, "difficulty": {"level": 3}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 3, "question__article__live": true, "question__article__slug": "longest-substring-without-repeating-characters", "question__title": "Longest Substring Without Repeating Characters", "question__title_slug": "longest-substring-without-repeating-characters", "question__hide": false, "total_acs": 129270, "total_submitted": 436723, "total_column_articles": 41, "frontend_question_id": 3, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 2, "question__article__live": true, "question__article__slug": "add-two-numbers", "question__title": "Add Two Numbers", "question__title_slug": "add-two-numbers", "question__hide": false, "total_acs": 133726, "total_submitted": 390778, "total_column_articles": 53, "frontend_question_id": 2, "is_new_question": false}, "status": null, "difficulty": {"level": 2}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}, {"stat": {"question_id": 1, "question__article__live": true, "question__article__slug": "two-sum", "question__title": "Two Sum", "question__title_slug": "two-sum", "question__hide": false, "total_acs": 384043, "total_submitted": 834341, "total_column_articles": 56, "frontend_question_id": 1, "is_new_question": false}, "status": null, "difficulty": {"level": 1}, "paid_only": false, "is_favor": false, "frequency": 0, "progress": 0}], "frequency_high": 0, "frequency_mid": 0}
+{
+  "user_name": "",
+  "num_solved": 0,
+  "num_total": 100,
+  "ac_easy": 0,
+  "ac_medium": 0,
+  "ac_hard": 0,
+  "stat_status_pairs": [
+    {
+      "stat": {
+        "question_id": 739,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Daily Temperatures",
+        "question__title_slug": "daily-temperatures",
+        "question__hide": false,
+        "total_acs": 5544,
+        "total_submitted": 9593,
+        "total_column_articles": 4,
+        "frontend_question_id": 739,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 647,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Palindromic Substrings",
+        "question__title_slug": "palindromic-substrings",
+        "question__hide": false,
+        "total_acs": 3785,
+        "total_submitted": 7004,
+        "total_column_articles": 1,
+        "frontend_question_id": 647,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 621,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Task Scheduler",
+        "question__title_slug": "task-scheduler",
+        "question__hide": false,
+        "total_acs": 2799,
+        "total_submitted": 6311,
+        "total_column_articles": 0,
+        "frontend_question_id": 621,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 617,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Merge Two Binary Trees",
+        "question__title_slug": "merge-two-binary-trees",
+        "question__hide": false,
+        "total_acs": 10708,
+        "total_submitted": 15231,
+        "total_column_articles": 2,
+        "frontend_question_id": 617,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 581,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Shortest Unsorted Continuous Subarray",
+        "question__title_slug": "shortest-unsorted-continuous-subarray",
+        "question__hide": false,
+        "total_acs": 4619,
+        "total_submitted": 14256,
+        "total_column_articles": 2,
+        "frontend_question_id": 581,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 560,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Subarray Sum Equals K",
+        "question__title_slug": "subarray-sum-equals-k",
+        "question__hide": false,
+        "total_acs": 2961,
+        "total_submitted": 7913,
+        "total_column_articles": 0,
+        "frontend_question_id": 560,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 543,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Diameter of Binary Tree",
+        "question__title_slug": "diameter-of-binary-tree",
+        "question__hide": false,
+        "total_acs": 4294,
+        "total_submitted": 9817,
+        "total_column_articles": 3,
+        "frontend_question_id": 543,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 538,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Convert BST to Greater Tree",
+        "question__title_slug": "convert-bst-to-greater-tree",
+        "question__hide": false,
+        "total_acs": 4094,
+        "total_submitted": 7670,
+        "total_column_articles": 3,
+        "frontend_question_id": 538,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 494,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Target Sum",
+        "question__title_slug": "target-sum",
+        "question__hide": false,
+        "total_acs": 4363,
+        "total_submitted": 10631,
+        "total_column_articles": 4,
+        "frontend_question_id": 494,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 461,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Hamming Distance",
+        "question__title_slug": "hamming-distance",
+        "question__hide": false,
+        "total_acs": 18596,
+        "total_submitted": 26637,
+        "total_column_articles": 6,
+        "frontend_question_id": 461,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 448,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Find All Numbers Disappeared in an Array",
+        "question__title_slug": "find-all-numbers-disappeared-in-an-array",
+        "question__hide": false,
+        "total_acs": 7915,
+        "total_submitted": 16086,
+        "total_column_articles": 4,
+        "frontend_question_id": 448,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 438,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Find All Anagrams in a String",
+        "question__title_slug": "find-all-anagrams-in-a-string",
+        "question__hide": false,
+        "total_acs": 5094,
+        "total_submitted": 13698,
+        "total_column_articles": 2,
+        "frontend_question_id": 438,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 437,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Path Sum III",
+        "question__title_slug": "path-sum-iii",
+        "question__hide": false,
+        "total_acs": 5550,
+        "total_submitted": 11178,
+        "total_column_articles": 3,
+        "frontend_question_id": 437,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 416,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Partition Equal Subset Sum",
+        "question__title_slug": "partition-equal-subset-sum",
+        "question__hide": false,
+        "total_acs": 3984,
+        "total_submitted": 9854,
+        "total_column_articles": 2,
+        "frontend_question_id": 416,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 406,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Queue Reconstruction by Height",
+        "question__title_slug": "queue-reconstruction-by-height",
+        "question__hide": false,
+        "total_acs": 2584,
+        "total_submitted": 4205,
+        "total_column_articles": 0,
+        "frontend_question_id": 406,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 399,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Evaluate Division",
+        "question__title_slug": "evaluate-division",
+        "question__hide": false,
+        "total_acs": 711,
+        "total_submitted": 1514,
+        "total_column_articles": 5,
+        "frontend_question_id": 399,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 394,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Decode String",
+        "question__title_slug": "decode-string",
+        "question__hide": false,
+        "total_acs": 3333,
+        "total_submitted": 7715,
+        "total_column_articles": 3,
+        "frontend_question_id": 394,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 347,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Top K Frequent Elements",
+        "question__title_slug": "top-k-frequent-elements",
+        "question__hide": false,
+        "total_acs": 12261,
+        "total_submitted": 21647,
+        "total_column_articles": 4,
+        "frontend_question_id": 347,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 338,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Counting Bits",
+        "question__title_slug": "counting-bits",
+        "question__hide": false,
+        "total_acs": 8561,
+        "total_submitted": 11889,
+        "total_column_articles": 2,
+        "frontend_question_id": 338,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 337,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "House Robber III",
+        "question__title_slug": "house-robber-iii",
+        "question__hide": false,
+        "total_acs": 3418,
+        "total_submitted": 6391,
+        "total_column_articles": 2,
+        "frontend_question_id": 337,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 322,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Coin Change",
+        "question__title_slug": "coin-change",
+        "question__hide": false,
+        "total_acs": 10753,
+        "total_submitted": 33289,
+        "total_column_articles": 2,
+        "frontend_question_id": 322,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 312,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Burst Balloons",
+        "question__title_slug": "burst-balloons",
+        "question__hide": false,
+        "total_acs": 1793,
+        "total_submitted": 3323,
+        "total_column_articles": 1,
+        "frontend_question_id": 312,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 3
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 309,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Best Time to Buy and Sell Stock with Cooldown",
+        "question__title_slug": "best-time-to-buy-and-sell-stock-with-cooldown",
+        "question__hide": false,
+        "total_acs": 3391,
+        "total_submitted": 7168,
+        "total_column_articles": 2,
+        "frontend_question_id": 309,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 301,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Remove Invalid Parentheses",
+        "question__title_slug": "remove-invalid-parentheses",
+        "question__hide": false,
+        "total_acs": 1206,
+        "total_submitted": 3034,
+        "total_column_articles": 2,
+        "frontend_question_id": 301,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 3
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 300,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Longest Increasing Subsequence",
+        "question__title_slug": "longest-increasing-subsequence",
+        "question__hide": false,
+        "total_acs": 13406,
+        "total_submitted": 32323,
+        "total_column_articles": 1,
+        "frontend_question_id": 300,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 297,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Serialize and Deserialize Binary Tree",
+        "question__title_slug": "serialize-and-deserialize-binary-tree",
+        "question__hide": false,
+        "total_acs": 4439,
+        "total_submitted": 11404,
+        "total_column_articles": 2,
+        "frontend_question_id": 297,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 3
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 287,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Find the Duplicate Number",
+        "question__title_slug": "find-the-duplicate-number",
+        "question__hide": false,
+        "total_acs": 10597,
+        "total_submitted": 17833,
+        "total_column_articles": 1,
+        "frontend_question_id": 287,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 283,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Move Zeroes",
+        "question__title_slug": "move-zeroes",
+        "question__hide": false,
+        "total_acs": 47759,
+        "total_submitted": 87800,
+        "total_column_articles": 9,
+        "frontend_question_id": 283,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 279,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Perfect Squares",
+        "question__title_slug": "perfect-squares",
+        "question__hide": false,
+        "total_acs": 10580,
+        "total_submitted": 21316,
+        "total_column_articles": 4,
+        "frontend_question_id": 279,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 253,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Meeting Rooms II",
+        "question__title_slug": "meeting-rooms-ii",
+        "question__hide": false,
+        "total_acs": 18,
+        "total_submitted": 51,
+        "total_column_articles": 0,
+        "frontend_question_id": 253,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": true,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 240,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Search a 2D Matrix II",
+        "question__title_slug": "search-a-2d-matrix-ii",
+        "question__hide": false,
+        "total_acs": 16189,
+        "total_submitted": 44070,
+        "total_column_articles": 5,
+        "frontend_question_id": 240,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 239,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Sliding Window Maximum",
+        "question__title_slug": "sliding-window-maximum",
+        "question__hide": false,
+        "total_acs": 7163,
+        "total_submitted": 17453,
+        "total_column_articles": 1,
+        "frontend_question_id": 239,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 3
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 238,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Product of Array Except Self",
+        "question__title_slug": "product-of-array-except-self",
+        "question__hide": false,
+        "total_acs": 10151,
+        "total_submitted": 16641,
+        "total_column_articles": 4,
+        "frontend_question_id": 238,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 236,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Lowest Common Ancestor of a Binary Tree",
+        "question__title_slug": "lowest-common-ancestor-of-a-binary-tree",
+        "question__hide": false,
+        "total_acs": 13925,
+        "total_submitted": 25578,
+        "total_column_articles": 4,
+        "frontend_question_id": 236,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 234,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Palindrome Linked List",
+        "question__title_slug": "palindrome-linked-list",
+        "question__hide": false,
+        "total_acs": 24623,
+        "total_submitted": 66622,
+        "total_column_articles": 10,
+        "frontend_question_id": 234,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 226,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Invert Binary Tree",
+        "question__title_slug": "invert-binary-tree",
+        "question__hide": false,
+        "total_acs": 17435,
+        "total_submitted": 24999,
+        "total_column_articles": 4,
+        "frontend_question_id": 226,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 221,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Maximal Square",
+        "question__title_slug": "maximal-square",
+        "question__hide": false,
+        "total_acs": 5552,
+        "total_submitted": 15023,
+        "total_column_articles": 2,
+        "frontend_question_id": 221,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 215,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Kth Largest Element in an Array",
+        "question__title_slug": "kth-largest-element-in-an-array",
+        "question__hide": false,
+        "total_acs": 26446,
+        "total_submitted": 46199,
+        "total_column_articles": 8,
+        "frontend_question_id": 215,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 208,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Implement Trie (Prefix Tree)",
+        "question__title_slug": "implement-trie-prefix-tree",
+        "question__hide": false,
+        "total_acs": 6891,
+        "total_submitted": 11782,
+        "total_column_articles": 5,
+        "frontend_question_id": 208,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 207,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Course Schedule",
+        "question__title_slug": "course-schedule",
+        "question__hide": false,
+        "total_acs": 4912,
+        "total_submitted": 10727,
+        "total_column_articles": 0,
+        "frontend_question_id": 207,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 206,
+        "question__article__live": true,
+        "question__article__slug": "reverse-linked-list",
+        "question__title": "Reverse Linked List",
+        "question__title_slug": "reverse-linked-list",
+        "question__hide": false,
+        "total_acs": 60190,
+        "total_submitted": 97669,
+        "total_column_articles": 14,
+        "frontend_question_id": 206,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 200,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Number of Islands",
+        "question__title_slug": "number-of-islands",
+        "question__hide": false,
+        "total_acs": 14747,
+        "total_submitted": 34076,
+        "total_column_articles": 8,
+        "frontend_question_id": 200,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 198,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "House Robber",
+        "question__title_slug": "house-robber",
+        "question__hide": false,
+        "total_acs": 26053,
+        "total_submitted": 64941,
+        "total_column_articles": 6,
+        "frontend_question_id": 198,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 169,
+        "question__article__live": false,
+        "question__article__slug": "majority-element",
+        "question__title": "Majority Element",
+        "question__title_slug": "majority-element",
+        "question__hide": false,
+        "total_acs": 44333,
+        "total_submitted": 74744,
+        "total_column_articles": 9,
+        "frontend_question_id": 169,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 160,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Intersection of Two Linked Lists",
+        "question__title_slug": "intersection-of-two-linked-lists",
+        "question__hide": false,
+        "total_acs": 27291,
+        "total_submitted": 63205,
+        "total_column_articles": 5,
+        "frontend_question_id": 160,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 155,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Min Stack",
+        "question__title_slug": "min-stack",
+        "question__hide": false,
+        "total_acs": 27864,
+        "total_submitted": 57100,
+        "total_column_articles": 8,
+        "frontend_question_id": 155,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 152,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Maximum Product Subarray",
+        "question__title_slug": "maximum-product-subarray",
+        "question__hide": false,
+        "total_acs": 10486,
+        "total_submitted": 30824,
+        "total_column_articles": 3,
+        "frontend_question_id": 152,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 148,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Sort List",
+        "question__title_slug": "sort-list",
+        "question__hide": false,
+        "total_acs": 13445,
+        "total_submitted": 22256,
+        "total_column_articles": 3,
+        "frontend_question_id": 148,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 146,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "LRU Cache",
+        "question__title_slug": "lru-cache",
+        "question__hide": false,
+        "total_acs": 8498,
+        "total_submitted": 20808,
+        "total_column_articles": 6,
+        "frontend_question_id": 146,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 3
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 142,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Linked List Cycle II",
+        "question__title_slug": "linked-list-cycle-ii",
+        "question__hide": false,
+        "total_acs": 16861,
+        "total_submitted": 42703,
+        "total_column_articles": 4,
+        "frontend_question_id": 142,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 141,
+        "question__article__live": true,
+        "question__article__slug": "linked-list-cycle",
+        "question__title": "Linked List Cycle",
+        "question__title_slug": "linked-list-cycle",
+        "question__hide": false,
+        "total_acs": 42158,
+        "total_submitted": 106421,
+        "total_column_articles": 8,
+        "frontend_question_id": 141,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 139,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Word Break",
+        "question__title_slug": "word-break",
+        "question__hide": false,
+        "total_acs": 9949,
+        "total_submitted": 24147,
+        "total_column_articles": 2,
+        "frontend_question_id": 139,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 136,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Single Number",
+        "question__title_slug": "single-number",
+        "question__hide": false,
+        "total_acs": 69989,
+        "total_submitted": 114459,
+        "total_column_articles": 12,
+        "frontend_question_id": 136,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 128,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Longest Consecutive Sequence",
+        "question__title_slug": "longest-consecutive-sequence",
+        "question__hide": false,
+        "total_acs": 8010,
+        "total_submitted": 18297,
+        "total_column_articles": 5,
+        "frontend_question_id": 128,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 3
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 124,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Binary Tree Maximum Path Sum",
+        "question__title_slug": "binary-tree-maximum-path-sum",
+        "question__hide": false,
+        "total_acs": 7375,
+        "total_submitted": 20899,
+        "total_column_articles": 5,
+        "frontend_question_id": 124,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 3
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 121,
+        "question__article__live": true,
+        "question__article__slug": "best-time-to-buy-and-sell-stock",
+        "question__title": "Best Time to Buy and Sell Stock",
+        "question__title_slug": "best-time-to-buy-and-sell-stock",
+        "question__hide": false,
+        "total_acs": 47768,
+        "total_submitted": 96033,
+        "total_column_articles": 6,
+        "frontend_question_id": 121,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 114,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Flatten Binary Tree to Linked List",
+        "question__title_slug": "flatten-binary-tree-to-linked-list",
+        "question__hide": false,
+        "total_acs": 7132,
+        "total_submitted": 11651,
+        "total_column_articles": 3,
+        "frontend_question_id": 114,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 105,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Construct Binary Tree from Preorder and Inorder Traversal",
+        "question__title_slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+        "question__hide": false,
+        "total_acs": 13421,
+        "total_submitted": 23144,
+        "total_column_articles": 2,
+        "frontend_question_id": 105,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 104,
+        "question__article__live": true,
+        "question__article__slug": "maximum-depth-of-binary-tree",
+        "question__title": "Maximum Depth of Binary Tree",
+        "question__title_slug": "maximum-depth-of-binary-tree",
+        "question__hide": false,
+        "total_acs": 48177,
+        "total_submitted": 69699,
+        "total_column_articles": 9,
+        "frontend_question_id": 104,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 102,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Binary Tree Level Order Traversal",
+        "question__title_slug": "binary-tree-level-order-traversal",
+        "question__hide": false,
+        "total_acs": 26818,
+        "total_submitted": 47767,
+        "total_column_articles": 5,
+        "frontend_question_id": 102,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 101,
+        "question__article__live": true,
+        "question__article__slug": "symmetric-tree",
+        "question__title": "Symmetric Tree",
+        "question__title_slug": "symmetric-tree",
+        "question__hide": false,
+        "total_acs": 33966,
+        "total_submitted": 72854,
+        "total_column_articles": 6,
+        "frontend_question_id": 101,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 98,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Validate Binary Search Tree",
+        "question__title_slug": "validate-binary-search-tree",
+        "question__hide": false,
+        "total_acs": 23562,
+        "total_submitted": 90950,
+        "total_column_articles": 8,
+        "frontend_question_id": 98,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 96,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Unique Binary Search Trees",
+        "question__title_slug": "unique-binary-search-trees",
+        "question__hide": false,
+        "total_acs": 8629,
+        "total_submitted": 14319,
+        "total_column_articles": 3,
+        "frontend_question_id": 96,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 94,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Binary Tree Inorder Traversal",
+        "question__title_slug": "binary-tree-inorder-traversal",
+        "question__hide": false,
+        "total_acs": 33081,
+        "total_submitted": 50396,
+        "total_column_articles": 3,
+        "frontend_question_id": 94,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 85,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Maximal Rectangle",
+        "question__title_slug": "maximal-rectangle",
+        "question__hide": false,
+        "total_acs": 4086,
+        "total_submitted": 9424,
+        "total_column_articles": 2,
+        "frontend_question_id": 85,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 3
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 84,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Largest Rectangle in Histogram",
+        "question__title_slug": "largest-rectangle-in-histogram",
+        "question__hide": false,
+        "total_acs": 6856,
+        "total_submitted": 18127,
+        "total_column_articles": 1,
+        "frontend_question_id": 84,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 3
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 79,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Word Search",
+        "question__title_slug": "word-search",
+        "question__hide": false,
+        "total_acs": 10693,
+        "total_submitted": 28476,
+        "total_column_articles": 3,
+        "frontend_question_id": 79,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 78,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Subsets",
+        "question__title_slug": "subsets",
+        "question__hide": false,
+        "total_acs": 20646,
+        "total_submitted": 28156,
+        "total_column_articles": 6,
+        "frontend_question_id": 78,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 76,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Minimum Window Substring",
+        "question__title_slug": "minimum-window-substring",
+        "question__hide": false,
+        "total_acs": 5400,
+        "total_submitted": 15371,
+        "total_column_articles": 2,
+        "frontend_question_id": 76,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 3
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 75,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Sort Colors",
+        "question__title_slug": "sort-colors",
+        "question__hide": false,
+        "total_acs": 19740,
+        "total_submitted": 37777,
+        "total_column_articles": 6,
+        "frontend_question_id": 75,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 72,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Edit Distance",
+        "question__title_slug": "edit-distance",
+        "question__hide": false,
+        "total_acs": 6865,
+        "total_submitted": 13523,
+        "total_column_articles": 4,
+        "frontend_question_id": 72,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 3
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 70,
+        "question__article__live": true,
+        "question__article__slug": "climbing-stairs",
+        "question__title": "Climbing Stairs",
+        "question__title_slug": "climbing-stairs",
+        "question__hide": false,
+        "total_acs": 50049,
+        "total_submitted": 110190,
+        "total_column_articles": 12,
+        "frontend_question_id": 70,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 64,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Minimum Path Sum",
+        "question__title_slug": "minimum-path-sum",
+        "question__hide": false,
+        "total_acs": 16360,
+        "total_submitted": 26853,
+        "total_column_articles": 5,
+        "frontend_question_id": 64,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 62,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Unique Paths",
+        "question__title_slug": "unique-paths",
+        "question__hide": false,
+        "total_acs": 22042,
+        "total_submitted": 40796,
+        "total_column_articles": 9,
+        "frontend_question_id": 62,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 56,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Merge Intervals",
+        "question__title_slug": "merge-intervals",
+        "question__hide": false,
+        "total_acs": 15527,
+        "total_submitted": 43212,
+        "total_column_articles": 7,
+        "frontend_question_id": 56,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 55,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Jump Game",
+        "question__title_slug": "jump-game",
+        "question__hide": false,
+        "total_acs": 18195,
+        "total_submitted": 51752,
+        "total_column_articles": 6,
+        "frontend_question_id": 55,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 53,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Maximum Subarray",
+        "question__title_slug": "maximum-subarray",
+        "question__hide": false,
+        "total_acs": 59150,
+        "total_submitted": 130996,
+        "total_column_articles": 17,
+        "frontend_question_id": 53,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 49,
+        "question__article__live": true,
+        "question__article__slug": "group-anagrams",
+        "question__title": "Group Anagrams",
+        "question__title_slug": "group-anagrams",
+        "question__hide": false,
+        "total_acs": 17038,
+        "total_submitted": 30450,
+        "total_column_articles": 3,
+        "frontend_question_id": 49,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 48,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Rotate Image",
+        "question__title_slug": "rotate-image",
+        "question__hide": false,
+        "total_acs": 23713,
+        "total_submitted": 38421,
+        "total_column_articles": 13,
+        "frontend_question_id": 48,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 46,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Permutations",
+        "question__title_slug": "permutations",
+        "question__hide": false,
+        "total_acs": 25739,
+        "total_submitted": 37246,
+        "total_column_articles": 9,
+        "frontend_question_id": 46,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 42,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Trapping Rain Water",
+        "question__title_slug": "trapping-rain-water",
+        "question__hide": false,
+        "total_acs": 15042,
+        "total_submitted": 34154,
+        "total_column_articles": 6,
+        "frontend_question_id": 42,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 3
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 39,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Combination Sum",
+        "question__title_slug": "combination-sum",
+        "question__hide": false,
+        "total_acs": 19323,
+        "total_submitted": 29816,
+        "total_column_articles": 7,
+        "frontend_question_id": 39,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 34,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Find First and Last Position of Element in Sorted Array",
+        "question__title_slug": "find-first-and-last-position-of-element-in-sorted-array",
+        "question__hide": false,
+        "total_acs": 19279,
+        "total_submitted": 52751,
+        "total_column_articles": 11,
+        "frontend_question_id": 34,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 33,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Search in Rotated Sorted Array",
+        "question__title_slug": "search-in-rotated-sorted-array",
+        "question__hide": false,
+        "total_acs": 25606,
+        "total_submitted": 69789,
+        "total_column_articles": 16,
+        "frontend_question_id": 33,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 32,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Longest Valid Parentheses",
+        "question__title_slug": "longest-valid-parentheses",
+        "question__hide": false,
+        "total_acs": 11284,
+        "total_submitted": 41791,
+        "total_column_articles": 4,
+        "frontend_question_id": 32,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 3
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 31,
+        "question__article__live": true,
+        "question__article__slug": "next-permutation",
+        "question__title": "Next Permutation",
+        "question__title_slug": "next-permutation",
+        "question__hide": false,
+        "total_acs": 13353,
+        "total_submitted": 43358,
+        "total_column_articles": 4,
+        "frontend_question_id": 31,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 23,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Merge k Sorted Lists",
+        "question__title_slug": "merge-k-sorted-lists",
+        "question__hide": false,
+        "total_acs": 24614,
+        "total_submitted": 53498,
+        "total_column_articles": 7,
+        "frontend_question_id": 23,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 3
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 22,
+        "question__article__live": true,
+        "question__article__slug": "generate-parentheses",
+        "question__title": "Generate Parentheses",
+        "question__title_slug": "generate-parentheses",
+        "question__hide": false,
+        "total_acs": 23915,
+        "total_submitted": 33989,
+        "total_column_articles": 5,
+        "frontend_question_id": 22,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 21,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Merge Two Sorted Lists",
+        "question__title_slug": "merge-two-sorted-lists",
+        "question__hide": false,
+        "total_acs": 71690,
+        "total_submitted": 131356,
+        "total_column_articles": 19,
+        "frontend_question_id": 21,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 20,
+        "question__article__live": true,
+        "question__article__slug": "valid-parentheses",
+        "question__title": "Valid Parentheses",
+        "question__title_slug": "valid-parentheses",
+        "question__hide": false,
+        "total_acs": 78166,
+        "total_submitted": 204472,
+        "total_column_articles": 15,
+        "frontend_question_id": 20,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 19,
+        "question__article__live": true,
+        "question__article__slug": "remove-nth-node-from-end-of-list",
+        "question__title": "Remove Nth Node From End of List",
+        "question__title_slug": "remove-nth-node-from-end-of-list",
+        "question__hide": false,
+        "total_acs": 46117,
+        "total_submitted": 136745,
+        "total_column_articles": 19,
+        "frontend_question_id": 19,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 17,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Letter Combinations of a Phone Number",
+        "question__title_slug": "letter-combinations-of-a-phone-number",
+        "question__hide": false,
+        "total_acs": 25725,
+        "total_submitted": 52117,
+        "total_column_articles": 15,
+        "frontend_question_id": 17,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 15,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "3Sum",
+        "question__title_slug": "3sum",
+        "question__hide": false,
+        "total_acs": 57706,
+        "total_submitted": 256672,
+        "total_column_articles": 17,
+        "frontend_question_id": 15,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 11,
+        "question__article__live": true,
+        "question__article__slug": "container-with-most-water",
+        "question__title": "Container With Most Water",
+        "question__title_slug": "container-with-most-water",
+        "question__hide": false,
+        "total_acs": 47478,
+        "total_submitted": 85020,
+        "total_column_articles": 11,
+        "frontend_question_id": 11,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 10,
+        "question__article__live": null,
+        "question__article__slug": null,
+        "question__title": "Regular Expression Matching",
+        "question__title_slug": "regular-expression-matching",
+        "question__hide": false,
+        "total_acs": 16241,
+        "total_submitted": 70680,
+        "total_column_articles": 10,
+        "frontend_question_id": 10,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 3
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 5,
+        "question__article__live": true,
+        "question__article__slug": "longest-palindromic-substring",
+        "question__title": "Longest Palindromic Substring",
+        "question__title_slug": "longest-palindromic-substring",
+        "question__hide": false,
+        "total_acs": 62374,
+        "total_submitted": 246723,
+        "total_column_articles": 20,
+        "frontend_question_id": 5,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 4,
+        "question__article__live": true,
+        "question__article__slug": "median-of-two-sorted-arrays",
+        "question__title": "Median of Two Sorted Arrays",
+        "question__title_slug": "median-of-two-sorted-arrays",
+        "question__hide": false,
+        "total_acs": 57296,
+        "total_submitted": 163882,
+        "total_column_articles": 27,
+        "frontend_question_id": 4,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 3
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 3,
+        "question__article__live": true,
+        "question__article__slug": "longest-substring-without-repeating-characters",
+        "question__title": "Longest Substring Without Repeating Characters",
+        "question__title_slug": "longest-substring-without-repeating-characters",
+        "question__hide": false,
+        "total_acs": 129270,
+        "total_submitted": 436723,
+        "total_column_articles": 41,
+        "frontend_question_id": 3,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 2,
+        "question__article__live": true,
+        "question__article__slug": "add-two-numbers",
+        "question__title": "Add Two Numbers",
+        "question__title_slug": "add-two-numbers",
+        "question__hide": false,
+        "total_acs": 133726,
+        "total_submitted": 390778,
+        "total_column_articles": 53,
+        "frontend_question_id": 2,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 2
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    },
+    {
+      "stat": {
+        "question_id": 1,
+        "question__article__live": true,
+        "question__article__slug": "two-sum",
+        "question__title": "Two Sum",
+        "question__title_slug": "two-sum",
+        "question__hide": false,
+        "total_acs": 384043,
+        "total_submitted": 834341,
+        "total_column_articles": 56,
+        "frontend_question_id": 1,
+        "is_new_question": false
+      },
+      "status": null,
+      "difficulty": {
+        "level": 1
+      },
+      "paid_only": false,
+      "is_favor": false,
+      "frequency": 0,
+      "progress": 0
+    }
+  ],
+  "frequency_high": 0,
+  "frequency_mid": 0
+}
