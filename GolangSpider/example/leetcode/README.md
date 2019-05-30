@@ -96,42 +96,57 @@
 ## 成果展示 ##
 
 ### **0.文件存储目录结构** ###
-> ![爬取所有题目列表并存储json文件](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/directory.png)  
+> 爬取所有数据的存储目录  
+> ![爬取所有数据的存储目录](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/directory.png)  
 > 
-> ![question](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/question_dir.png)  
+> 题目信息保存目录   
+> ![题目信息保存目录](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/question_dir.png)  
 > 
-> ![answer](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/answer_dir.png)
+> 题解保存目录  
+> ![题解保存目录](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/answer_dir.png)
 
 ### **1.爬取所有题目列表并存储json文件** ###
+> 爬取所有题目列表并存储json文件  
 > ![爬取所有题目列表并存储json文件](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/algorithms.png)  
 > 
+> 爬取所有题目列表并存储json文件  
 > ![爬取所有题目列表并存储json文件](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/question_list.png)
 
 
 ### **2.爬取单个题目的详细信息** ###
+> 爬取所有话题分类数据  
 > ![爬取所有话题分类数据](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/question_detail.png)
 
 ### **3.爬取每个题目的题解数据并存储json文件** ###
+> 爬取所有题解信息  
 > ![爬取所有题解信息](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/answers.png) 
 >  
+> 爬取每个题解详细信息  
 > ![爬取每个题解详细信息](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/answer_detail.png)  
 
 
 ### **4.爬取热门推荐所有题目数据并存储json文件** ###
+> 热题 HOT 100  
 > ![热题 HOT 100](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/hot100.png)  
 > 
+> 腾讯精选练习（50 题）  
 > ![ 腾讯精选练习（50 题）](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/tentcent50.png)  
 > 
+> 精选 TOP 面试题  
 > ![ 精选 TOP 面试题](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/top.png)  
 
 ### **5.爬取所有话题分类数据并存储json文件** ###
+> 爬取所有话题分类数据  
 > ![爬取所有话题分类数据](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/tags.png)  
 > 
-> ![爬取所有话题分类数据](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/one_tag.png)  
+> 爬取单个话题数据  
+> ![爬取单个话题数据](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/one_tag.png)  
 > 
 ### **6.建立Http服务器在线获取题目列表、单个题目详细信息** ###
+> 在线获取单个题目详细信息  
 > ![在线获取单个题目详细信息](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/web_question_detail.png)  
 > 
+> 在线获取题目列表信息  
 > ![在线获取题目列表信息](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/leetcode/images/web_questions_list.png)
 
 ## 涉及技术 ##
