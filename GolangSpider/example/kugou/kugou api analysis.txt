@@ -1,0 +1,52 @@
+https://wwwapi.kugou.com/yy/index.php?r=play/getdata&hash=F3991D6DB0B606A4994F809517D88C35&album_id=20356684&dfid=3dTilM3ox9ex0DBwK11ykf6l&mid=dc8c2ae8999da9ab67910eac60b6faed&platid=4&_=1557887614895
+
+
+https://wwwapi.kugou.com/yy/index.php?r=play/getdata&hash=52E3C67830F5CB06DAD206E47C4D3A8C&platid=4
+
+&dfid=3dTilM3ox9ex0DBwK11ykf6l&mid=dc8c2ae8999da9ab67910eac60b6faed&platid=4&_=1557887614895
+
+
+http://202.197.96.246:8081/IXCe59869656c0a702e3b128efbf8022669/201905151455/a7024a5839c2435adee36eab1df5c0f9/G107/M05/13/18/qw0DAFwTC_eAbPQFADcJ9weu2oY463.mp3
+http://fs.w.kugou.com/201905151455/a7024a5839c2435adee36eab1df5c0f9/G107/M05/13/18/qw0DAFwTC_eAbPQFADcJ9weu2oY463.mp3
+
+搜索url
+https://songsearch.kugou.com/song_search_v2?keyword=%E4%B8%8B%E5%9D%A0falling&page=1&pagesize=30&platform=WebFilter
+
+&tag=em&filter=2&iscorrection=1&privilege_filter=0&_=1557904003419
+
+单曲
+https://wwwapi.kugou.com/yy/index.php?r=play/getdata&hash=074D817B1E889989DAD1E8EE3B546309&platid=4
+https://wwwapi.kugou.com/yy/index.php?r=play/getdata&hash=52E3C67830F5CB06DAD206E47C4D3A8C&platid=4
+
+搜索歌单
+https://specialsearch.kugou.com/special_search?keyword=%E6%9E%81%E8%87%B4%E7%BA%AF%E7%94%B5%E9%9F%B3&page=1&pagesize=30&platform=WebFilter
+
+
+&tag=em&filter=2&iscorrection=1&privilege_filter=0&_=1558057735645
+
+mv搜索
+https://mvsearch.kugou.com/mv_search?keyword=%E6%9E%81%E8%87%B4%E7%BA%AF%E7%94%B5%E9%9F%B3&page=1&pagesize=30&platform=WebFilter
+
+&userid=-1&clientver=&platform=WebFilter&tag=em&filter=2&iscorrection=1&privilege_filter=0&_=1558057735646
+
+
+https://searchrecommend.kugou.com/v1/word_nofocus?platform=pc
+
+
+获取mv下载地址的url
+http://trackermv.kugou.com/interface/index/cmd=100&hash=578668742F2F76B598DADEBE266FDDC5&key=c83b410711be23b67b064077dc5b238a&pid=6&ext=mp4&ismp3=0
+http://trackermv.kugou.com/interface/index/cmd=100&hash=E23438F0448B148E595816DCC15D0D6E&key=06a824a75307983ab83a69a1d80325f6&pid=6&ext=mp4&ismp3=0
+
+http://trackermv.kugou.com/interface/index/cmd=100&hash=E23438F0448B148E595816DCC15D0D6E&key=06a824a75307983ab83a69a1d80325f6&pid=6&ext=mp4&ismp3=0
+
+http://fs.mv.web.kugou.com/201905171014/63301276bf01141504a177b2015d630b/G119/M08/1D/15/V5QEAFyJ_3OAU9thAV5j-sTFk6M514.mp4
+
+"http://trackermv.kugou.com/interface/index/cmd=100&hash=".strtoupper($mv_hash)."&key=".md5(strtoupper($mv_hash)."kugoumvcloud")."&pid=6&ext=mp4&ismp3=0<br/>";
+
+data:=[]byte(strings.ToUpper("E23438F0448B148E595816DCC15D0D6E")+"kugoumvcloud")
+    val := md5.Sum(data)
+    fmt.Printf("%x",val)
+
+
+    //选择操作
+    DispatcherOperation(hashs)
