@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"net"
 	"net/http"
+	"strings"
 	"time"
 )
 
@@ -88,6 +89,65 @@ func RequestJson(url string, headers map[string]string) string {
 	}
 	return string(data)
 }
+
+
+//通过get发送请求，返回数据
+//第一个参数为字节数组，第二个参数为默认编码为utf-8的字符串
+func RequestJsonWithPost(url string, headers map[string]string,params string) string {
+
+	//1.发请求，获取数据
+	//如果需要自己设置请求头，则通过http.NewRequest
+	//resp, err := http.Get(url)
+	request, err := http.NewRequest("POST", url, strings.NewReader(params))
+	//设置请求头
+	request.Header.Add("User-Agent", USER_AGENT)
+	for key, value := range headers {
+		request.Header.Add(key, value)
+	}
+	//发送请求
+	transport := &http.Transport{
+		Dial: func(netw, addr string) (net.Conn, error) {
+			deadline := time.Now().Add(120 * time.Second)
+			c, err := net.DialTimeout(netw, addr, time.Second*120)
+			if err != nil {
+				return nil, err
+			}
+			c.SetDeadline(deadline)
+			return c, nil
+		},
+		IdleConnTimeout:       120 * time.Second,
+		TLSHandshakeTimeout:   120 * time.Second,
+		ResponseHeaderTimeout: 120 * time.Second,
+	}
+
+	client := &http.Client{
+		Timeout:   120 * time.Second,
+		Transport: transport,
+	}
+	resp, err := client.Do(request)
+	if err != nil {
+		logs.Error("http get error:", err.Error())
+		//panic(err.Error())
+		//resp.Body.Close()
+		//defer resp.Body.Close()
+		return ""
+		//logs.Info("please wait for time.there is now retrying download....")
+		//return RequestJson(url,headers)
+	}
+	data, _ := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		logs.Error("ioutil ReadAll error:", err.Error())
+		return ""
+	}
+	if err = resp.Body.Close(); err != nil {
+		logs.Error("resp Body Close error:", err.Error())
+		return ""
+	}
+	request.Close=true
+	return string(data)
+}
+
+
 
 //通过get发送请求，返回数据
 //第一个参数为字节数组，第二个参数为默认编码为utf-8的字符串
