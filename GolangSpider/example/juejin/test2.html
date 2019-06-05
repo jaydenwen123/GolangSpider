@@ -1,0 +1,301 @@
+<h1 class="article-title" data-v-3f6f7ca1>如何提升JSON.stringify()的性能？</h1><div data-id="5cf7ae1b6fb9a07ef06f830a" itemprop="articleBody" class="article-content" data-v-3f6f7ca1><h2 class="heading" data-id="heading-0">1. 熟悉的<code>JSON.stringify()</code></h2>
+    <p>在浏览器端或服务端，<code>JSON.stringify()</code>都是我们很常用的方法：</p>
+    <ul>
+        <li>将 JSON object 存储到 localStorage 中；</li>
+        <li>POST 请求中的 JSON body；</li>
+        <li>处理响应体中的 JSON 形式的数据；</li>
+        <li>甚至某些条件下，我们还会用它来实现一个简单的深拷贝；</li>
+        <li>……</li>
+    </ul>
+    <p>在一些性能敏感的场合下（例如服务端处理大量并发），或面对大量 stringify 的操作时，我们会希望它的性能更好，速度更快。这也催生了一些优化的 stringify 方案/库，下图是它们与原生方法的性能对比：</p>
+    <p></p><figure><img class="lazyload" data-src="https://user-gold-cdn.xitu.io/2019/6/5/16b25784d49d825a?imageView2/0/w/1280/h/960/ignore-error/1" data-width="1200" data-height="488"><figcaption></figcaption></figure><p></p>
+    <p>绿色部分时原生<code>JSON.stringify()</code>，可见性能相较这些库都要低很多。那么，在大幅的性能提升背后的技术原理是什么呢？</p>
+    <h2 class="heading" data-id="heading-1">2. 比 <code>stringify</code> 更快的 <code>stringify</code></h2>
+    <p>由于 JavaScript 是动态性很强的语言，所以对于一个 Object 类型的变量，其包含的键名、键值、键值类型最终只能在运行时确定。因此，执行<code>JSON.stringify()</code>时会有很多工作要做。在一无所知的情况下，我们想要大幅优化显然无能为力。</p>
+    <p>那么如果我们知道这个 Object 中的键名、键值信息呢 —— 也就是知道它的结构信息，这会有帮助么？</p>
+    <p>看个例子：</p>
+    <p>下面这个 Object，</p>
+    <pre><code class="hljs JavaScript copyable" lang="JavaScript"><span class="hljs-keyword">const</span> obj = {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'alienzhou'</span>,
+    <span class="hljs-attr">status</span>: <span class="hljs-number">6</span>,
+    <span class="hljs-attr">working</span>: <span class="hljs-literal">true</span>
+};
+<span class="copy-code-btn">复制代码</span></code></pre><p>我们对它应用<code>JSON.stringify()</code>，得到结果为</p>
+    <pre><code class="hljs JavaScript copyable" lang="JavaScript"><span class="hljs-built_in">JSON</span>.stringify(obj);
+<span class="hljs-comment">// {"name":"alienzhou","status":6,"working":true}</span>
+<span class="copy-code-btn">复制代码</span></code></pre><p>现在如果我们知道这个<code>obj</code>的结构是固定的：</p>
+    <ul>
+        <li>键名不变</li>
+        <li>键值的类型一定</li>
+    </ul>
+    <p>那么其实，我可以创建一个“定制化”的 stringify 方法</p>
+    <pre><code class="hljs JavaScript copyable" lang="JavaScript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myStringify</span>(<span class="hljs-params">o</span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="hljs-string">'{"name":"'</span>
+        + o.name
+        + <span class="hljs-string">'","status":'</span>
+        + o.status
+        + <span class="hljs-string">',"isWorking":'</span>
+        + o.working
+        + <span class="hljs-string">'}'</span>
+    );
+}
+<span class="copy-code-btn">复制代码</span></code></pre><p>看看我们的<code>myStringify</code>方法的输出：</p>
+    <pre><code class="hljs JavaScript copyable" lang="JavaScript">myStringify({
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'alienzhou'</span>,
+    <span class="hljs-attr">status</span>: <span class="hljs-number">6</span>,
+    <span class="hljs-attr">working</span>: <span class="hljs-literal">true</span>
+});
+<span class="hljs-comment">// {"name":"alienzhou","status":6,"isWorking":true}</span>
+
+myStringify({
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'mengshou'</span>,
+    <span class="hljs-attr">status</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-attr">working</span>: <span class="hljs-literal">false</span>
+});
+<span class="hljs-comment">// {"name":"mengshou","status":3,"isWorking":false}</span>
+<span class="copy-code-btn">复制代码</span></code></pre><p>可以得到正确的结果，但只用到了类型转换和字符串拼接，所以“定制化”方法可以让“stringify”更快。</p>
+    <p>总结来看，如何得到比 <code>stringify</code> 更快的 <code>stringify</code> 方法呢？</p>
+    <ol>
+        <li>需要先确定对象的结构信息；</li>
+        <li>根据其结构信息，为该种结构的对象创建“定制化”的<code>stringify</code>方法，其内部实际是通过字符串拼接生成结果的；</li>
+        <li>最后，使用该“定制化”的方法来 stringify 对象即可。</li>
+    </ol>
+    <p>这也是大多数 stringify 加速库的套路，转化为代码就是类似：</p>
+    <pre><code class="hljs JavaScript copyable" lang="JavaScript"><span class="hljs-keyword">import</span> faster <span class="hljs-keyword">from</span> <span class="hljs-string">'some_library_faster_stringify'</span>;
+
+<span class="hljs-comment">// 1. 通过相应规则，定义你的对象结构</span>
+<span class="hljs-keyword">const</span> theObjectScheme = {
+    <span class="hljs-comment">// ……</span>
+};
+
+<span class="hljs-comment">// 2. 根据结构，得到一个定制化的方法</span>
+<span class="hljs-keyword">const</span> stringify = faster(theObjectScheme);
+
+<span class="hljs-comment">// 3. 调用方法，快速 stringify</span>
+<span class="hljs-keyword">const</span> target = {
+    <span class="hljs-comment">// ……</span>
+};
+stringify(target);
+<span class="copy-code-btn">复制代码</span></code></pre><h2 class="heading" data-id="heading-2">3. 如何生成“定制化”的方法</h2>
+    <p>根据上面的分析，核心功能在于，<strong>根据其结构信息，为该类对象创建“定制化”的stringify方法，其内部实际是简单的属性访问与字符串拼接。</strong></p>
+    <p>为了了解具体的实现方式，下面我以两个实现上略有差异的开源库为例来简单介绍一下。</p>
+    <h3 class="heading" data-id="heading-3">3.1. fast-json-stringify</h3>
+    <p></p><figure><img class="lazyload" data-src="https://user-gold-cdn.xitu.io/2019/6/4/16b21d1399c2e90b?imageView2/0/w/1280/h/960/ignore-error/1" data-width="1280" data-height="61"><figcaption></figcaption></figure><p></p>
+    <p>下图是根据 <a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fgithub.com%2Ffastify%2Ffast-json-stringify%23benchmarks" rel="nofollow noopener noreferrer">fast-json-stringify</a> 提供的 benchmark 结果，整理出来的性能对比。</p>
+    <p></p><figure><img class="lazyload" data-src="https://user-gold-cdn.xitu.io/2019/6/4/16b21db215453a98?imageView2/0/w/1280/h/960/ignore-error/1" data-width="872" data-height="434"><figcaption></figcaption></figure><p></p>
+    <p>可以看到，在大多数场景下具备2-5倍的性能提升。</p>
+    <h4 class="heading" data-id="heading-4">3.1.1. scheme 的定义方式</h4>
+    <p>fast-json-stringify 使用了 <a target="_blank" href="https://link.juejin.im?target=http%3A%2F%2Fjson-schema.org%2Flatest%2Fjson-schema-validation.html" rel="nofollow noopener noreferrer">JSON Schema Validation </a> 来定义（JSON）对象的数据格式。其 scheme 定义的结构本身也是 JSON 格式的，例如对象</p>
+    <pre><code class="hljs JavaScript copyable" lang="JavaScript">{
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'alienzhou'</span>,
+    <span class="hljs-attr">status</span>: <span class="hljs-number">6</span>,
+    <span class="hljs-attr">working</span>: <span class="hljs-literal">true</span>
+}
+<span class="copy-code-btn">复制代码</span></code></pre><p>对应的 scheme 就是：</p>
+    <pre><code class="hljs JavaScript copyable" lang="JavaScript">{
+    <span class="hljs-attr">title</span>: <span class="hljs-string">'Example Schema'</span>,
+    <span class="hljs-attr">type</span>: <span class="hljs-string">'object'</span>,
+    <span class="hljs-attr">properties</span>: {
+        <span class="hljs-attr">name</span>: {
+            <span class="hljs-attr">type</span>: <span class="hljs-string">'string'</span>
+        },
+        <span class="hljs-attr">status</span>: {
+            <span class="hljs-attr">type</span>: <span class="hljs-string">'integer'</span>
+        },
+        <span class="hljs-attr">working</span>: {
+            <span class="hljs-attr">type</span>: <span class="hljs-string">'boolean'</span>
+        }
+    }
+}
+<span class="copy-code-btn">复制代码</span></code></pre><p>其 scheme 定义规则丰富，具体使用可以参考 <a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fajv.js.org%2F" rel="nofollow noopener noreferrer">Ajv</a> 这个 JSON 校验库。</p>
+    <h4 class="heading" data-id="heading-5">3.1.2. stringify 方法的生成</h4>
+    <p>fast-json-stringify 会根据刚才定义的 scheme，拼接生成出实际的函数代码字符串，然后使用 <a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FFunction" rel="nofollow noopener noreferrer">Function 构造函数</a>在运行时动态生成对应的 stringify 函数。</p>
+    <p>在代码生成上，首先它会注入预先定义好的各类工具方法，这一部分不同的 scheme 都是一样的：</p>
+    <pre><code class="hljs JavaScript copyable" lang="JavaScript"><span class="hljs-keyword">var</span> code = <span class="hljs-string">`
+    'use strict'
+  `</span>
+
+  code += <span class="hljs-string">`
+    <span class="hljs-subst">${$asString.toString()}</span>
+    <span class="hljs-subst">${$asStringNullable.toString()}</span>
+    <span class="hljs-subst">${$asStringSmall.toString()}</span>
+    <span class="hljs-subst">${$asNumber.toString()}</span>
+    <span class="hljs-subst">${$asNumberNullable.toString()}</span>
+    <span class="hljs-subst">${$asIntegerNullable.toString()}</span>
+    <span class="hljs-subst">${$asNull.toString()}</span>
+    <span class="hljs-subst">${$asBoolean.toString()}</span>
+    <span class="hljs-subst">${$asBooleanNullable.toString()}</span>
+  `</span>
+<span class="copy-code-btn">复制代码</span></code></pre><p>其次，就会根据 scheme 定义的具体内容生成 stringify 函数的具体代码。而生成的方式也比较简单：通过遍历 scheme。</p>
+    <p>遍历 scheme 时，根据定义的类型，在对应代码处插入相应的工具函数用于键值转换。例如上面例子中<code>name</code>这个属性：</p>
+    <pre><code class="hljs JavaScript copyable" lang="JavaScript"><span class="hljs-keyword">var</span> accessor = key.indexOf(<span class="hljs-string">'['</span>) === <span class="hljs-number">0</span> ? sanitizeKey(key) : <span class="hljs-string">`['<span class="hljs-subst">${sanitizeKey(key)}</span>']`</span>
+<span class="hljs-keyword">switch</span> (type) {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">'null'</span>:
+        code += <span class="hljs-string">`
+            json += $asNull()
+        `</span>
+        <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-string">'string'</span>:
+        code += nullable ? <span class="hljs-string">`json += obj<span class="hljs-subst">${accessor}</span> === null ? null : $asString(obj<span class="hljs-subst">${accessor}</span>)`</span> : <span class="hljs-string">`json += $asString(obj<span class="hljs-subst">${accessor}</span>)`</span>
+        <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-string">'integer'</span>:
+        code += nullable ? <span class="hljs-string">`json += obj<span class="hljs-subst">${accessor}</span> === null ? null : $asInteger(obj<span class="hljs-subst">${accessor}</span>)`</span> : <span class="hljs-string">`json += $asInteger(obj<span class="hljs-subst">${accessor}</span>)`</span>
+        <span class="hljs-keyword">break</span>
+    ……
+<span class="copy-code-btn">复制代码</span></code></pre><p>上面代码中的<code>code</code>变量保存的就是最后生成的函数体的代码串。由于在 scheme 定义中，<code>name</code>为<code>string</code>类型，且不为空，所以会在<code>code</code>中添加如下一段代码字符串：</p>
+    <pre><code class="hljs JavaScript copyable" lang="JavaScript"><span class="hljs-string">"json += $asString(obj['name'])"</span>
+<span class="copy-code-btn">复制代码</span></code></pre><blockquote>
+        <p>由于还需要处理数组、及联对象等复杂情况，实际的代码省略了很多。</p>
+    </blockquote>
+    <p>然后，生成的完整的<code>code</code>字符串大致如下：</p>
+    <pre><code class="hljs JavaScript copyable" lang="JavaScript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">$asString</span>(<span class="hljs-params">str</span>) </span>{
+    <span class="hljs-comment">// ……</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">$asStringNullable</span>(<span class="hljs-params">str</span>) </span>{
+    <span class="hljs-comment">// ……</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">$asStringSmall</span>(<span class="hljs-params">str</span>) </span>{
+    <span class="hljs-comment">// ……</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">$asNumber</span>(<span class="hljs-params">i</span>) </span>{
+    <span class="hljs-comment">// ……</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">$asNumberNullable</span>(<span class="hljs-params">i</span>) </span>{
+    <span class="hljs-comment">// ……</span>
+}
+<span class="hljs-comment">/* 以上是一系列通用的键值转换方法 */</span>
+
+<span class="hljs-comment">/* $main 就是 stringify 的主体函数 */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">$main</span>(<span class="hljs-params">input</span>) </span>{
+    <span class="hljs-keyword">var</span> obj = <span class="hljs-keyword">typeof</span> input.toJSON === <span class="hljs-string">'function'</span>
+        ? input.toJSON()
+        : input
+
+    <span class="hljs-keyword">var</span> json = <span class="hljs-string">'{'</span>
+    <span class="hljs-keyword">var</span> addComma = <span class="hljs-literal">false</span>
+    <span class="hljs-keyword">if</span> (obj[<span class="hljs-string">'name'</span>] !== <span class="hljs-literal">undefined</span>) {
+        <span class="hljs-keyword">if</span> (addComma) {
+            json += <span class="hljs-string">','</span>
+        }
+        addComma = <span class="hljs-literal">true</span>
+        json += <span class="hljs-string">'"name":'</span>
+        json += $asString(obj[<span class="hljs-string">'name'</span>])
+    }
+
+    <span class="hljs-comment">// …… 其他属性(status、working)的拼接</span>
+
+    json += <span class="hljs-string">'}'</span>
+    <span class="hljs-keyword">return</span> json
+}
+
+<span class="hljs-keyword">return</span> $main
+<span class="copy-code-btn">复制代码</span></code></pre><p>最后，将<code>code</code>字符串传入 Function 构造函数来创建相应的 stringify 函数。</p>
+    <pre><code class="hljs JavaScript copyable" lang="JavaScript"><span class="hljs-comment">// dependencies 主要用于处理包含 anyOf 与 if 语法的情况</span>
+dependenciesName.push(code)
+<span class="hljs-keyword">return</span> (<span class="hljs-built_in">Function</span>.apply(<span class="hljs-literal">null</span>, dependenciesName).apply(<span class="hljs-literal">null</span>, dependencies))
+<span class="copy-code-btn">复制代码</span></code></pre><h3 class="heading" data-id="heading-6">3.2. slow-json-stringify</h3>
+    <p></p><figure><img class="lazyload" data-src="https://user-gold-cdn.xitu.io/2019/6/4/16b223db88e935e6?imageView2/0/w/1280/h/960/ignore-error/1" data-width="1280" data-height="58"><figcaption></figcaption></figure><p></p>
+    <p><a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fgithub.com%2Flucagez%2Fslow-json-stringify" rel="nofollow noopener noreferrer">slow-json-stringify</a> 虽然名字叫 "slow"，但其实是一个 "fast" 的 stringify 库（命名很调皮）。</p>
+    <blockquote>
+        <p>The slowest stringifier in the known universe. Just kidding, it's the fastest (:</p>
+    </blockquote>
+    <p>它的实现比前面提到的 fast-json-stringify 更轻量级，思路也很巧妙。同时它<a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fgithub.com%2Flucagez%2Fslow-json-stringify%2Fblob%2Fmaster%2Fbenchmark.md" rel="nofollow noopener noreferrer">在很多场景下效率会比 fast-json-stringify 更快</a>。</p>
+    <p></p><figure><img class="lazyload" data-src="https://user-gold-cdn.xitu.io/2019/6/5/16b25784d49d825a?imageView2/0/w/1280/h/960/ignore-error/1" data-width="1200" data-height="488"><figcaption></figcaption></figure><p></p>
+    <p></p><figure><img class="lazyload" data-src="https://user-gold-cdn.xitu.io/2019/6/5/16b25793da834834?imageView2/0/w/1280/h/960/ignore-error/1" data-width="1092" data-height="396"><figcaption></figcaption></figure><p></p>
+    <h4 class="heading" data-id="heading-7">3.2.1. scheme 的定义方式</h4>
+    <p>slow-json-stringify 的 scheme 定义更自然与简单，主要就是将键值替换为类型描述。还是上面这个对象的例子，scheme 会变为</p>
+    <pre><code class="hljs JavaScript copyable" lang="JavaScript">{
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'string'</span>,
+    <span class="hljs-attr">status</span>: <span class="hljs-string">'number'</span>,
+    <span class="hljs-attr">working</span>: <span class="hljs-string">'boolean'</span>
+}
+<span class="copy-code-btn">复制代码</span></code></pre><p>确实非常直观。</p>
+    <h4 class="heading" data-id="heading-8">3.2.2. stringify 方法的生成</h4>
+    <p>不知道你注意到没有</p>
+    <pre><code class="hljs JavaScript copyable" lang="JavaScript"><span class="hljs-comment">// scheme</span>
+{
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'string'</span>,
+    <span class="hljs-attr">status</span>: <span class="hljs-string">'number'</span>,
+    <span class="hljs-attr">working</span>: <span class="hljs-string">'boolean'</span>
+}
+
+<span class="hljs-comment">// 目标对象</span>
+{
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'alienzhou'</span>,
+    <span class="hljs-attr">status</span>: <span class="hljs-number">6</span>,
+    <span class="hljs-attr">working</span>: <span class="hljs-literal">true</span>
+}
+<span class="copy-code-btn">复制代码</span></code></pre><p>scheme 和原对象的结构是不是很像？</p>
+    <p>这种 scheme 的巧妙之处在于，这样定义之后，我们可以先把 scheme <code>JSON.stringify</code>一下，然后“扣去”所有类型值，最后等着我们的就是把实际的值直接填充到 scheme 对应的类型声明处。</p>
+    <p>具体如何操作呢？</p>
+    <p>首先，可以直接对 scheme 调用<code>JSON.stringify()</code>来生成基础模版，同时借用<code>JSON.stringify()</code>的第二个参数来作为遍历方法收集属性的访问路径：</p>
+    <pre><code class="hljs JavaScript copyable" lang="JavaScript"><span class="hljs-keyword">let</span> map = {};
+<span class="hljs-keyword">const</span> str = <span class="hljs-built_in">JSON</span>.stringify(schema, (prop, value) =&gt; {
+    <span class="hljs-keyword">const</span> isArray = <span class="hljs-built_in">Array</span>.isArray(value);
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> value !== <span class="hljs-string">'object'</span> || isArray) {
+        <span class="hljs-keyword">if</span> (isArray) {
+            <span class="hljs-keyword">const</span> current = value[<span class="hljs-number">0</span>];
+            arrais.set(prop, current);
+        }
+
+        _validator(value);
+
+        map[prop] = _deepPath(schema, prop);
+        props += <span class="hljs-string">`"<span class="hljs-subst">${prop}</span>"|`</span>;
+    }
+    <span class="hljs-keyword">return</span> value;
+});
+<span class="copy-code-btn">复制代码</span></code></pre><p>此时，<code>map</code> 里收集所有属性的访问路径。同时生成的<code>props</code>可以拼接为匹配相应类型字符还的正则表达式，例如我们这个例子里的正则表达式为<code>/name|status|working"(string|number|boolean|undef)"|\\[(.*?)\\]/</code>。</p>
+    <p>然后，根据正则表达式来顺序匹配这些属性，替换掉属性类型的字符串，换成统一的占位字符串<code>"__par__"</code>，并基于<code>"__par__"</code>拆分字符串：</p>
+    <pre><code class="hljs JavaScript copyable" lang="JavaScript"><span class="hljs-keyword">const</span> queue = [];
+<span class="hljs-keyword">const</span> chunks = str
+    .replace(regex, (type) =&gt; {
+      <span class="hljs-keyword">switch</span> (type) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'"string"'</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'"undefined"'</span>:
+          <span class="hljs-keyword">return</span> <span class="hljs-string">'"__par__"'</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'"number"'</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'"boolean"'</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'["array-simple"]'</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'[null]'</span>:
+          <span class="hljs-keyword">return</span> <span class="hljs-string">'__par__'</span>;
+        <span class="hljs-keyword">default</span>:
+          <span class="hljs-keyword">const</span> prop = type.match(<span class="hljs-regexp">/(?&lt;=\").+?(?=\")/</span>)[<span class="hljs-number">0</span>];
+          queue.push(prop);
+          <span class="hljs-keyword">return</span> type;
+      }
+    })
+    .split(<span class="hljs-string">'__par__'</span>);
+<span class="copy-code-btn">复制代码</span></code></pre><p>这样你就会得到<code>chunks</code>和<code>props</code>两个数组。<code>chunks</code>里包含了被分割的 JSON 字符串。以例子来说，两个数组分别如下</p>
+    <pre><code class="hljs JavaScript copyable" lang="JavaScript"><span class="hljs-comment">// chunks</span>
+[
+    <span class="hljs-string">'{"name":"'</span>,
+    <span class="hljs-string">'","status":"'</span>,
+    <span class="hljs-string">'","working":"'</span>,
+    <span class="hljs-string">'"}'</span>
+]
+
+<span class="hljs-comment">// props</span>
+[
+    <span class="hljs-string">'name'</span>,
+    <span class="hljs-string">'status'</span>,
+    <span class="hljs-string">'working'</span>
+]
+<span class="copy-code-btn">复制代码</span></code></pre><p>最后，由于 map 中保存了属性名与访问路径的映射，因此可以根据 prop 访问到对象中某个属性的值，循环遍历数组，将其与对应的 chunks 拼接即可。</p>
+    <p>从代码量和实现方式来看，这个方案会更轻便与巧妙，同时也不需要通过 Function、eval 等方式动态生成或执行函数。</p>
+    <h2 class="heading" data-id="heading-9">4. 总结</h2>
+    <p>虽然不同库的实现有差异，但从整体思路上来说，实现高性能 stringify 的方式都是一样的：</p>
+    <ol>
+        <li>开发者定义 Object 的 JSON scheme；</li>
+        <li>stringify 库根据 scheme 生成对应的模版方法，模版方法里会对属性与值进行字符串拼接（显然，属性访问与字符串拼接的效率要高多了）；</li>
+        <li>最后开发者调用返回的方法来 stringify Object 即可。</li>
+    </ol>
+    <p>归根到底，它本质上是通过静态的结构信息将优化与分析前置了。</p>
+    <h2 class="heading" data-id="heading-10">Tips</h2>
+    <p>最后，还是想提一下</p>
+    <ul>
+        <li>所有的 benchmark 只能作为一个参考，具体是否有性能提升、提升多少还是建议你在实际的业务中测试；</li>
+        <li>fast-json-stringify 中使用到了 Function 构造函数，因此建议不要将用户输入直接用作 scheme，以防一些安全问题。</li>
+    </ul>
+</div>

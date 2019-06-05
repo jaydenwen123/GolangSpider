@@ -1,0 +1,52 @@
+1.后台搜索接口
+
+2.后台首页接口
+2.1热门内容接口
+https://web-api.juejin.im/query
+post
+请求头：
+Content-Type: application/json
+X-Agent: Juejin/Web
+参数：
+{"operationName":"","query":"","variables":{"first":20,"after":"","order":"POPULAR"},"extensions":{"query":{"id":"21207e9ddb1de777adeaca7a2fb38030"}}}
+
+2.2热榜内容接口
+https://web-api.juejin.im/query
+post
+请求头：
+Content-Type: application/json
+X-Agent: Juejin/Web
+参数：
+{"operationName":"","query":"","variables":{"first":20,"after":"","order":"THREE_DAYS_HOTTEST"},"extensions":{"query":{"id":"21207e9ddb1de777adeaca7a2fb38030"}}}
+
+2.3最新内容接口
+https://web-api.juejin.im/query
+post
+请求头：
+Content-Type: application/json
+X-Agent: Juejin/Web
+参数：
+{"operationName":"","query":"","variables":{"first":20,"after":"","order":"NETEST"},"extensions":{"query":{"id":"21207e9ddb1de777adeaca7a2fb38030"}}}
+
+3 文章详情接口
+3.1文章详情接口
+https://juejin.im/post/{id}
+5cf61ed3e51d4555fd20a2f3
+get请求
+3.2文章内容：
+<h1 class="article-title" data-v-3f6f7ca1>如何提升JSON.stringify()的性能？</h1>
+<div data-id="5cf7ae1b6fb9a07ef06f830a" itemprop="articleBody" class="article-content" data-v-3f6f7ca1>
+.........content.....
+</div>
+
+4.搜索接口
+https://web-api.juejin.im/query
+post
+请求头：
+User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36
+X-Agent: Juejin/Web
+参数：
+{"operationName":"","query":"","variables":{"type":"ALL","query":"golang","after":"","period":"ALL","first":20},"extensions":{"query":{"id":"d9997080c3d67a02bfdae094729fed3b"}}}
+{"operationName":"","query":"","variables":{"type":"ALL","query":"golang","after":"","period":"M3","first":20},"extensions":{"query":{"id":"d9997080c3d67a02bfdae094729fed3b"}}}
+//type:ALL/ARTICLE/TAG/USER
+
