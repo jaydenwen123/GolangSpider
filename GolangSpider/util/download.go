@@ -48,6 +48,10 @@ func Download(url string, filename string) error {
 	//如果需要自己设置请求头，则通过http.NewRequest
 	//resp, err := http.Get(url)
 	request, err := http.NewRequest("GET", url, nil)
+	if err!=nil{
+		logs.Error("new request occurs error.",err.Error())
+		return errors.New(err.Error())
+	}
 	//发送请求
 	transport := &http.Transport{
 		Dial: (&net.Dialer{

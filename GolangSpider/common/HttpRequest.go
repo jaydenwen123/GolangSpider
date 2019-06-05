@@ -100,7 +100,7 @@ func RequestJsonWithPost(url string, headers map[string]string,params string) st
 	//resp, err := http.Get(url)
 	request, err := http.NewRequest("POST", url, strings.NewReader(params))
 	//设置请求头
-	request.Header.Add("User-Agent", USER_AGENT)
+	//request.Header.Add("User-Agent", USER_AGENT)
 	for key, value := range headers {
 		request.Header.Add(key, value)
 	}

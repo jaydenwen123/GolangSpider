@@ -1,0 +1,330 @@
+
+获取用户的视频数据
+https://aweme-hl.snssdk.com/aweme/v1/aweme/post/?max_cursor=0&user_id=4226155227382595&count=20&retry_type=no_retry&iid=73085022843&device_id=39988204972&ac=wifi&channel=huawei&aid=1128&app_name=aweme&version_code=630&version_name=6.3.0&device_platform=android&ssmix=a&device_type=BLN-AL40&device_brand=HONOR&language=zh&os_api=26&os_version=8.0.0&uuid=865546035253935&openudid=d5c03a4945197bbf&manifest_version_code=630&resolution=1080*1800&dpi=480&update_version_code=6302&_rticket=1559065965588&mcc_mnc=46000&js_sdk_version=1.16.2.4&ts=1559065965&sec_user_id=MS4wLjABAAAANwnOancRo20rVNpv0miPtW0gneIFeXrnMvZU0HtU5tuFXJLM03uZhucaoR1m7wA-
+
+
+https://aweme-hl.snssdk.com/aweme/v1/aweme/post/?max_cursor=1555673415000&user_id=4226155227382595&count=10&retry_type=no_retry&iid=73085022843&device_id=39988204972&ac=wifi&channel=huawei&aid=1128&app_name=aweme&version_code=630&version_name=6.3.0&device_platform=android&ssmix=a&device_type=BLN-AL40&device_brand=HONOR&language=zh&os_api=26&os_version=8.0.0&uuid=865546035253935&openudid=d5c03a4945197bbf&manifest_version_code=630&resolution=1080*1800&dpi=480&update_version_code=6302&_rticket=1559068037953&mcc_mnc=46000&js_sdk_version=1.16.2.4&ts=1559068037&sec_user_id=MS4wLjABAAAANwnOancRo20rVNpv0miPtW0gneIFeXrnMvZU0HtU5tuFXJLM03uZhucaoR1m7wA-
+
+
+
+
+GET https://api-hl.amemv.com/aweme/v1/aweme/post/?max_cursor=1557214058000&user_id=111527023909&count=10&retry_type=no_retry&iid=73640641358&device_id=39988204972&ac=wifi&channel=huawei&aid=1128&app_name=aweme&version_code=650&version_name=6.5.0&device_platform=android&ssmix=a&device_type=BLN-AL40&device_brand=HONOR&language=zh&os_api=26&os_version=8.0.0&uuid=865546035253935&openudid=d5c03a4945197bbf&manifest_version_code=650&resolution=1080*1800&dpi=480&update_version_code=6502&_rticket=1559280606890&mcc_mnc=46000&js_sdk_version=1.16.2.7&ts=1559280607&sec_user_id=MS4wLjABAAAAYQmq5-57_PcKd9dMCQDPxkPY0RonL0ct9LBTkgglwUc 
+HTTP/1.1
+
+
+
+
+GET https://api-hl.amemv.com/aweme/v1/aweme/post/?max_cursor=0&user_id=111527023909&count=20&retry_type=no_retry&iid=73640641358&device_id=39988204972&ac=wifi&channel=huawei&aid=1128&app_name=aweme&version_code=650&version_name=6.5.0&device_platform=android&ssmix=a&device_type=BLN-AL40&device_brand=HONOR&language=zh&os_api=26&os_version=8.0.0&uuid=865546035253935&openudid=d5c03a4945197bbf&manifest_version_code=650&resolution=1080*1800&dpi=480&update_version_code=6502&_rticket=1559280187915&mcc_mnc=46000&js_sdk_version=1.16.2.7&ts=1559280188&sec_user_id=MS4wLjABAAAAYQmq5-57_PcKd9dMCQDPxkPY0RonL0ct9LBTkgglwUc HTTP/1.1
+Host: api-hl.amemv.com
+Connection: keep-alive
+Cookie: odin_tt=88cf9e48c89beec658089f4b5580fca061f5545c7f7ef2d15cd3bebab1723fe07b1fef48dbb16190876be834bb6c37bd50a0988c7abcb5a55212ed95ea3cac07; install_id=73640641358; ttreq=1$b5f0dd9dd200b7dc412e9d54d582275da257c97f; qh[360]=1
+Accept-Encoding: gzip
+sdk-version: 1
+User-Agent: com.ss.android.ugc.aweme/650 (Linux; U; Android 8.0.0; zh_CN_#Hans; BLN-AL40; Build/HONORBLN-AL40; Cronet/58.0.2991.0)
+X-Khronos: 1559280187
+X-Gorgon: 03006cc00000000d76eda76ab91ff305b9727b81af9537afc541
+X-Pods: 
+
+
+HTTP/1.1 200 OK
+Server: Tengine
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Date: Fri, 31 May 2019 05:23:19 GMT
+Vary: Accept-Encoding
+Status_code: 0
+Tt_stable: 1
+X-TT-LOGID: 20190531132319010024102241508F04
+Vary: Accept-Encoding
+Content-Encoding: gzip
+server-timing: inner;dur=48
+Vary: Accept-Encoding
+Via: cache1.cn596[345,0]
+Timing-Allow-Origin: *
+EagleId: 6e3475c915592801992767088e
+
+
+
+
+
+
+
+
+
+
+搜索用户接口
+POST https://aweme-hl.snssdk.com/aweme/v1/general/search/single/?ts=1559280834&js_sdk_version=1.16.2.7&app_type=normal&manifest_version_code=650&_rticket=1559280833631&ac=wifi&device_id=39988204972&iid=73640641358&mcc_mnc=46000&os_version=8.0.0&channel=huawei&version_code=650&device_type=BLN-AL40&language=zh&uuid=865546035253935&resolution=1080*1800&openudid=d5c03a4945197bbf&update_version_code=6502&app_name=aweme&version_name=6.5.0&os_api=26&device_brand=HONOR&ssmix=a&device_platform=android&dpi=480&aid=1128 HTTP/1.1
+Host: aweme-hl.snssdk.com
+Connection: keep-alive
+Content-Length: 175
+Cookie: odin_tt=88cf9e48c89beec658089f4b5580fca061f5545c7f7ef2d15cd3bebab1723fe07b1fef48dbb16190876be834bb6c37bd50a0988c7abcb5a55212ed95ea3cac07; install_id=73640641358; ttreq=1$b5f0dd9dd200b7dc412e9d54d582275da257c97f; qh[360]=1
+Accept-Encoding: gzip
+X-SS-REQ-TICKET: 1559280833627
+sdk-version: 1
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+X-SS-STUB: DC7A829E8865E5C75DB2D7EE7E5C0F8F
+User-Agent: com.ss.android.ugc.aweme/650 (Linux; U; Android 8.0.0; zh_CN_#Hans; BLN-AL40; Build/HONORBLN-AL40; Cronet/58.0.2991.0)
+X-Khronos: 1559280833
+X-Gorgon: 03006cc000001155a30a4aced488f305b9727b81af9537cf9c3c
+X-Pods: 
+
+
+
+
+keyword=%E9%9F%B3%E4%B9%90&offset=0&count=10&is_pull_refresh=0&search_source=normal_search&hot_search=0&latitude=28.181103&longitude=112.946743&search_id=&query_correct_type=1
+
+HTTP/1.1 200 OK
+Server: Tengine
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Date: Fri, 31 May 2019 05:33:55 GMT
+Vary: Accept-Encoding
+X_TT_LOGID: 20190531133354010026049209432CB8
+tt_stable: 1
+X-TT-LOGID: 20190531133354010026049209432CB8
+Vary: Accept-Encoding
+Content-Encoding: gzip
+server-timing: inner;dur=864
+Vary: Accept-Encoding
+server-timing: cdn-cache;desc=MISS,edge;dur=0,origin;dur=907
+Via: cache2.cn612[907,0]
+Timing-Allow-Origin: *
+EagleId: 2a30794215592808344195267e
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+POST https://aweme-hl.snssdk.com/aweme/v1/discover/search/?ts=1559280965&js_sdk_version=1.16.2.7&app_type=normal&manifest_version_code=650&_rticket=1559280964535&ac=wifi&device_id=39988204972&iid=73640641358&mcc_mnc=46000&os_version=8.0.0&channel=huawei&version_code=650&device_type=BLN-AL40&language=zh&uuid=865546035253935&resolution=1080*1800&openudid=d5c03a4945197bbf&update_version_code=6502&app_name=aweme&version_name=6.5.0&os_api=26&device_brand=HONOR&ssmix=a&device_platform=android&dpi=480&aid=1128 HTTP/1.1
+Host: aweme-hl.snssdk.com
+Connection: keep-alive
+Content-Length: 129
+Cookie: odin_tt=88cf9e48c89beec658089f4b5580fca061f5545c7f7ef2d15cd3bebab1723fe07b1fef48dbb16190876be834bb6c37bd50a0988c7abcb5a55212ed95ea3cac07; install_id=73640641358; ttreq=1$b5f0dd9dd200b7dc412e9d54d582275da257c97f; qh[360]=1
+Accept-Encoding: gzip
+X-SS-REQ-TICKET: 1559280964533
+sdk-version: 1
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+X-SS-STUB: 764B64A88789A6434C03DE838FA4B30B
+User-Agent: com.ss.android.ugc.aweme/650 (Linux; U; Android 8.0.0; zh_CN_#Hans; BLN-AL40; Build/HONORBLN-AL40; Cronet/58.0.2991.0)
+X-Khronos: 1559280964
+X-Gorgon: 03006cc00000ec4126589361ce4ef305b9727b81af95374f3599
+X-Pods: 
+
+
+cursor=0&keyword=%E9%9F%B3%E4%B9%90&count=10&type=1&is_pull_refresh=1&hot_search=0&search_source=&search_id=&query_correct_type=1
+
+
+
+
+HTTP/1.1 200 OK
+Server: Tengine
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Date: Fri, 31 May 2019 05:36:06 GMT
+Vary: Accept-Encoding
+X_TT_LOGID: 20190531133605010026049131843730
+tt_stable: 1
+X-TT-LOGID: 20190531133605010026049131843730
+Vary: Accept-Encoding
+Content-Encoding: gzip
+server-timing: inner;dur=284
+Vary: Accept-Encoding
+server-timing: cdn-cache;desc=MISS,edge;dur=0,origin;dur=319
+Via: cache2.cn612[319,0]
+Timing-Allow-Origin: *
+EagleId: 2a30794215592809658291002e
+
+
+
+
+
+
+
+
+获取用户的信息
+https://aweme-eagle-hl.snssdk.com/aweme/v1/user/?user_id=63283014705&retry_type=no_retry&iid=73085022843&device_id=39988204972&ac=wifi&channel=huawei&aid=1128&app_name=aweme&version_code=630&version_name=6.3.0&device_platform=android&ssmix=a&device_type=BLN-AL40&device_brand=HONOR&language=zh&os_api=26&os_version=8.0.0&uuid=865546035253935&openudid=d5c03a4945197bbf&manifest_version_code=630&resolution=1080*1800&dpi=480&update_version_code=6302&_rticket=1559068577250&mcc_mnc=46000&js_sdk_version=1.16.2.4&ts=1559068578&sec_user_id=MS4wLjABAAAANcSQjVNhC6afdSlwiPEgkJq-G-W5U2HjwAskIUw0Qkk
+
+https://aweme-eagle-hl.snssdk.com/aweme/v1/user/?user_id=62538933547&retry_type=no_retry&iid=73640641358&device_id=39988204972&ac=wifi&channel=huawei&aid=1128&app_name=aweme&version_code=650&version_name=6.5.0&device_platform=android&ssmix=a&device_type=BLN-AL40&device_brand=HONOR&language=zh&os_api=26&os_version=8.0.0&uuid=865546035253935&openudid=d5c03a4945197bbf&manifest_version_code=650&resolution=1080*1800&dpi=480&update_version_code=6502&_rticket=1559275401122&mcc_mnc=46000&js_sdk_version=1.16.2.7&ts=1559275402&sec_user_id=MS4wLjABAAAA0UvtN7yozozFC1b5PhxIMYzVwIugSWsC7i06UgHDw24
+
+
+
+
+
+
+
+
+
+
+GET https://aweme-eagle-hl.snssdk.com/aweme/v1/user/?user_id=99390730049&retry_type=no_retry&iid=73640641358&device_id=39988204972&ac=wifi&channel=huawei&aid=1128&app_name=aweme&version_code=650&version_name=6.5.0&device_platform=android&ssmix=a&device_type=BLN-AL40&device_brand=HONOR&language=zh&os_api=26&os_version=8.0.0&uuid=865546035253935&openudid=d5c03a4945197bbf&manifest_version_code=650&resolution=1080*1800&dpi=480&update_version_code=6502&_rticket=1559282458466&mcc_mnc=46000&js_sdk_version=1.16.2.7&ts=1559282459&sec_user_id=MS4wLjABAAAAtgulrvqhVhb0RMMMgpDRvaKEmbQM7X4fGh4L0TWwQPo HTTP/1.1
+
+Host: aweme-eagle-hl.snssdk.com
+Connection: keep-alive
+Cookie: odin_tt=88cf9e48c89beec658089f4b5580fca061f5545c7f7ef2d15cd3bebab1723fe07b1fef48dbb16190876be834bb6c37bd50a0988c7abcb5a55212ed95ea3cac07; install_id=73640641358; ttreq=1$b5f0dd9dd200b7dc412e9d54d582275da257c97f; qh[360]=1
+Accept-Encoding: gzip
+X-SS-REQ-TICKET: 1559282458474
+sdk-version: 1
+User-Agent: com.ss.android.ugc.aweme/650 (Linux; U; Android 8.0.0; zh_CN_#Hans; BLN-AL40; Build/HONORBLN-AL40; Cronet/58.0.2991.0)
+X-Khronos: 1559282458
+X-Gorgon: 03006cc000005ce20a6ba76ab91ff305b9727b81af953731a833
+X-Pods: 
+
+
+
+
+
+
+
+GET https://aweme-eagle-hl.snssdk.com/aweme/v1/user/?user_id=63201128958&retry_type=no_retry&iid=73640641358&device_id=39988204972&ac=wifi&channel=huawei&aid=1128&app_name=aweme&version_code=650&version_name=6.5.0&device_platform=android&ssmix=a&device_type=BLN-AL40&device_brand=HONOR&language=zh&os_api=26&os_version=8.0.0&uuid=865546035253935&openudid=d5c03a4945197bbf&manifest_version_code=650&resolution=1080*1800&dpi=480&update_version_code=6502&_rticket=1559282796814&mcc_mnc=46000&js_sdk_version=1.16.2.7&ts=1559282797&sec_user_id=MS4wLjABAAAAej4HrpZUFtcrcYolO9I8Em3hdILyUwEpnBs9ratLmps HTTP/1.1
+Host: aweme-eagle-hl.snssdk.com
+Connection: keep-alive
+Cookie: odin_tt=88cf9e48c89beec658089f4b5580fca061f5545c7f7ef2d15cd3bebab1723fe07b1fef48dbb16190876be834bb6c37bd50a0988c7abcb5a55212ed95ea3cac07; install_id=73640641358; ttreq=1$b5f0dd9dd200b7dc412e9d54d582275da257c97f; qh[360]=1
+Accept-Encoding: gzip
+X-SS-REQ-TICKET: 1559282796825
+sdk-version: 1
+User-Agent: com.ss.android.ugc.aweme/650 (Linux; U; Android 8.0.0; zh_CN_#Hans; BLN-AL40; Build/HONORBLN-AL40; Cronet/58.0.2991.0)
+X-Khronos: 1559282796
+X-Gorgon: 03006cc00000ac07f589a76ab91ff305b9727b81af9537d1c8da
+X-Pods: 
+
+
+
+
+
+
+//自己匹配
+GET https://aweme-eagle-hl.snssdk.com/aweme/v1/user/?user_id=60501711486&retry_type=no_retry&iid=73640641358&device_id=39988204972&ac=wifi&channel=huawei&aid=1128&app_name=aweme&version_code=650&version_name=6.5.0&device_platform=android&ssmix=a&device_type=BLN-AL40&device_brand=HONOR&language=zh&os_api=26&os_version=8.0.0&uuid=865546035253935&openudid=d5c03a4945197bbf&manifest_version_code=650&resolution=1080*1800&dpi=480&update_version_code=6502&_rticket=1559275401122&mcc_mnc=46000&js_sdk_version=1.16.2.7&ts=1559275402&sec_user_id=MS4wLjABAAAA_DuZtUJO2H1mTEP6PWYOpMxaAG3c0v5DAgL74FafWYc
+需要添加加密的头部信息，加密部分没办法弄
+
+
+
+
+GET https://aweme-eagle-hl.snssdk.com/aweme/v1/user/?user_id=62538933547&retry_type=no_retry&iid=73640641358&device_id=39988204972&ac=wifi&channel=huawei&aid=1128&app_name=aweme&version_code=650&version_name=6.5.0&device_platform=android&ssmix=a&device_type=BLN-AL40&device_brand=HONOR&language=zh&os_api=26&os_version=8.0.0&uuid=865546035253935&openudid=d5c03a4945197bbf&manifest_version_code=650&resolution=1080*1800&dpi=480&update_version_code=6502&_rticket=1559275401122&mcc_mnc=46000&js_sdk_version=1.16.2.7&ts=1559275402&sec_user_id=MS4wLjABAAAA0UvtN7yozozFC1b5PhxIMYzVwIugSWsC7i06UgHDw24
+
+
+ HTTP/1.1
+
+Host: aweme-eagle-hl.snssdk.com
+Connection: keep-alive
+Cookie: odin_tt=88cf9e48c89beec658089f4b5580fca061f5545c7f7ef2d15cd3bebab1723fe07b1fef48dbb16190876be834bb6c37bd50a0988c7abcb5a55212ed95ea3cac07; install_id=73640641358; ttreq=1$b5f0dd9dd200b7dc412e9d54d582275da257c97f; qh[360]=1
+Accept-Encoding: gzip
+X-SS-REQ-TICKET: 1559275401146
+sdk-version: 1
+User-Agent: com.ss.android.ugc.aweme/650 (Linux; U; Android 8.0.0; zh_CN_#Hans; BLN-AL40; Build/HONORBLN-AL40; Cronet/58.0.2991.0)
+X-Khronos: 1559275401
+X-Gorgon: 03006cc000003fc91a88a76ab91ff305b9727b81af9537170369
+X-Pods: 
+
+
+HTTP/1.1 200 OK
+Server: Tengine
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Date: Fri, 31 May 2019 04:03:22 GMT
+Vary: Accept-Encoding
+Tt_stable: 1
+X-TT-LOGID: 20190531120322010024109216459F27
+Vary: Accept-Encoding
+Content-Encoding: gzip
+server-timing: inner;dur=28
+Vary: Accept-Encoding
+Via: cache16.l2cm12-6[39,0], cache2.cn1182[66,0]
+server-timing: cdn-cache;desc=MISS,edge;dur=27,origin;dur=39
+Timing-Allow-Origin: *
+EagleId: d35bf19615592754024387980e
+
+
+
+
+
+
+
+获取用户的作品信息
+https://aweme-hl.snssdk.com/aweme/v1/aweme/post/?max_cursor=0&user_id=63283014705&count=20&retry_type=no_retry&iid=73085022843&device_id=39988204972&ac=wifi&channel=huawei&aid=1128&app_name=aweme&version_code=630&version_name=6.3.0&device_platform=android&ssmix=a&device_type=BLN-AL40&device_brand=HONOR&language=zh&os_api=26&os_version=8.0.0&uuid=865546035253935&openudid=d5c03a4945197bbf&manifest_version_code=630&resolution=1080*1800&dpi=480&update_version_code=6302&_rticket=1559068577241&mcc_mnc=46000&js_sdk_version=1.16.2.4&ts=1559068578&sec_user_id=MS4wLjABAAAANcSQjVNhC6afdSlwiPEgkJq-G-W5U2HjwAskIUw0Qkk
+
+
+
+
+GET https://api-hl.amemv.com/aweme/v1/aweme/post/?max_cursor=0&user_id=62538933547&count=20&retry_type=no_retry&iid=73640641358&device_id=39988204972&ac=wifi&channel=huawei&aid=1128&app_name=aweme&version_code=650&version_name=6.5.0&device_platform=android&ssmix=a&device_type=BLN-AL40&device_brand=HONOR&language=zh&os_api=26&os_version=8.0.0&uuid=865546035253935&openudid=d5c03a4945197bbf&manifest_version_code=650&resolution=1080*1800&dpi=480&update_version_code=6502&_rticket=1559275401120&mcc_mnc=46000&js_sdk_version=1.16.2.7&ts=1559275402&sec_user_id=MS4wLjABAAAA0UvtN7yozozFC1b5PhxIMYzVwIugSWsC7i06UgHDw24 HTTP/1.1
+Host: api-hl.amemv.com
+Connection: keep-alive
+Cookie: odin_tt=88cf9e48c89beec658089f4b5580fca061f5545c7f7ef2d15cd3bebab1723fe07b1fef48dbb16190876be834bb6c37bd50a0988c7abcb5a55212ed95ea3cac07; install_id=73640641358; ttreq=1$b5f0dd9dd200b7dc412e9d54d582275da257c97f; qh[360]=1
+Accept-Encoding: gzip
+sdk-version: 1
+User-Agent: com.ss.android.ugc.aweme/650 (Linux; U; Android 8.0.0; zh_CN_#Hans; BLN-AL40; Build/HONORBLN-AL40; Cronet/58.0.2991.0)
+X-Khronos: 1559275401
+X-Gorgon: 03006cc0000006d6c24da76ab91ff305b9727b81af95371703f5
+X-Pods: 
+
+
+HTTP/1.1 200 OK
+Server: Tengine
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Date: Fri, 31 May 2019 04:03:22 GMT
+Vary: Accept-Encoding
+Status_code: 0
+Tt_stable: 1
+X-TT-LOGID: 20190531120322010023064071447963
+Vary: Accept-Encoding
+Content-Encoding: gzip
+server-timing: inner;dur=60
+Vary: Accept-Encoding
+Via: cache9.l2st3-1[100,0], cache6.cn1414[131,0]
+Timing-Allow-Origin: *
+EagleId: af061d9a15592754024105949e
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//可以对分享信息进行爬取，解析视频链接
+share_url=https://www.iesdouyin.com/share/video/6695730645194394884/?region=CN&mid=6695990600224885516&u_code=bh2k3gkb&titleType=title
+
+//视频下载链接地址
+https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0300f140000bjmhau4if32rivkce8a0
+
+https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0300f690000bjnqhsvcbhngqh3s4gqg
+
+https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0300f690000bjn6hubee8lvvppd2cig
+
+
+uri=v0300f140000bjmhau4if32rivkce8a0
+
+http://v9-dy.ixigua.com/d8ca8c35202f5ecdb766ba1b0a3093c5/5ced838c/video/m/220ab9a716d76834eb8b4ceba16ad1f0e721161ed4e900011b2805cf77f3/?rc=MztmeXU2bHhrbTMzN2kzM0ApQHRAb0g6MzY0MzczNDk1NDw4PDNAKXUpQGczdSlAZjV2KUBmcHcxZnNoaGRmOzRAXmJoZi9jMV5qXy0tLi0wc3M1byNvIy42MzAwLi8tLTEyLS8tLi9pOmIucCM6YS1xIzpgMG8jYmZoXitqdDojLy5e
+
+http://v1-dy.ixigua.com/c84b77d105cd87f4e736f1dbac2d42ed/5ced838c/video/m/220ab9a716d76834eb8b4ceba16ad1f0e721161ed4e900011b2805cf77f3/
+
+https://aweme-hl.snssdk.com/aweme/v1/play/?video_id=v0300f140000bjmhau4if32rivkce8a0&line=0&ratio=540p&media_type=4&vr_type=0&improve_bitrate=0&h265=1
+
+https://api-hl.amemv.com/aweme/v1/play/?video_id=v0300f140000bjmhau4if32rivkce8a0&line=1&ratio=540p&media_type=4&vr_type=0&improve_bitrate=0&h265=1
+
+uri=http://p3-dy.byteimg.com/obj/ies-music/1634769207076903.mp3
+
+
+https://aweme-hl.snssdk.com/aweme/v1/play/?video_id=v0300f140000bjmhau4if32rivkce8a0&line=0&ratio=540p&watermark=1&media_type=4&vr_type=0&improve_bitrate=0&logo_name=aweme
+
+

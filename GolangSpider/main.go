@@ -1,10 +1,8 @@
 package main
 
 import (
-	"crypto/md5"
 	"fmt"
 	"os"
-	"strings"
 )
 
 func main() {
@@ -40,10 +38,24 @@ func main() {
 	//TestFmt()
 	//c83b410711be23b67b064077dc5b238a
 	//c83b410711be23b67b064077dc5b238a
-	data:=[]byte(strings.ToUpper("51967E53BB70A713E908443F5350A21C")+"kugoumvcloud")
-	val := md5.Sum(data)
-	fmt.Printf("%x",val)
+
+	//md5加密算法
+	//data:=[]byte(strings.ToUpper("51967E53BB70A713E908443F5350A21C")+"kugoumvcloud")
+	//val := md5.Sum(data)
+	//fmt.Printf("%x",val)
+	ProxySendRequest()
 }
+//http://116.208.55.252:9999
+//http://115.53.34.166:9999
+//http://106.110.65.109:8118
+//http://114.119.116.92:61066
+//http://218.73.131.6:9999
+//http://125.108.85.13:9000
+//http://115.193.100.80:9000
+//http://59.62.26.232:9000
+//http://117.90.4.204:9000
+//http://114.55.103.83:9090
+//http://183.129.207.86:13340
 
 type point struct {
 	x, y int
