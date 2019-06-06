@@ -141,7 +141,7 @@
 > ![文章详情](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/juejin/images/article_show.png)
 
 **3.下载日志**
-> ![下载日志](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/juejin/images/downloadlog.png)
+> ![下载日志](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/juejin/images/download_log.png)
 
 **4.文章简要信息**
 > ![文章简要信息](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/juejin/images/article_info.png)
