@@ -1,0 +1,73 @@
+# React Native实现一个带筛选功能的搜房列表（1） #
+
+原文链接 [React Native实现一个带筛选功能的搜房列表（1）]( https://link.juejin.im?target=https%3A%2F%2Fwww.neroxie.com%2F2019%2F06%2F06%2FReact-Native%25E5%25AE%259E%25E7%258E%25B0%25E4%25B8%2580%25E4%25B8%25AA%25E5%25B8%25A6%25E7%25AD%259B%25E9%2580%2589%25E5%258A%259F%25E8%2583%25BD%25E7%259A%2584%25E6%2590%259C%25E6%2588%25BF%25E5%2588%2597%25E8%25A1%25A8%25EF%25BC%25881%25EF%25BC%2589%2F )
+
+最近在写RN项目中需要实现一个带筛选功能的搜房列表，写完这个功能后发现有一些新的心得，在这里写下来跟大家分享一下。
+
+开始之前，我们先看一下最终实现的效果
+
+![search_house](https://user-gold-cdn.xitu.io/2019/6/6/16b2ae02b72f2324?imageslim)
+
+文章中的代码都来自 [代码传送门--NNHybrid]( https://link.juejin.im?target=https%3A%2F%2Fgithub.com%2FYiHuaXie%2FNNHybrid ) 。主要集中在 ` SearchHousePage.js` 、 ` searchHouse.js` 和 ` FHTFilterMenuManager.m` 。我会通过 **列表下拉刷新和上拉加载更多的实现** 、 **使用Redux** 以及 **RN与原生iOS通信** 这三方面向大家分享这个页面的开发过程。
+
+首先我们来看一下列表是如何实现的。
+
+## 如何实现下拉刷新和上拉加载更多 ##
+
+在移动端的开发过程中，写一个带下拉刷新和上拉加载更多的列表可以说是一个常态。在React Native中我们一般使用FlatList或SectionList组件实现，这里我使用FlatList来实现这个列表。
+
+我们知道FlatList默认是有下拉刷新功能的，但是自定义效果比较差，而且效果也不如iOS中MJRefresh的效果好，另外FlatList没有加载更多的功能，所以需要我们自己去实现下拉刷新和上拉加载更多。在下拉刷新的时候如果出现空数据或者报错，我们可能需要分别实现对应的占位视图。
+
+基于上述要求，我们可以通过改变state中的headerRefreshState的值对头部刷新控件样式进行更改，而通过props中的footerRefreshState的值对底部刷新控件样式进行更改。
+
+根据上面所述，我们可以用下面这张图来描述列表在不同刷新状态时候对应的样式。
+
+![RefreshState](https://user-gold-cdn.xitu.io/2019/6/6/16b2ae02b730d03c?imageView2/0/w/1280/h/960/ignore-error/1)
+
+## 主要代码 ##
+
+### RefreshConst ###
+
+` // 默认刷新控件高度 export const defaultHeight = 60; // 下拉刷新状态 export const HeaderRefreshState = { Idle: 'Idle' , //无刷新的情况 Pulling: 'Pulling' , //松开刷新 Refreshing: 'Refreshing' , //正在刷新 } // 加载更多状态 export const FooterRefreshState = { Idle: 'Idle' , //无刷新的情况 Refreshing: 'Refreshing' , //正在刷新 NoMoreData: 'NoMoreData' , //没有更多数据 EmptyData: 'EmptyData' , //空数据 Failure: 'Failure' , //错误提示 } // 下拉刷新默认props export const defaultHeaderProps = { headerIsRefreshing: false , headerHeight: defaultHeight, headerIdleText: '下拉可以刷新' , headerPullingText: '松开立即刷新' , headerRefreshingText: '正在刷新数据中...' , } // 加载更多默认props export const defaultFooterProps = { footerRefreshState: FooterRefreshState.Idle, footerHeight: defaultHeight, footerRefreshingText: '更多数据加载中...' , footerFailureText: '点击重新加载' , footerNoMoreDataText: '已加载全部数据' , footerEmptyDataText: '暂时没有相关数据' , } 复制代码`
+
+### RefreshFlatList ###
+
+` import React, { Component } from 'react' ; import { StyleSheet, View, Text, Image, FlatList, ActivityIndicator, Animated, } from 'react-native' ; import { PropTypes } from 'prop-types' ; import AppUtil from '../../utils/AppUtil' ; import { HeaderRefreshState, FooterRefreshState, defaultHeaderProps, defaultFooterProps, } from './RefreshConst' ; /** * 头部刷新组件的箭头或菊花 */ const headerArrowOrActivity = (headerRefreshState, arrowAnimation) => { if (headerRefreshState == HeaderRefreshState.Refreshing) { return ( <ActivityIndicator style={{ marginRight: 10 }} size= "small" color={AppUtil.app_theme} /> ); } else { return ( <Animated.Image source ={require( '../../resource/images/arrow/refresh_arrow.png' )} style={{ width: 20, height: 20, marginRight: 10, transform: [{ rotateZ: arrowAnimation.interpolate({ inputRange: [0, 1], outputRange: [ '0deg' , '-180deg' ] }) }] }} /> ); } } /** * 头部刷新组件的Text组件 */ const headerTitleComponent = (headerRefreshState, props) => { const { headerIdleText, headerPullingText, headerRefreshingText } = props; let headerTitle = '' ; switch (headerRefreshState) { case HeaderRefreshState.Idle: headerTitle = headerIdleText; break ; case HeaderRefreshState.Pulling: headerTitle = headerPullingText; break ; case HeaderRefreshState.Refreshing: headerTitle = headerRefreshingText; break ; default: break ; } return ( <Text style={{ fontSize: 13, color: AppUtil.app_theme }}> {headerTitle} </Text> ); } // 默认加载更多组件 export const defaultFooterRefreshComponent = ({ footerRefreshState, footerRefreshingText, footerFailureText, footerNoMoreDataText, footerEmptyDataText, onHeaderRefresh, onFooterRefresh, data }) => { switch (footerRefreshState) { case FooterRefreshState.Idle: return ( <View style={styles.footerContainer} /> ); case FooterRefreshState.Refreshing: return ( <View style={styles.footerContainer} > <ActivityIndicator size= "small" color={AppUtil.app_theme} /> <Text style={[styles.footerText, { marginLeft: 7 }]}> {footerRefreshingText} </Text> </View> ); case FooterRefreshState.Failure: return ( <TouchableOpacity onPress={() => { if (AppUtil.isEmptyArray(data)) { onHeaderRefresh && onHeaderRefresh(); } else { onFooterRefresh && onFooterRefresh(); } Î }}> <View style={styles.footerContainer}> <Text style={styles.footerText}>{footerFailureText}</Text> </View> </TouchableOpacity> ); case FooterRefreshState.EmptyData: return ( <TouchableOpacity onPress={() => { onHeaderRefresh && onHeaderRefresh(); }}> <View style={styles.footerContainer}> <Text style={styles.footerText}>{footerEmptyDataText}</Text> </View> </TouchableOpacity> ); case FooterRefreshState.NoMoreData: return ( <View style={styles.footerContainer} > <Text style={styles.footerText}>{footerNoMoreDataText}</Text> </View> ); } return null; } export default class RefreshFlatList extends Component { static propTypes = { listRef: PropTypes.any, data: PropTypes.array, renderItem: PropTypes.func, // Header相关属性 headerIsRefreshing: PropTypes.bool, headerHeight: PropTypes.number, onHeaderRefresh: PropTypes.func, headerIdleText: PropTypes.string, headerPullingText: PropTypes.string, headerRefreshingText: PropTypes.string, headerRefreshComponent: PropTypes.func, // Footer相关属性 footerRefreshState: PropTypes.string, onFooterRefresh: PropTypes.func, footerHeight: PropTypes.number, footerRefreshingText: PropTypes.string, footerFailureText: PropTypes.string, footerNoMoreDataText: PropTypes.string, footerEmptyDataText: PropTypes.string, footerRefreshComponent: PropTypes.func, }; static defaultProps = { listRef: 'flatList' , ...defaultHeaderProps, ...defaultFooterProps, } constructor(props) { super(props); const { headerHeight, footerHeight } = this.props; this.isDragging = false ; this.headerHeight = headerHeight; this.footerHeight = footerHeight; this.state = { arrowAnimation: new Animated.Value(0), headerRefreshState: HeaderRefreshState.Idle, }; } componentWillReceiveProps(nextProps) { const { headerIsRefreshing, listRef } = nextProps; if (headerIsRefreshing !== this.props.headerIsRefreshing) { // console.log( '调用一下' + headerIsRefreshing + this.props.headerIsRefreshing); const offset = headerIsRefreshing ? -this.headerHeight : 0; const headerRefreshState = headerIsRefreshing ? HeaderRefreshState.Refreshing : HeaderRefreshState.Idle; if (!headerIsRefreshing) this.state.arrowAnimation.setValue(0); this.refs[listRef].scrollToOffset({ animated: true , offset }); this.setState({ headerRefreshState }); } } /** * 加载下拉刷新组件 */ _renderHeader = () => { const { headerRefreshComponent } = this.props; const { arrowAnimation, headerRefreshState } = this.state; if (headerRefreshComponent) { return ( <View style={{ marginTop: -this.headerHeight, height: this.headerHeight }}> {headerRefreshComponent(headerRefreshState)} </View> ); } else { return ( <View style={{ alignItems: 'center' , justifyContent: 'center' , flexDirection: 'row' , marginTop: -this.headerHeight, height: this.headerHeight }} > {headerArrowOrActivity(headerRefreshState, arrowAnimation)} {headerTitleComponent(headerRefreshState, this.props)} </View > ); } } /** * 加载更多组件 */ _renderFooter = () => { const { footerRefreshState, footerRefreshComponent, } = this.props; if (footerRefreshComponent) { const component = footerRefreshComponent(footerRefreshState); if (component) return component; } return defaultFooterRefreshComponent({ ...this.props }); } render () { return ( <FlatList {...this.props} ref={this.props.listRef} onScroll={event => this._onScroll(event)} onScrollEndDrag={event => this._onScrollEndDrag(event)} onScrollBeginDrag={event => this._onScrollBeginDrag(event)} onEndReached={this._onEndReached} ListHeaderComponent={this._renderHeader} ListFooterComponent={this._renderFooter} onEndReachedThreshold={0.1} /> ); } /** * 列表正在滚动 * @private * @param {{}} event */ _onScroll(event) { const offsetY = event.nativeEvent.contentOffset.y; if (this.isDragging) { if (!this._isRefreshing()) { if (offsetY <= -this.headerHeight) { // 松开以刷新 this.setState({ headerRefreshState: HeaderRefreshState.Pulling }); this.state.arrowAnimation.setValue(1); } else { // 下拉以刷新 this.setState({ headerRefreshState: HeaderRefreshState.Idle }); this.state.arrowAnimation.setValue(0); } } } } /** * 列表开始拖拽 * @private * @param {{}} event */ _onScrollBeginDrag(event) { this.isDragging = true ; } /** * 列表结束拖拽 * @private * @param {{}} event */ _onScrollEndDrag(event) { this.isDragging = false ; const offsetY = event.nativeEvent.contentOffset.y; const { listRef, onHeaderRefresh } = this.props; if (!this._isRefreshing()) { if (this.state.headerRefreshState === HeaderRefreshState.Pulling) { this.refs[listRef].scrollToOffset({ animated: true , offset: -this.headerHeight }); this.setState({ headerRefreshState: HeaderRefreshState.Refreshing }); onHeaderRefresh && onHeaderRefresh(); } } else { if (offsetY <= 0) { this.refs[listRef].scrollToOffset({ animated: true , offset: -this.headerHeight }); } } } /** * 列表是否正在刷新 */ _isRefreshing = () => { return ( this.state.headerRefreshState === HeaderRefreshState.Refreshing && this.props.footerRefreshState === FooterRefreshState.Refreshing ); } /** * 触发加载更多 */ _onEndReached = () => { const { onFooterRefresh, data } = this.props; if (!this._isRefreshing() && !AppUtil.isEmptyArray(data) && this.props.footerRefreshState !== FooterRefreshState.NoMoreData) { onFooterRefresh && onFooterRefresh(); } } } const styles = StyleSheet.create({ headerContainer: { position: 'absolute' , left: 0, right: 0, }, customHeader: { position: 'absolute' , left: 0, right: 0, }, defaultHeader: { position: 'absolute' , alignItems: 'center' , justifyContent: 'center' , flexDirection: 'row' , left: 0, right: 0, }, footerContainer: { flex: 1, flexDirection: 'row' , justifyContent: 'center' , alignItems: 'center' , padding: 10, height: 60, }, footerText: { fontSize: 14, color: AppUtil.app_theme } }); 复制代码`
+
+### PlaceholderView ###
+
+` PlaceholderView.js` 用来实现占位图
+
+` export default class PlaceholderView extends Component { static propTypes = { height: PropTypes.number, imageSource: PropTypes.any, tipText: PropTypes.string, infoText: PropTypes.string, spacing: PropTypes.number, needReload: PropTypes.bool, reloadHandler: PropTypes.func } static defaultProps = { height: AppUtil.windowHeight, hasError: false , tipText: '' , infoText: '' , spacing: 10, needReload: false , reloadHandler: null } renderImage = imageSource => { return imageSource ? ( <NNImage style={styles.image} enable Adaptation={ true } source ={imageSource} /> ) : null; } renderTipText = tipText => { return !AppUtil.isEmptyString(tipText) ? ( <Text style={styles.tipText}>{tipText}</Text> ) : null; } renderInfoText = infoText => { return !AppUtil.isEmptyString(infoText) ? ( <Text style={styles.infoText}>{infoText}</Text> ) : null; } renderReloadButton = (needReload, reloadHandler) => { return needReload ? ( <TouchableOpacity onPress={() => { if (reloadHandler) { reloadHandler(); } }}> <View style={styles.reloadButton}> <Text style={styles.reloadButtonText}>重新加载</Text> </View> </TouchableOpacity> ) : null; } render () { const { height, imageSource, tipText, infoText, needReload, reloadHandler, } = this.props; return ( <View style={{ ...styles.container, height }}> {this.renderImage(imageSource)} {this.renderTipText(tipText)} {this.renderInfoText(infoText)} {this.renderReloadButton(needReload, reloadHandler)} </View> ); } } 复制代码`
+
+## 最终实现 ##
+
+在 ` SearchHousePage.js` 中实现列表，主要代码如下：
+
+` footerRefreshComponent(footerRefreshState, data) { switch (footerRefreshState) { // 自定义footerFailureComponent，当有数据的时候返回null，这样列表就会使用默认的footerFailureComponent，否则显示错误占位图 case FooterRefreshState.Failure: { return AppUtil.isEmptyArray(data) ? ( <PlaceholderView height={AppUtil.windowHeight - AppUtil.fullNavigationBarHeight - 44} imageSource={require( '../../resource/images/placeHolder/placeholder_error.png' )} tipText= '出了点小问题' needReload={ true } reloadHandler={() => this._loadData( true )} /> ) : null; } // 空数据占位图的实现 case FooterRefreshState.EmptyData: { return ( <PlaceholderView height={AppUtil.windowHeight - AppUtil.fullNavigationBarHeight - 44} imageSource={require( '../../resource/images/placeHolder/placeholder_house.png' )} tipText= '真的没了' infoText= '更换筛选条件试试吧' /> ); } default: return null; } } // 列表的实现 <RefreshFlatList ref= 'flatList' style={{ marginTop: AppUtil.fullNavigationBarHeight + 44 }} showsHorizontalScrollIndicator={ false } data={searchHouse.houseList} keyExtractor={item => ` ${item.id} `} renderItem={({ item, index }) => this._renderHouseCell(item, index)} headerIsRefreshing={searchHouse.headerIsRefreshing} footerRefreshState={searchHouse.footerRefreshState} onHeaderRefresh={() => this._loadData( true )} onFooterRefresh={() => this._loadData( false )} footerRefreshComponent={footerRefreshState => this.footerRefreshComponent(footerRefreshState, searchHouse.houseList)} /> 复制代码`
+
+### 各状态对应的效果图 ###
+
+**NoMoreData**
+
+![RefreshStateNoMoreData](https://user-gold-cdn.xitu.io/2019/6/6/16b2ae02b8257bc2?imageView2/0/w/1280/h/960/ignore-error/1)
+
+**列表无数据时的Failure**
+
+![RefreshFailurePlaceholder](https://user-gold-cdn.xitu.io/2019/6/6/16b2ae02b8404983?imageView2/0/w/1280/h/960/ignore-error/1)
+
+**列表有数据时的Failure**
+
+![RefreshStateFailure](https://user-gold-cdn.xitu.io/2019/6/6/16b2ae02b8a66224?imageView2/0/w/1280/h/960/ignore-error/1)
+
+**EmptyData**
+
+![RefreshEmptyPlaceholder](https://user-gold-cdn.xitu.io/2019/6/6/16b2ae02f747560a?imageView2/0/w/1280/h/960/ignore-error/1)
+
+## 综上 ##
+
+到这里，我们已经完成了一个带下拉刷新和上拉加载更多的列表，并且实现了空数据占位。接着就是介绍数据的加载，在 [React Native实现一个带筛选功能的搜房列表（2）]( https://link.juejin.im?target=https%3A%2F%2Fwww.neroxie.com%2F2019%2F06%2F06%2FReact-Native%25E5%25AE%259E%25E7%258E%25B0%25E4%25B8%2580%25E4%25B8%25AA%25E5%25B8%25A6%25E7%25AD%259B%25E9%2580%2589%25E5%258A%259F%25E8%2583%25BD%25E7%259A%2584%25E6%2590%259C%25E6%2588%25BF%25E5%2588%2597%25E8%25A1%25A8%25EF%25BC%25882%25EF%25BC%2589%2F ) 中我会介绍如何使用redux进行数据的加载。另外上面提供的代码均是从项目当中截取的，如果需要查看完整代码的话，在 [代码传送门--NNHybrid]( https://link.juejin.im?target=https%3A%2F%2Fgithub.com%2FYiHuaXie%2FNNHybrid ) 中。
+
+相关代码路径：
+
+` RefreshFlatList: /NNHybridRN/components/refresh/RefreshFlatList.js RefreshConst: /NNHybridRN/components/refresh/RefreshConst.js PlaceholderView: /NNHybridRN/components/common/PlaceholderView.js SearchHousePage: /NNHybridRN/sections/searchHouse/SearchHousePage.js 复制代码`

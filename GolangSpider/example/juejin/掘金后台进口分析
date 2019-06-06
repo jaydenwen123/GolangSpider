@@ -26,7 +26,7 @@ post
 Content-Type: application/json
 X-Agent: Juejin/Web
 参数：
-{"operationName":"","query":"","variables":{"first":20,"after":"","order":"NETEST"},"extensions":{"query":{"id":"21207e9ddb1de777adeaca7a2fb38030"}}}
+{"operationName":"","query":"","variables":{"first":20,"after":"","order":"NEWEST"},"extensions":{"query":{"id":"21207e9ddb1de777adeaca7a2fb38030"}}}
 
 3 文章详情接口
 3.1文章详情接口
@@ -49,4 +49,33 @@ X-Agent: Juejin/Web
 {"operationName":"","query":"","variables":{"type":"ALL","query":"golang","after":"","period":"ALL","first":20},"extensions":{"query":{"id":"d9997080c3d67a02bfdae094729fed3b"}}}
 {"operationName":"","query":"","variables":{"type":"ALL","query":"golang","after":"","period":"M3","first":20},"extensions":{"query":{"id":"d9997080c3d67a02bfdae094729fed3b"}}}
 //type:ALL/ARTICLE/TAG/USER
+
+
+
+5.标签
+
+5.1获取标签信息
+https://gold-tag-ms.juejin.im/v1/tags/type/hot/page/1/pageSize/40
+Origin: https://juejin.im
+Referer: https://juejin.im/subscribe/all
+User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+X-Juejin-Client: 1559818729874
+X-Juejin-Src: web
+X-Juejin-Token: eyJhY2Nlc3NfdG9rZW4iOiI3d2MzSG9Sb0JOeEV3dnpkIiwicmVmcmVzaF90b2tlbiI6ImdhbklJaE9LdnRJVWdBSkUiLCJ0b2tlbl90eXBlIjoibWFjIiwiZXhwaXJlX2luIjoyNTkyMDAwfQ==
+X-Juejin-Uid: 5ce8befdf265da1bd1463390
+
+5.2关注标签
+addTagUrl=`https://gold-tag-ms.juejin.im/v1/tag/subscribe/5597a23fe4b08a686ce5a7c4`
+//PUT
+User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
+X-Juejin-Client: 1559818729874
+X-Juejin-Src: web
+X-Juejin-Token: eyJhY2Nlc3NfdG9rZW4iOiI3d2MzSG9Sb0JOeEV3dnpkIiwicmVmcmVzaF90b2tlbiI6ImdhbklJaE9LdnRJVWdBSkUiLCJ0b2tlbl90eXBlIjoibWFjIiwiZXhwaXJlX2luIjoyNTkyMDAwfQ==
+X-Juejin-Uid: 5ce8befdf265da1bd1463390
+
+
+
+5.3获取标签全部文章
+get请求
+https://timeline-merger-ms.juejin.im/v1/get_tag_entry?src=web&uid=5ce8befdf265da1bd1463390&device_id=1559818729874&token=eyJhY2Nlc3NfdG9rZW4iOiI3d2MzSG9Sb0JOeEV3dnpkIiwicmVmcmVzaF90b2tlbiI6ImdhbklJaE9LdnRJVWdBSkUiLCJ0b2tlbl90eXBlIjoibWFjIiwiZXhwaXJlX2luIjoyNTkyMDAwfQ%3D%3D&tagId=5597a063e4b08a686ce57030&page=0&pageSize=20&sort=rankIndex
 

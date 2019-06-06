@@ -36,7 +36,10 @@ func MatchStringValue(regExp, content string) string {
 	cp := regexp.MustCompile(regExp)
 	//带分组的匹配
 	submatchs := cp.FindAllStringSubmatch(content, -1)
-	return submatchs[0][1]
+	if len(submatchs)==1{
+		return submatchs[0][1]
+	}
+	return ""
 }
 
 //正则表达式匹配单个int类型的值

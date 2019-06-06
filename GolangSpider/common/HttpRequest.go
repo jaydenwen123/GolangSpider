@@ -94,11 +94,20 @@ func RequestJson(url string, headers map[string]string) string {
 //通过get发送请求，返回数据
 //第一个参数为字节数组，第二个参数为默认编码为utf-8的字符串
 func RequestJsonWithPost(url string, headers map[string]string,params string) string {
+	return RequestJsonWithMethod(url,headers,"POST",params)
+}
+//通过get发送请求，返回数据
+//第一个参数为字节数组，第二个参数为默认编码为utf-8的字符串
+func RequestJsonWithMethod(url string, headers map[string]string,method string,params string) string {
 
 	//1.发请求，获取数据
 	//如果需要自己设置请求头，则通过http.NewRequest
 	//resp, err := http.Get(url)
-	request, err := http.NewRequest("POST", url, strings.NewReader(params))
+	var body io.Reader
+	if len(params)>0{
+		body=strings.NewReader(params)
+	}
+	request, err := http.NewRequest(method, url, body)
 	//设置请求头
 	//request.Header.Add("User-Agent", USER_AGENT)
 	for key, value := range headers {

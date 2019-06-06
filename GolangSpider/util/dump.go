@@ -60,7 +60,7 @@ func Obj2JsonStr(vData interface{}) string {
 }
 
 //将对象转换成带缩进格式的json字符串
-func Obj2JsonStrIndex(vData interface{}, prefix, indent string) string {
+func Obj2JsonStrIndent(vData interface{}, prefix, indent string) string {
 	data, err := json.MarshalIndent(vData, prefix, indent)
 	if err != nil {
 		logs.Error("object to json error:", err.Error())
