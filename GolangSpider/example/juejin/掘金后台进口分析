@@ -1,7 +1,5 @@
-1.后台搜索接口
-
-2.后台首页接口
-2.1热门内容接口
+1.后台首页接口
+1.1热门内容接口
 https://web-api.juejin.im/query
 post
 请求头：
@@ -10,7 +8,7 @@ X-Agent: Juejin/Web
 参数：
 {"operationName":"","query":"","variables":{"first":20,"after":"","order":"POPULAR"},"extensions":{"query":{"id":"21207e9ddb1de777adeaca7a2fb38030"}}}
 
-2.2热榜内容接口
+1.2热榜内容接口
 https://web-api.juejin.im/query
 post
 请求头：
@@ -19,7 +17,7 @@ X-Agent: Juejin/Web
 参数：
 {"operationName":"","query":"","variables":{"first":20,"after":"","order":"THREE_DAYS_HOTTEST"},"extensions":{"query":{"id":"21207e9ddb1de777adeaca7a2fb38030"}}}
 
-2.3最新内容接口
+1.3最新内容接口
 https://web-api.juejin.im/query
 post
 请求头：
@@ -28,18 +26,18 @@ X-Agent: Juejin/Web
 参数：
 {"operationName":"","query":"","variables":{"first":20,"after":"","order":"NEWEST"},"extensions":{"query":{"id":"21207e9ddb1de777adeaca7a2fb38030"}}}
 
-3 文章详情接口
-3.1文章详情接口
+2 文章详情接口
+2.1文章详情接口
 https://juejin.im/post/{id}
 5cf61ed3e51d4555fd20a2f3
 get请求
-3.2文章内容：
+2.2文章内容：
 <h1 class="article-title" data-v-3f6f7ca1>如何提升JSON.stringify()的性能？</h1>
 <div data-id="5cf7ae1b6fb9a07ef06f830a" itemprop="articleBody" class="article-content" data-v-3f6f7ca1>
 .........content.....
 </div>
 
-4.搜索接口
+3 搜索接口
 https://web-api.juejin.im/query
 post
 请求头：
@@ -52,9 +50,8 @@ X-Agent: Juejin/Web
 
 
 
-5.标签
-
-5.1获取标签信息
+4.标签
+4.1获取标签信息
 https://gold-tag-ms.juejin.im/v1/tags/type/hot/page/1/pageSize/40
 Origin: https://juejin.im
 Referer: https://juejin.im/subscribe/all
@@ -64,7 +61,7 @@ X-Juejin-Src: web
 X-Juejin-Token: eyJhY2Nlc3NfdG9rZW4iOiI3d2MzSG9Sb0JOeEV3dnpkIiwicmVmcmVzaF90b2tlbiI6ImdhbklJaE9LdnRJVWdBSkUiLCJ0b2tlbl90eXBlIjoibWFjIiwiZXhwaXJlX2luIjoyNTkyMDAwfQ==
 X-Juejin-Uid: 5ce8befdf265da1bd1463390
 
-5.2关注标签
+4.2关注标签
 addTagUrl=`https://gold-tag-ms.juejin.im/v1/tag/subscribe/5597a23fe4b08a686ce5a7c4`
 //PUT
 User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
@@ -73,9 +70,7 @@ X-Juejin-Src: web
 X-Juejin-Token: eyJhY2Nlc3NfdG9rZW4iOiI3d2MzSG9Sb0JOeEV3dnpkIiwicmVmcmVzaF90b2tlbiI6ImdhbklJaE9LdnRJVWdBSkUiLCJ0b2tlbl90eXBlIjoibWFjIiwiZXhwaXJlX2luIjoyNTkyMDAwfQ==
 X-Juejin-Uid: 5ce8befdf265da1bd1463390
 
-
-
-5.3获取标签全部文章
+4.3获取标签全部文章
 get请求
 https://timeline-merger-ms.juejin.im/v1/get_tag_entry?src=web&uid=5ce8befdf265da1bd1463390&device_id=1559818729874&token=eyJhY2Nlc3NfdG9rZW4iOiI3d2MzSG9Sb0JOeEV3dnpkIiwicmVmcmVzaF90b2tlbiI6ImdhbklJaE9LdnRJVWdBSkUiLCJ0b2tlbl90eXBlIjoibWFjIiwiZXhwaXJlX2luIjoyNTkyMDAwfQ%3D%3D&tagId=5597a063e4b08a686ce57030&page=0&pageSize=20&sort=rankIndex
 
