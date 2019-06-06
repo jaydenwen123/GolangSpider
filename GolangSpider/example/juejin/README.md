@@ -99,11 +99,11 @@
 
 **4.1获取标签信息**
 
-> https://gold-tag-ms.juejin.im/v1/tags/type/hot/page/1/pageSize/40
-> Origin: https://juejin.im
-> Referer: https://juejin.im/subscribe/all
-> User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36
-> X-Juejin-Client: 1559818729874
+> https://gold-tag-ms.juejin.im/v1/tags/type/hot/page/1/pageSize/40  
+> Origin: https://juejin.im  
+> Referer: https://juejin.im/subscribe/all  
+> User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64)   AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169   Safari/537.36
+> X-Juejin-Client: 1559818729874  
 > X-Juejin-Src: web
 > X-Juejin-Token: eyJhY2Nlc3NfdG9rZW4iOiI3d2MzSG9Sb0JOeEV3dnpkIiwicmVmcmVzaF90b2tlbiI6ImdhbklJaE9LdnRJVWdBSkUiLCJ0b2tlbl90eXBlIjoibWFjIiwiZXhwaXJlX2luIjoyNTkyMDAwfQ==
 > X-Juejin-Uid: 5ce8befdf265da1bd1463390
