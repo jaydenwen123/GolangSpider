@@ -1,10 +1,9 @@
 package cbooo
 
 import (
-	"GolangSpider/GolangSpider/common"
-	"GolangSpider/GolangSpider/util"
 	"encoding/csv"
 	"github.com/astaxie/beego/logs"
+	"github.com/jaydenwen123/go-util"
 	"os"
 	"regexp"
 	"strconv"
@@ -23,7 +22,7 @@ func Main() {
 func SpiderMovieInfo(movieId string,downloadPoster bool) {
 	//1.发送请求
 	detailUrl:=getDetailUrl(movieId)
-	_, content := common.Request(detailUrl)
+	_, content := util.Request(detailUrl)
 	//fmt.Println(content)
 	//content=TrimSpace(content)
 	//fmt.Println(content)
@@ -44,7 +43,7 @@ func SpiderMovieInfo(movieId string,downloadPoster bool) {
 
 func SpiderCboooHome() {
 	//1.发送http请求
-	_, content := common.Request(cboooUrl)
+	_, content := util.Request(cboooUrl)
 	//fmt.Println(content)
 	//解析CBO实时票房榜数据
 	SpiderBoxOffice(content)

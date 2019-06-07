@@ -1,9 +1,8 @@
 package gushiwen
 
 import (
-	"GolangSpider/GolangSpider/common"
+	"github.com/jaydenwen123/go-util"
 	"GolangSpider/GolangSpider/example/gushiwen/db"
-	"GolangSpider/GolangSpider/util"
 	"github.com/PuerkitoBio/goquery"
 	"github.com/astaxie/beego/logs"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
@@ -13,7 +12,7 @@ import (
 //1.爬取古诗文网，诗文栏目的所有诗文类型，作者，朝代，形式（诗、词、曲、文言文）
 //https://www.gushiwen.org/shiwen/
 func SpiderShiwenKindUrl() ( map[string]string, map[string]string, map[string]string, map[string]string ) {
-	_, resp := common.Request(SHIWEN_URL)
+	_, resp := util.Request(SHIWEN_URL)
 	//fmt.Println(resp)
 	//util.TrimSpace(resp)
 	//利用正则表达式解析出所有的分类（类型、作者、朝代、形式）
@@ -60,7 +59,7 @@ func SpiderShiwenKindUrl() ( map[string]string, map[string]string, map[string]st
 //2.1爬取不同类型诗文下的诗文链接
 //<a href="/gushi/guiyuan.aspx">闺怨</a>
 func SpiderShiwenByType(url string) []*db.Poem {
-	_, resp := common.Request(url)
+	_, resp := util.Request(url)
 	targets := util.MatchTarget(typePoemRe, resp)
 	curUrl:=""
 	poems:=make([]*db.Poem ,0)
@@ -76,7 +75,7 @@ func SpiderShiwenByType(url string) []*db.Poem {
 //2.2爬取不同类型诗文下的诗文链接
 //<a href="/gushi/guiyuan.aspx">闺怨</a>
 func SpiderShiwenUrlByType(url string) []string {
-	_, resp := common.Request(url)
+	_, resp := util.Request(url)
 	targets := util.MatchTarget(typePoemRe, resp)
 	curUrl:=""
 	urls:=make([]string,0)
@@ -93,7 +92,7 @@ func SpiderShiwenUrlByType(url string) []string {
 //原文、译文、注释、背景、赏析、作者介绍
 func SpiderShiwenContent(shiwenUrl string) *db.Poem {
 	poem:=&db.Poem{}
-	reader := common.ResponseWithReader(shiwenUrl)
+	reader := util.ResponseWithReader(shiwenUrl)
 	//采用新的方案来解决
 	//https://github.com/PuerkitoBio/goquery
 	doc, err := goquery.NewDocumentFromReader(reader)

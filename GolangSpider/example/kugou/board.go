@@ -1,8 +1,7 @@
 package kugou
 
 import (
-	"GolangSpider/GolangSpider/common"
-	"GolangSpider/GolangSpider/util"
+	"github.com/jaydenwen123/go-util"
 	"github.com/PuerkitoBio/goquery"
 	"github.com/astaxie/beego/logs"
 	"github.com/tidwall/gjson"
@@ -68,7 +67,7 @@ func ExactSongHash(jsonStr string) ([]gjson.Result) {
 
 //解析出榜单的歌曲信息，返回的是json字符串
 func ParseBoardSongsInfo(url string) string{
-	_, data := common.Request(url)
+	_, data := util.Request(url)
 	data = util.MatchStringValue(`global.features =(?s:(.*?))}\]`, data)
 	data=data+"}]"
 	//得到json数据
@@ -77,7 +76,7 @@ func ParseBoardSongsInfo(url string) string{
 
 //解析所有榜单的url，键存储榜单名称、值存储url
 func ParseAllBoardUrls() map[string]string {
-	reader := common.ResponseWithReader(boardUrl)
+	reader := util.ResponseWithReader(boardUrl)
 	doc, err := goquery.NewDocumentFromReader(reader)
 	if err != nil {
 		logs.Error("goquery new document from reader error.",err.Error())

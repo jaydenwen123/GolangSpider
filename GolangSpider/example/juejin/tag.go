@@ -1,7 +1,7 @@
 package juejin
 
 import (
-	"GolangSpider/GolangSpider/common"
+	"github.com/jaydenwen123/go-util"
 	"fmt"
 	"github.com/astaxie/beego/logs"
 	"github.com/tidwall/gjson"
@@ -11,7 +11,7 @@ import (
 
 func GetAllTags(tagUrl string)  {
 	url:=strings.Replace(tagUrl,"{page}","1",-1)
-	jsonStr := common.RequestJson(url, headers)
+	jsonStr := util.RequestJson(url, headers)
 	logs.Info("开始关注第",1,"页的标签")
 	AddAllTags(jsonStr)
 	if gjson.Valid(jsonStr){
@@ -24,7 +24,7 @@ func GetAllTags(tagUrl string)  {
 		for i:=1;i<pageCount;i++{
 			logs.Info("开始关注第",i+1,"页的标签")
 			url=strings.Replace(tagUrl,"{page}",fmt.Sprintf("%d",i+1),-1)
-			jsonStr = common.RequestJson(url, headers)
+			jsonStr = util.RequestJson(url, headers)
 			AddAllTags(jsonStr)
 		}
 
@@ -38,7 +38,7 @@ func AddAllTags(jsonStr string) {
 	idArr := parse.Get("d.tags.#.id").Array()
 	for _,id:=range idArr{
 		url:=strings.Replace(addTagUrl,"{id}",id.String(),-1)
-		res := common.RequestJsonWithMethod(url, headers, "PUT", "")
+		res := util.RequestJsonWithMethod(url, headers, "PUT", "")
 		fmt.Println(res)
 		time.Sleep(time.Millisecond*50)
 	}
@@ -56,7 +56,7 @@ func SaveAllTagPageArticles()  {
 func GetPageCount() int  {
 	url:=strings.Replace(tagAllArticlesUrl,"{page}","1",-1)
 	url=strings.Replace(url,"{pagesize}","1",-1)
-	jsonData := common.RequestJson(url, headers)
+	jsonData := util.RequestJson(url, headers)
 	if gjson.Valid(jsonData){
 		//解析总条数、计算页数
 		parse:=gjson.Parse(jsonData)
@@ -74,7 +74,7 @@ func GetPageCount() int  {
 func SaveTagPageArticlesAsMarkdown(page,pageCount int)  {
 	url:=strings.Replace(tagAllArticlesUrl,"{page}",fmt.Sprintf("%d",page),-1)
 	url=strings.Replace(url,"{pagesize}",fmt.Sprintf("%d",PAGESIZE),-1)
-	jsonData := common.RequestJson(url, headers)
+	jsonData := util.RequestJson(url, headers)
 	if gjson.Valid(jsonData){
 		logs.Info("总共",pageCount,"页，","正在处理第",page,"页的文章")
 		articleInfo, _ := ParseArticleInfo(jsonData, tagArticleDetailPath, "")

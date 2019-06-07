@@ -1,8 +1,7 @@
 package kugou
 
 import (
-	"GolangSpider/GolangSpider/common"
-	"GolangSpider/GolangSpider/util"
+	"github.com/jaydenwen123/go-util"
 	"crypto/md5"
 	"fmt"
 	"github.com/astaxie/beego/logs"
@@ -14,7 +13,7 @@ import (
 )
 //1.搜索MV数据
 func SearchMV() []*MVInfo {
-	jsonStr := common.RequestJsonWithRetry(mvSearchUrl, HEADER)
+	jsonStr := util.RequestJsonWithRetry(mvSearchUrl, HEADER)
 	infos:=ParseMVInfo(jsonStr)
 	return infos
 }
@@ -74,17 +73,17 @@ func DownloadSearchMV()  {
 	//1.根据接收的关键词，替换url然后请求数据
 	searchUrl:=strings.Replace(mvSearchUrl,"{keyword}",keyword,-1)
 	searchUrl=strings.Replace(searchUrl,"{pagesize}","1",-1)
-	//info:=common.RequestJsonWithRetry(mvSearchUrl,HEADER)
+	//info:=util.RequestJsonWithRetry(mvSearchUrl,HEADER)
 	//2.保存信息
 	//获得总共的条数
-	searchInfos := common.RequestJson(searchUrl, HEADER)
+	searchInfos := util.RequestJson(searchUrl, HEADER)
 	total := GetTotal(searchInfos)
 	searchUrl=strings.Replace(mvSearchUrl,"{keyword}",keyword,-1)
 	searchUrl=strings.Replace(searchUrl,"{pagesize}",total,-1)
 	logs.Info("恭喜你，总共搜索到", total, "首MV！！！")
 	logs.Info("搜索歌曲的链接：", searchUrl)
 	logs.Info("正在搜索数据中，请耐心等待.....")
-	searchInfos = common.RequestJsonWithRetry(searchUrl, HEADER)
+	searchInfos = util.RequestJsonWithRetry(searchUrl, HEADER)
 	//初始化保存歌曲目录
 	saveBasePath := path.Join(downloadSaveMVDir, keyword)
 	logs.Info("正在初始化目录,请等待......")
@@ -122,7 +121,7 @@ func DownloadSearchMV()  {
 
 //下载MV文件
 func DownloadMV(mv *MVInfo, dirPath string, suffix string, fileIndex int, done chan DownloadMsg) {
-	mvInfo := common.RequestJsonWithRetry(mv.DetailUrl, HEADER)
+	mvInfo := util.RequestJsonWithRetry(mv.DetailUrl, HEADER)
 	if gjson.Valid(mvInfo){
 		//补全信息
 		mv.MVDetail=ParsedMVDetail(mvInfo)

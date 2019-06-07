@@ -1,7 +1,7 @@
 package leetcode
 
 import (
-	"GolangSpider/GolangSpider/util"
+	"github.com/jaydenwen123/go-util"
 	"os"
 )
 

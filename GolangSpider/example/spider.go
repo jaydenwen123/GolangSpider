@@ -1,7 +1,5 @@
 package main
 
-import "GolangSpider/GolangSpider/example/pexels"
-
 func main() {
 	//fmt.Println("爬取cbooo的数据")
 	//cbooo.Main()
@@ -9,5 +7,5 @@ func main() {
 	//gushiwen.Main()
 	//fmt.Println("爬取酷狗音乐的歌曲数据")
 	//kugou.Main()
-	pexels.Search()
+	//pexels.Search()
 }

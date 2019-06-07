@@ -1,7 +1,7 @@
 package kugou
 
 import (
-	"GolangSpider/GolangSpider/util"
+	"github.com/jaydenwen123/go-util"
 	"fmt"
 	"github.com/astaxie/beego/logs"
 	"io/ioutil"

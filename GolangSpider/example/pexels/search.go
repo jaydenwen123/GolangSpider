@@ -1,9 +1,8 @@
 package pexels
 
 import (
-	"GolangSpider/GolangSpider/common"
+	"github.com/jaydenwen123/go-util"
 	"GolangSpider/GolangSpider/example/kugou"
-	"GolangSpider/GolangSpider/util"
 	"bufio"
 	"fmt"
 	"github.com/PuerkitoBio/goquery"
@@ -24,7 +23,7 @@ func Search()  {
 	//计算程序运行时间
 	cost := util.NewCost(time.Now())
 	//https://www.pexels.com/zh-cn/search/{keyword}/?format=html&page={page}&type=
-	//_,data:=common.Request("https://www.pexels.com/search-photos/?s=muscle")
+	//_,data:=util.Request("https://www.pexels.com/search-photos/?s=muscle")
 	//1.接收控制台的输入参数：关键字
 	lang,searchWord:=AcceptSearchWordFromConsole()
 	//2.初始化下载图片的目录
@@ -34,7 +33,7 @@ func Search()  {
 	firstPageUrl:=strings.Replace(pageUrl[lang],"{keyword}",searchWord,-1)
 	firstPageUrl=strings.Replace(firstPageUrl,"{page}","1",-1)
 	logs.Info("第1页数据的url:",firstPageUrl)
-	_, resp := common.RequestWithHeader(firstPageUrl,headers)
+	_, resp := util.RequestWithHeader(firstPageUrl,headers)
 	//fmt.Println(resp)
 	//3.循环请求每页的数据
 	var total,pageCount int
@@ -161,7 +160,7 @@ func RequestPage(lang int,searchWord string, page int,pageChan chan PageContent,
 	eachPageUrl := strings.Replace(pageUrl[lang], "{keyword}", searchWord, -1)
 	eachPageUrl = strings.Replace(eachPageUrl, "{page}", strconv.Itoa(page), -1)
 	logs.Info("第",page,"页数据的url:",eachPageUrl)
-	_, resp := common.RequestWithHeader(eachPageUrl,headers)
+	_, resp := util.RequestWithHeader(eachPageUrl,headers)
 	pageChan<-PageContent{page,resp}
 }
 

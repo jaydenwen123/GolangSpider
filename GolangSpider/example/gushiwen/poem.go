@@ -2,7 +2,7 @@ package gushiwen
 
 import (
 	"GolangSpider/GolangSpider/example/gushiwen/db"
-	"GolangSpider/GolangSpider/util"
+	"github.com/jaydenwen123/go-util"
 	"fmt"
 	"github.com/astaxie/beego/logs"
 	"io/ioutil"

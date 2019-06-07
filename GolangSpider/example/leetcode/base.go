@@ -1,9 +1,8 @@
 package leetcode
 
 import (
-	"GolangSpider/GolangSpider/common"
-	"GolangSpider/GolangSpider/util"
 	"github.com/astaxie/beego/logs"
+	"github.com/jaydenwen123/go-util"
 	"github.com/pkg/errors"
 	"github.com/tidwall/gjson"
 	"strings"
@@ -17,7 +16,7 @@ func getPostJsonByTemplate(template string,replace string,keyword string,)  (str
 		param=strings.Replace(param,replace,keyword,-1)
 	}
 	var err error
-	jsonStr := common.RequestJsonWithPost(commonUrl, headers, param)
+	jsonStr := util.RequestJsonWithPost(commonUrl, headers, param)
 	if !gjson.Valid(jsonStr){
 		logs.Error("从服务器拉去题目数据失败，请稍后重试")
 		err=errors.New("从服务器拉去数据失败，请稍后重试")
@@ -27,7 +26,7 @@ func getPostJsonByTemplate(template string,replace string,keyword string,)  (str
 
 //保存直接根据url获取的json数据
 func SaveJsonDataByUrl(url, filename string) (string, error) {
-	data := common.RequestJson(url, headers)
+	data := util.RequestJson(url, headers)
 	if !gjson.Valid(data) {
 		logs.Error("从服务器拉去数据失败，请稍后重试")
 		return "", errors.New("从服务器拉去数据失败，请稍后重试")

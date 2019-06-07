@@ -1,8 +1,7 @@
 package kugou
 
 import (
-	"GolangSpider/GolangSpider/common"
-	"GolangSpider/GolangSpider/util"
+	"github.com/jaydenwen123/go-util"
 	"bufio"
 	"flag"
 	"fmt"
@@ -42,14 +41,14 @@ func DownloadSearchMusicInfo() {
 	search := strings.Replace(searchUrl, "{}", keyword, -1)
 	search = strings.Replace(search, "$", "1", -1)
 	//获得总共的条数
-	searchInfos := common.RequestJson(search, HEADER)
+	searchInfos := util.RequestJson(search, HEADER)
 	total := GetTotal(searchInfos)
 	search = strings.Replace(searchUrl, "{}", keyword, -1)
 	search = strings.Replace(search, "$", total, -1)
 	logs.Info("恭喜你，总共搜索到", total, "首歌曲！！！")
 	logs.Info("搜索歌曲的链接：", search)
 	logs.Info("正在搜索数据中，请耐心等待.....")
-	searchInfos = common.RequestJsonWithRetry(search, HEADER)
+	searchInfos = util.RequestJsonWithRetry(search, HEADER)
 	//初始化保存歌曲目录
 	saveBasePath := path.Join(downloadSaveSongDir, keyword)
 	logs.Info("正在初始化目录,请等待......")
@@ -146,7 +145,7 @@ func GetTotal(info string) string {
 func DownloadMusic(hash,savePath string,fileSuffix string,fileIndex int,done chan DownloadMsg) {
 	//1.首先根据hash值获取歌曲的json数据
 	songUrl:=strings.Replace(songInfoTemplateUrl,"{}",hash,-1)
-	songJson := common.RequestJson(songUrl, HEADER)
+	songJson := util.RequestJson(songUrl, HEADER)
 	//估计是cookie变化了，所以需要重新设置一次cookie
 	//time.Sleep(time.Millisecond*500)
 	//2.提取歌曲下载链接

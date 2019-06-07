@@ -1,10 +1,9 @@
 package juejin
 
 import (
-	"GolangSpider/GolangSpider/common"
-	"GolangSpider/GolangSpider/util"
 	"fmt"
 	"github.com/astaxie/beego/logs"
+	"github.com/jaydenwen123/go-util"
 	"github.com/pkg/errors"
 	"github.com/tidwall/gjson"
 	"os"
@@ -24,7 +23,7 @@ func Init()  {
 
 //1.爬取文章列表
 func GetArticle(param *PostQueryBody) (string ,error){
-	jsonStr := common.RequestJsonWithPost(juejinUrl, headers, param.String())
+	jsonStr := util.RequestJsonWithPost(juejinUrl, headers, param.String())
 
 	//fmt.Println(jsonStr)
 	if gjson.Valid(jsonStr){
@@ -63,7 +62,7 @@ func ParseArticleInfo(articles string,articlePath,pagePath string) ([]*Article,*
 
 //3.爬取文章详情信息
 func SpiderArticleDetail(articleUrl string) string{
-	_, htmlStr:= common.RequestWithHeader(articleUrl, headers)
+	_, htmlStr:= util.RequestWithHeader(articleUrl, headers)
 	return htmlStr
 }
 //4.解析文章html内容

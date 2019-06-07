@@ -7,6 +7,5 @@ func GetRecommanderJson() {
 	SaveJsonDataByUrl(recommanderHotUrl, hot100Jsonfile)
 	SaveJsonDataByUrl(recommanderTencentUrl, tencent50Jsonfile)
 	SaveJsonDataByUrl(recommanderTopUrl, topJsonfile)
-
 }
 

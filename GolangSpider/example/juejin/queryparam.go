@@ -1,7 +1,6 @@
 package juejin
 
-import "GolangSpider/GolangSpider/util"
-
+import "github.com/jaydenwen123/go-util"
 //以下构造post请求中请求体内部的参数
 type Variable struct {
 	Type string	`json:"type"`

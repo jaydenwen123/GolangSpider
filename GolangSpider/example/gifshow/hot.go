@@ -1,9 +1,8 @@
 package gifshow
 
 import (
-	"GolangSpider/GolangSpider/common"
-	"GolangSpider/GolangSpider/example/kugou"
-	"GolangSpider/GolangSpider/util"
+	"github.com/jaydenwen123/GolangSpider/GolangSpider/example/kugou"
+	"github.com/jaydenwen123/go-util"
 	"fmt"
 	"github.com/astaxie/beego/logs"
 	"github.com/tidwall/gjson"
@@ -36,7 +35,7 @@ func DownloadWithBatch(epoch int)  {
 
 func DownloadHotVideo(id int,batch chan int)  {
 	cost:=util.NewCost(time.Now())
-	jsonStr := common.RequestJsonWithPost(gifUrl, headers, bodyData)
+	jsonStr := util.RequestJsonWithPost(gifUrl, headers, bodyData)
 	//jsonStr:=SendPostRequest(url,headers,bodyData)
 	if !gjson.Valid(jsonStr){
 		logs.Error("获取json数据失败")
