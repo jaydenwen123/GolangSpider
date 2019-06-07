@@ -13,7 +13,7 @@
 - [4.Pexels图片](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/pexels) 
 
 
-- [5.抖音小视频](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/douyin) 
+- [5.快手小视频](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/gifshow) 
 
 
 - [6.Github热门项目](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/github) 
