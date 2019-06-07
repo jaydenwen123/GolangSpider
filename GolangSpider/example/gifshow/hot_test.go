@@ -11,5 +11,5 @@ func TestDownloadHotVideo(t *testing.T) {
 }
 
 func TestDownloadWithBatch(t *testing.T) {
-	DownloadWithBatch(1)
+	DownloadWithBatch(3)
 }
