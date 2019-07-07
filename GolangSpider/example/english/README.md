@@ -48,8 +48,10 @@ http://www.eudic.cn/ting/channel?id=8a695f40-1da1-11e6-bcc9-000c29ffef9b&type=ca
 	3BBVDA9IiwidCI6IkFCSU1UVTRNakUyTXpnME9BPT0ifQ%3D%3D
 
 > ![音频文章详情](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/english/images/audio_content.png)   
-> ![视频文章详情](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/english/images/video_content.png)   
-  
+> ![视频文章详情](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/english/images/video_content.png) 
+
+**4.保存的栏目信息**  
+> ![保存的栏目信息](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/english/images/category_json.png) 
 
 ## 涉及技术 ##
 1. goquery库使用
