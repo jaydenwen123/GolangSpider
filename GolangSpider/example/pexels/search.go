@@ -1,8 +1,8 @@
 package pexels
 
 import (
+	"github.com/jaydenwen123/GolangSpider/GolangSpider/example/kugou"
 	"github.com/jaydenwen123/go-util"
-	"GolangSpider/GolangSpider/example/kugou"
 	"bufio"
 	"fmt"
 	"github.com/PuerkitoBio/goquery"

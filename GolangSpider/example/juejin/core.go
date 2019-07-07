@@ -3,6 +3,7 @@ package juejin
 import (
 	"fmt"
 	"github.com/astaxie/beego/logs"
+	"github.com/jaydenwen123/GolangSpider/GolangSpider/example/juejin/elasticsearch"
 	"github.com/jaydenwen123/go-util"
 	"github.com/pkg/errors"
 	"github.com/tidwall/gjson"
@@ -109,6 +110,13 @@ func SavePageArticlesAsMarkdown(dirName string, currentPage int, articleInfos []
 	util.Save2JsonFile(articleInfos, filename)
 	//第三步
 	for _, articleInfo := range articleInfos {
+		//保存到elasticsearch中
+		_,err:=es.Create("tag", "article", articleInfo.Id, articleInfo)
+		if err!=nil{
+			logs.Error("save article into elasticsearch happends error.",err.Error())
+		}else{
+			logs.Info("save article into elasticsearch successfully.")
+		}
 		htmlStr := SpiderArticleDetail(articleInfo.OriginalUrl)
 		//第四步
 		articleDetail, err := ParseArticleDetail(htmlStr)
