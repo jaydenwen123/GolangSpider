@@ -1,0 +1,14 @@
+1.每日英语听力的链接
+http://www.eudic.cn/ting/channel?id=8a695f40-1da1-11e6-bcc9-000c29ffef9b&type=category
+获取一级栏目和二级栏目的链接
+一级栏目：
+http://www.eudic.cn/ting/channel?id=e5708ee5-f9a2-11e6-9e96-000c29ffef9b&type=tag
+二级栏目：
+http://www.eudic.cn/ting/article?id=30c7c56b-1b3a-11e7-be40-000c29ffef9b
+文章详情：
+http://www.eudic.cn/webting/desktopplay?id=bcc705dd-1f34-11e7-be40-000c29ffef91&token=
+QYN+eyJ0b2tlbiI6IiIsInVzZXJpZCI6IiIsInVybHNpZ24iOiJ1SDVtT0tWc2JnU09pTkhyUkkzS0Job
+3BBVDA9IiwidCI6IkFCSU1UVTRNakUyTXpnME9BPT0ifQ%3D%3D
+2.获取文章详情
+获取不同栏目的内容链接
+3.直接保存文章以及视频（如果有视频）
