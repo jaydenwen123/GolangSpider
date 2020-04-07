@@ -2,6 +2,8 @@
 this is my network spider with golang language.in this project,I use the following  real examples and  the following technology  and 
 framework to complete this project.Now let's start.
 
+> this is using to learning the technology with golang,do not use business to earn money....
+
 ## Using Technology And FrameWork ##
 1. gjson(https://github.com/tidwall/gjson)
 2. goquery(https://github.com/PuerkitoBio/goquery)
