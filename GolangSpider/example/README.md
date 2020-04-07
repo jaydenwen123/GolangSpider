@@ -1,5 +1,6 @@
 ##  爬虫实例  ##
 
+> 此项目所有的东西仅用于学习技术交流，切勿用于商业用途，否则后果自负...
 
 - [1.中国票房](https://github.com/jaydenwen123/GolangSpider/blob/master/GolangSpider/example/cbooo) 
 
